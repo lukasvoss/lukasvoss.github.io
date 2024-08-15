@@ -3,14 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
+    <title>About - Lukas Voss</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Main Page</h1>
-        <p>This is the main page of Lukas' website.</p>
-        <a href="index.html">Back to Home</a>
-    </div>
+    <header class="header">
+        <a href="index.html" class="logo">Lukas.</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="about">
+    
+        <!-- Education Section -->
+        <div class="cv-section">
+            <h3>Education</h3>
+            <div class="timeline">
+                <!-- Education Entry 1 -->
+                <div class="timeline-entry">
+                    <div class="timeline-logo">
+                        <img src="images/university-logo.png" alt="University Logo">
+                    </div>
+                    <div class="timeline-bubble"></div> <!-- Bubble on the line -->
+                    <div class="timeline-content">
+                        <h4>Master's in Quantum Physics</h4>
+                        <p>Jiao Tong University, Shanghai</p>
+                        <p>2023 - 2024</p>
+                    </div>
+                </div>
+    
+                <!-- Education Entry 2 -->
+                <div class="timeline-entry">
+                    <div class="timeline-logo">
+                        <img src="images/university-logo.png" alt="University Logo">
+                    </div>
+                    <div class="timeline-bubble"></div>
+                    <div class="timeline-content">
+                        <h4>Bachelor's in Physics</h4>
+                        <p>University of XYZ</p>
+                        <p>2019 - 2023</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Professional Experience Section -->
+        <div class="cv-section">
+            <h3>Professional Experience</h3>
+            <div class="timeline">
+                <!-- Experience Entry 1 -->
+                <div class="timeline-entry">
+                    <div class="timeline-logo">
+                        <img src="images/company-logo.png" alt="Company Logo">
+                    </div>
+                    <div class="timeline-bubble"></div>
+                    <div class="timeline-content">
+                        <h4>Data Scientist Intern</h4>
+                        <p>Company ABC</p>
+                        <p>2022 - 2023</p>
+                    </div>
+                </div>
+    
+                <!-- Experience Entry 2 -->
+                <div class="timeline-entry">
+                    <div class="timeline-logo">
+                        <img src="images/company-logo.png" alt="Company Logo">
+                    </div>
+                    <div class="timeline-bubble"></div>
+                    <div class="timeline-content">
+                        <h4>Research Assistant</h4>
+                        <p>Institute DEF</p>
+                        <p>2021 - 2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

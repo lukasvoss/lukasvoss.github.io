@@ -148,3 +148,88 @@
     background: rgba(0, 170, 240, 0.1);
 }
 
+.about {
+    padding-left: 10%; /* Align with the logo in the header */
+    margin-top: 100px;
+}
+
+.cv-section {
+    margin-bottom: 50px;
+}
+
+.cv-section h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 4px;
+    width: calc(100% - 20%); /* Adjust this to match the width needed */
+    max-width: 800px; /* Ensure it does not exceed a reasonable width */
+}
+
+/* Timeline Styling */
+.timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+}
+
+/* Vertical line connecting bubbles */
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 86pt; /* Adjust this to align with the center of the bubbles */
+    width: 2px;
+    background-color: #333;
+}
+
+.timeline-entry {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px; /* Increased space between entries */
+    position: relative;
+}
+
+.timeline-logo {
+    margin-right: 60px; /* Increased space between the logo and the vertical line */
+    width: 50px;
+    height: auto;
+}
+
+.timeline-logo img {
+    width: 100%;
+    height: auto;
+    border: none; /* Remove the circle border */
+}
+
+.timeline-bubble {
+    width: 12px;
+    height: 12px;
+    background-color: #333;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 60px; /* Increased space between the bubble and the text box */
+    z-index: 1; /* Ensure the bubble is above the line */
+}
+
+/* Text box for the timeline content */
+.timeline-content {
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 70%;
+}
+
+.timeline-content h4 {
+    margin: 0 0 5px;
+    font-size: 18px;
+}
+
+.timeline-content p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
