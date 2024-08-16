@@ -180,7 +180,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 86pt; /* Adjust this to align with the center of the bubbles */
+    left: 116.3pt; /* Adjust this to align with the center of the bubbles */
     width: 2px;
     background-color: #333;
 }
@@ -193,8 +193,8 @@
 }
 
 .timeline-logo {
-    margin-right: 60px; /* Increased space between the logo and the vertical line */
-    width: 50px;
+    margin-right: 50px; /* Increased space between the logo and the vertical line */
+    width: 100px;
     height: auto;
 }
 
@@ -230,6 +230,6 @@
 
 .timeline-content p {
     margin: 5px 0;
-    font-size: 14px;
+    font-size: 16px;
     color: #555;
 }
