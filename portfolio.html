@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Lukas Voss</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your dedicated CSS file -->
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Lukas.</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html" class="active">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="portfolio">
+        <h3>Portfolio</h3>
+
+        <div class="portfolio-entry">
+            <img src="images/QECTannerGraph.pdf" alt="Project 1 Image">
+            <div class="portfolio-entry-content">
+                <h4>Multivariate Bicycle Codes (2024)</h4>
+                <p>Quantum error correction suppresses noise in quantum systems to allow for high-precision computations. 
+                    In this work, we introduce Multivariate Bicycle (MB) Quantum Low-Density Parity-Check (QLDPC) codes, via an extension of the framework developed by Bravyi <i>et al.</i> [Nature, 627, 778-782 (2024)] and particularly focus on Trivariate Bicycle (TB) codes. 
+                    Unlike the weight-6 codes proposed in their study, we offer concrete examples of weight-4 and weight-5 TB-QLDPC codes which promise to be more amenable to near-term experimental setups. We show that our TB-QLDPC codes up to weight-6 have a bi-planar structure. Further, most of our new codes can also be arranged in a two-dimensional toric layout, and have substantially better encoding rates than comparable surface codes while offering similar error suppression capabilities.
+                    For example, we can encode 4 logical qubits with distance 5 into 30 physical qubits with weight-5 check measurements, while a surface code with these parameters requires 100 physical qubits. 
+                    The high encoding rate and compact layout make our codes highly suitable candidates for near-term hardware implementations, paving the way for a realizable quantum error correction protocol.
+                    <br>The picture on the left is Fig. 1 in our paper showing the Tanner graph for our weight-5 [[30, 4, 5]] code. 
+                    <br><br><i>In collaboration with Sim Jian Xian, Tobias Haug, Kishor Bharti (National University of Singapore, TII Abu Dhabi, A*STAR Agency for Science & Technology Singapore)</i>
+                    <br><a href="https://arxiv.org/pdf/2406.19151" target="_blank">Link to publication</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="portfolio-entry">
+            <img src="images/project2-image.jpg" alt="Project 2 Image">
+            <div class="portfolio-entry-content">
+                <h4>Context-aware gate calibration with Deep Reinforcement Learning (2024)</h4>
+                <p>The advent of scalable quantum computation relies on
+                    the possibility of executing quantum gates with high fi-
+                    delity. To do so, there is a need to design operations
+                    which are robust to a variety of noise sources. While
+                    many techniques exploiting both physical models and ex-
+                    perimental data have emerged in the past few years, few
+                    of them actually consider the noise inherent to the execu-
+                    tion of a specific quantum circuit context. In this work,
+                    we benchmark the importance of such noise on near-term
+                    superconducting quantum devices and propose a new dynamical 
+                    gate calibration method based on model-free
+                    reinforcement learning for its active suppression. We
+                    demonstrate the efficiency of the method by addressing a
+                    pulse optimization over a set of parameters that would be
+                    adjustable in real-time, provided that the control system
+                    is equipped with such real-time processing features. This
+                    means that no additional memory overhead should be required 
+                    in the control system to enable an adaptive and
+                    context-aware gate calibration. We envision our method
+                    to become a new tool in the calibration workflows enabling 
+                    the successful execution of complex quantum algorithms. 
+                    We also open the door to a change of paradigm regarding the traditional gate model of quantum computation, enabling the seamless adjustment of those building blocks based on the context they are executed in.
+                    <br><br><i>In collaboration with Arthur Strauss & Hui Khoon Ng (Centre for Quantum Technologies, National University of Singapore)</i>
+                    <br>Manuscript in the making.
+                </p>
+            </div>
+        </div>
+
+        <div class="portfolio-entry">
+            <img src="images/network_theory_plot.png" alt="Project 3 Image">
+            <div class="portfolio-entry-content">
+                <h4>Network Theory - An executive summary (2022)</h4>
+                <p>Provides a comprehensive overview of Network Theory, and introduces important concepts and phenomena such as Power-Law observations in distribution functions of a newtwork, the Bianconi-Barabási model, "winner-takes-all" and the spread of information in random networks.
+                <br>The picture on the left provides a mapping between fitness of a network to Bose-Einstein condensates. (Bianconi and Barabási, 2001)
+                <br><br><i>Graduate Seminar in Advanced Interdisciplinary Statistical Methods  (Ulm University, Germany)</i>
+                <br><a href="files/network_theory_slides.pdf" target="_blank">View the Slide Deck</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Add more project entries as needed -->
+        
+    </section>
+</body>
+</html>
