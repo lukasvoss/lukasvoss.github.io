@@ -20,9 +20,11 @@
 
     <section class="portfolio">
         <h3>Portfolio</h3>
+        <p class="portfolio-summary">Summary of my previous and ongoing (research) projects, primarily focused on quantum physics, statistical modelling, and applied machine learning. All illustrations were created by me unless otherwise noted. Publications are open access.</p>
+    
 
         <div class="portfolio-entry">
-            <img src="images/QECTannerGraph.pdf" alt="Project 1 Image">
+            <img src="images/QECTannerGraph-1.png" alt="Project 1 Image">
             <div class="portfolio-entry-content">
                 <h4>Multivariate Bicycle Codes (2024)</h4>
                 <p>Quantum error correction suppresses noise in quantum systems to allow for high-precision computations. 
@@ -38,7 +40,7 @@
         </div>
 
         <div class="portfolio-entry">
-            <img src="images/project2-image.jpg" alt="Project 2 Image">
+            <img src="images/SpilloverNoise_comparison_reward_methods_infidelity_experiment_runtime.pdf" alt="Project 2 Image">
             <div class="portfolio-entry-content">
                 <h4>Context-aware gate calibration with Deep Reinforcement Learning (2024)</h4>
                 <p>The advent of scalable quantum computation relies on
@@ -63,6 +65,7 @@
                     to become a new tool in the calibration workflows enabling 
                     the successful execution of complex quantum algorithms. 
                     We also open the door to a change of paradigm regarding the traditional gate model of quantum computation, enabling the seamless adjustment of those building blocks based on the context they are executed in.
+                    <br>The provided pictures shows the average error (infidelity) per gate over the training time of the Reinforcement Learning model if performed on a real quantum computer.
                     <br><br><i>In collaboration with Arthur Strauss & Hui Khoon Ng (Centre for Quantum Technologies, National University of Singapore)</i>
                     <br>Manuscript in the making.
                 </p>
@@ -70,12 +73,38 @@
         </div>
 
         <div class="portfolio-entry">
-            <img src="images/network_theory_plot.png" alt="Project 3 Image">
+            <img src="images/anki_card.png" alt="Project 3 Image" class="large-vertical-image">
+            <div class="portfolio-entry-content">
+                <h4>Automation of Anki Flashcard Creation (2023)</h4>
+                <p>This automation tool is designed to optimize the way Chinese learners create their flashcards in Anki. Anki is a digital flashcard application based on the "spaced-repetition" method for human memory. This Python tool utilizes Anki's ability to import CSV files and directly creates corresponding flashcards.</p>
+                <br><p>The tool automates the process, making it easier for learners to generate flashcards efficiently.</p>
+        
+                <ul class="indented-list">
+                    <li><strong>Input:</strong> An Excel file (hanzi_list.xlsx) that contains a column with the header "Hanzi," where the Chinese characters (simplified or traditional) are listed for flashcard creation.</li>
+                    <li><strong>Output:</strong> An Excel file (chinese_vocabulary.xlsx) that includes the characters, their phonetics (pinyin), English translations, and, in some cases, an example sentence. <br>  
+                        According to each Chinese character (Hanzi), the corresponding pinyin and English translation are added to the dataframe generated from the input Excel file. This file is then exported to a CSV, which can be directly imported into Anki.</li>
+                </ul>
+        
+                <br><p>There is another script that semi-automates the process of adding mp3 audio files to your Anki flashcards directly within the Anki app. It's similiar to a Windows AutoHotkey script:</p>
+        
+                <ul class="indented-list">
+                    <li>First, download the <a href="https://ankiweb.net/shared/info/858591644" target="_blank">Forvo Add-On</a>. This extension allows you to add mp3 audio files based on a field in your Anki flashcard. It uses recordings from the Forvo community.</li>
+                    <li>Adjust the coordinates of the buttons according to your screen, and you can start the script.</li>
+                    <li>The script will then perform the necessary clicks to add the recording for each card.</li>
+                </ul>
+                
+                <p><br><i>Own mini life-automation project during my time in Taipei, ROC.</i></p>
+                <p><br><a href="https://github.com/lukasvoss/anki_vocabulary_automation/tree/feature/excel_anki_import" target="_blank">View the GitHub Repo</a></p>
+            </div>
+        </div>
+
+        <div class="portfolio-entry">
+            <img src="images/network_theory_plot.png" alt="Project 4 Image">
             <div class="portfolio-entry-content">
                 <h4>Network Theory - An executive summary (2022)</h4>
                 <p>Provides a comprehensive overview of Network Theory, and introduces important concepts and phenomena such as Power-Law observations in distribution functions of a newtwork, the Bianconi-Barabási model, "winner-takes-all" and the spread of information in random networks.
-                <br>The picture on the left provides a mapping between fitness of a network to Bose-Einstein condensates. (Bianconi and Barabási, 2001)
-                <br><br><i>Graduate Seminar in Advanced Interdisciplinary Statistical Methods  (Ulm University, Germany)</i>
+                <br>The picture on the left provides a mapping between fitness of a network to Bose-Einstein condensates. (taken from Bianconi and Barabási, 2001)
+                <br><br><i>Graduate Seminar in Advanced Interdisciplinary Statistical Methods (Ulm University, Germany)</i>
                 <br><a href="files/network_theory_slides.pdf" target="_blank">View the Slide Deck</a>
                 </p>
             </div>

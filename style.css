@@ -238,9 +238,17 @@
     color: #555;
 }
 
+/* General Portfolio Styling */
+.portfolio-summary {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 50px;
+    line-height: 1.5; /* Improves readability */
+}
+
 .portfolio h3 {
     font-size: 32px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     text-align: left;
 }
 
@@ -251,18 +259,9 @@
 }
 
 .portfolio-entry img {
-    max-width: 300px; /* Increased size of the image */
-    height: auto;
-    margin-right: 200px; /* Increased distance between the image and text */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.portfolio-entry img {
-    width: 300px; /* Set a consistent width */
-    height: 200px; /* Set a consistent height */
-    object-fit: contain; /* Ensures the image covers the entire area, cropping if necessary */
-    margin-right: 40px; /* Space between the image and the text */
+    max-width: 300px; /* Ensures consistent image size across portfolio entries */
+    height: auto; /* Maintains the aspect ratio */
+    margin-right: 40px; /* Consistent spacing between the image and the text */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -277,4 +276,19 @@
     font-size: 16px;
     color: #555;
     line-height: 1.5;
+}
+
+/* Indentation for Bullet Points */
+.indented-list {
+    padding-left: 40px; /* Increase this value to indent more */
+    margin-left: 30px; /* Optional: You can add margin as well to adjust */
+}
+
+/* Specific Styling for Vertical Image in Anki Project */
+.large-vertical-image {
+    width: 300px; /* Match this with the width of other images */
+    height: auto; /* Keep the aspect ratio intact */
+    margin-right: 40px; /* Keep consistent spacing */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
