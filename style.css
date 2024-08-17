@@ -166,8 +166,7 @@
     margin-bottom: 20px;
     border-bottom: 2px solid #333;
     padding-bottom: 4px;
-    width: calc(100% - 20%); /* Adjust this to match the width needed */
-    max-width: 800px; /* Ensure it does not exceed a reasonable width */
+    width: 100%; /* Adjust this to match the width needed */
 }
 
 /* Timeline Styling */
@@ -224,7 +223,16 @@
     padding: 15px 20px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    width: 70%;
+    width: 80%;
+}
+.timeline-content ul {
+    padding-left: 20px; /* Adjust the left padding to align with the content */
+    margin-bottom: 10px; /* Adds space below the list */
+}
+
+.timeline-content li {
+    margin-bottom: 5px; /* Adds space between list items */
+    line-height: 1.5; /* Improves readability */
 }
 
 .timeline-content h4 {
@@ -249,6 +257,8 @@
 .portfolio h3 {
     font-size: 32px;
     margin-bottom: 20px;
+    border-bottom: 2px solid #333;
+    width: 100%;
     text-align: left;
 }
 
@@ -291,4 +301,27 @@
     margin-right: 40px; /* Keep consistent spacing */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.home-footer {
+    display: flex;
+    justify-content: space-between; /* Distributes space evenly between the icons and the footer */
+    align-items: center; /* Aligns items vertically */
+    margin-top: 100px; /* Adds some space above the footer */
+    padding-left: 10%; /* Align with other content */
+    padding-right: 10%; /* Align with other content */
+    # 
+}
+
+.home-sci {
+    display: flex;
+    gap: 20px; /* Space between icons */
+}
+
+.site-footer {
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    padding-top: 40px; /* Adjust this value as needed */
+    margin-bottom: 40px; /* Adjust this value as needed */
 }
