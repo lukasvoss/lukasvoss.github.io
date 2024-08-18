@@ -1,0 +1,367 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.body {
+    background: #ffffff;
+    overflow-x: hidden; /* Ensure no horizontal scrolling */
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 8%;
+    background: #0D0A3A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.about, .portfolio {
+    padding: 0 8%; /* Ensure all content stays within the header borders */
+    margin-top: 100px;
+    max-width: 100%; /* Make sure content doesn’t overflow */
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.home-content {
+    max-width: 100%;
+    margin: 20px; /* Space above the text */
+}
+
+.home-content h1 {
+    font-size: clamp(24px, 5vh, 36px);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-content p {
+    font-size: clamp(16px, 2.5vh, 18px);
+    /* margin: 20px 0 40px; */
+    margin: 2% 0 4%;
+}
+
+/* .home-content h3 {
+    font-size: 2.5vh;
+    font-weight: 700;
+    color: #00abf0;
+} */
+
+/* .home-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    color: #0D0A3A;
+    width: 345px;
+    height: 50px;
+} */
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 5%; /* Further reduce padding on smaller screens */
+    }
+
+    .navbar {
+        flex-wrap: wrap; /* Allow wrapping to the next line */
+        gap: 5px; /* Reduce space between navigation links */
+        justify-content: center; /* Center the items closer together */
+    }
+
+    .navbar a {
+        font-size: 14px; /* Reduce font size for smaller screens */
+        padding: 5px 12px; /* Increase padding for a more balanced layout */
+        width: 45%; /* Each link takes up 45% of the width, allowing for two columns */
+        text-align: center; /* Center-align the text */
+    }
+}
+
+
+.logo {
+    color: rgb(249, 141, 0);
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Navigation Bar Styling */
+.navbar {
+    display: flex;
+    gap: 6px; /* Space between navigation links */
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    padding-right: 6px; /* Padding around each link */
+    margin-left: 1.5vw;
+    transition: .3s;
+}
+
+ .navbar a:hover,
+.navbar a.active {
+    color: rgb(249, 141, 0);
+}
+
+/*
+.btn-box a {
+    position: relateive;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #0D0A3A;
+    border: 2px solid #0D0A3A;
+    border-radius: 8px;
+    font-size: 19px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:nth-child(1) {
+    background: transparent;
+    color: #0D0A3A;
+}
+
+.btn-box a:nth-child(1)::before {
+    background: #ffffff;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #0D0A3A;
+    z-index: -1;
+    transition: .5s;
+} */
+
+.home-sci {
+    position: absolute;
+    /* padding-left: 20px; */
+    bottom: 40px;
+    width: 100%; 
+    display: flex;
+    margin: 20px;
+    justify-content: left; 
+    gap: 30px;
+}
+
+
+
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px; 
+    height: 50px;
+    background: transparent;
+    border: 2px solid #0D0A3A;
+    border-radius: 50%;
+    color: #0D0A3A;
+    font-size: 24px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.home-sci a:hover {
+    background: rgba(0, 170, 240, 0.1);
+}
+
+
+
+.cv-section {
+    margin-bottom: 50px;
+}
+
+.cv-section h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 4px;
+    width: 100%; /* Adjust this to match the width needed */
+}
+
+/* Timeline Styling */
+.timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+}
+
+/* Vertical line connecting bubbles */
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 116.3pt; /* Adjust this to align with the center of the bubbles */
+    width: 2px;
+    background-color: #333;
+}
+
+.timeline-entry {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px; /* Increased space between entries */
+    position: relative;
+}
+
+.timeline-logo {
+    margin-right: 50px; /* Increased space between the logo and the vertical line */
+    width: 100px;
+    height: auto;
+}
+
+.timeline-logo img {
+    width: 100%;
+    height: auto;
+    border: none; /* Remove the circle border */
+}
+
+.timeline-bubble {
+    width: 12px;
+    height: 12px;
+    background-color: #333;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 60px; /* Increased space between the bubble and the text box */
+    z-index: 1; /* Ensure the bubble is above the line */
+}
+
+/* Text box for the timeline content */
+.timeline-content {
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+.timeline-content ul {
+    padding-left: 20px; /* Adjust the left padding to align with the content */
+    margin-bottom: 10px; /* Adds space below the list */
+}
+
+.timeline-content li {
+    margin-bottom: 5px; /* Adds space between list items */
+    line-height: 1.5; /* Improves readability */
+}
+
+.timeline-content h4 {
+    margin: 0 0 5px;
+    font-size: 18px;
+}
+
+.timeline-content p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* General Portfolio Styling */
+.portfolio-summary {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 50px;
+    line-height: 1.5; /* Improves readability */
+}
+
+.portfolio h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 4px;
+    width: 100%; /* Adjust this to match the width needed */
+}
+
+.portfolio-entry {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.portfolio-entry img {
+    max-width: 300px; /* Ensures consistent image size across portfolio entries */
+    height: auto; /* Maintains the aspect ratio */
+    margin-right: 40px; /* Consistent spacing between the image and the text */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-entry-content h4 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.portfolio-entry-content p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Indentation for Bullet Points */
+.indented-list {
+    padding-left: 40px; /* Increase this value to indent more */
+    margin-left: 30px; /* Optional: You can add margin as well to adjust */
+}
+
+/* Specific Styling for Vertical Image in Anki Project */
+.large-vertical-image {
+    width: 300px; /* Match this with the width of other images */
+    height: auto; /* Keep the aspect ratio intact */
+    margin-right: 40px; /* Keep consistent spacing */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.home-sci {
+    display: flex;
+    gap: 20px; /* Space between icons */
+}
+
+.site-footer {
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    padding-top: 40px; /* Adjust this value as needed */
+    margin-bottom: 40px; /* Adjust this value as needed */
+}
+
+.profile-photo {
+    width: clamp(150px, 30vb, 500px); /* Set the desired width */
+    height: clamp(150px, 30vb, 500px); /* Set the same height to make it a square */
+    border-radius: 50%; /* Make the image a circle */
+    object-fit: cover; /* Ensures the image is cropped from the center */
+    overflow: hidden; /* Ensures any overflow is hidden */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+    margin-top: 20px; /* Adds space above the image */
+    margin-bottom: 20px; /* Adds space below the image */
+    display: block; /* Ensure the image aligns properly */
+    margin: 20px auto; /* Ensure space around the image */
+}
