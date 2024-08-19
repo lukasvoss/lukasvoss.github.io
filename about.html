@@ -6,6 +6,7 @@
         <title>About - Lukas Voss</title>
         <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
         <link rel="icon" href="images/favicon.png" type="image/png"> <!-- Favicon for .png format -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
 <body>
     <header class="header">
@@ -19,6 +20,8 @@
     </header>
 
     <section class="about">
+        <p class="portfolio-summary">My full CV can be found <a href="files/cv_voss.pdf" target="_blank">here</a> (Aug 2024 version)</p>
+    
     
         <!-- Professional Experience Section -->
         <div class="cv-section">
@@ -51,8 +54,8 @@
                         <p><i>BlackRock, Budapest, Hungary</i></p>
                         <p>06/2022 - 08/2022</p>
                         <ul>
-                            <li>Built evaluation pipeline for a new financial model & improved data query time by ~60% over prior solution</li>
-                            <li>Created risk monitor to flag data inconsistencies between client & internal databases (Python, SQL, MS PowerBI)</li>
+                            <li>Engineered an evaluation pipeline to validate a new multi-asset multi-factor financial model by comparing its outputs with an older model, enhancing data collection efficiency by 60% through infrastructure improvements</li>
+                            <li>Developed a risk monitoring dashboard to automatically flag data inconsistencies between firm-internal and client databases across multiple portfolios, utilizing Python and SQL for data validation and integrating the solution into a nightly update routine</li>
                         </ul>
                     </div>
                 </div>
@@ -83,8 +86,8 @@
                         <p><i>KPMG, Munich, Germany</i></p>
                         <p>03/2022 - 06/2022</p>
                         <ul>
-                            <li>Development of an interactive treasury dashboard with automized real-time market data analysis (webscraping & data analytics in Python, dahsboard in MS PowerBI)</li>
-                            <li>Pitched my project results to the German Treasury practice (>60 FTE including partners) & demo to 2 clients</li>
+                            <li>Developed an interactive treasury dashboard in Microsoft PowerBI, integrating Python-based web scraping and Google News API to analyze real-time market data, including CDS spreads and sentiment analysis of news articles on 15 counterparties</li>
+                            <li>Presented project results and demonstrated the tool to the entire German Treasury practice (>60 FTE, including partners) in a nationwide call, followed by a live demo to two clients, driving interest in advanced data-driven risk management solutions</li>
                         </ul>
                     </div>
                 </div>
@@ -195,9 +198,47 @@
                 </div>
             </div>
         </div>
-    
-
     </section>
+
+    <!-- Add new sections for Languages, Interests, and Volunteering -->
+    <section class="about-section">
+        <div class="section-header">
+            <h3>Languages</h3>
+            <hr>
+        </div>
+        <div class="section-content">
+            <p>German (native), English (full working proficiency), Mandarin Chinese (est. B1-2), French (est. B1)</p>
+            <p>Python (Advanced), R, Matlab, SQL, Bash (proficient)</p>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="section-header">
+            <h3>Interests</h3>
+            <hr>
+        </div>
+        <div class="section-content">
+            <p>Passionate about cooking, swimming, tennis, traveling, wine/gin tasting and history,language learning, Chinese culture, ...</p>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="section-header">
+            <h3>Volunteering</h3>
+            <hr>
+        </div>
+        <div class="section-content">
+            <p>Entrepreneurship at the German Entrepreneurship Prize for Students (DGPS) <a href="https://dgps-alumni.de" target="_blank">Alumni Organization</a> and organizer at Singapore Quantum Tech <a href="https://www.meetup.com/singapore-quantum-computing-meetup/" target="_blank">Meetup group</a> </p>
+        </div>
+    </section>
+    <!-- <footer class="site-footer">
+        <p>© 2024 All rights reserved. <a href="legal.html">Legal notice</a></p>
+    </footer> -->
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/lukasvoss/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+        <a href="mailto:lukas_voss@icloud.com"><i class='bx bxs-envelope'></i></a>
+        <a href="https://scholar.google.com/citations?user=lIDlyVMAAAAJ&hl=en&oi=ao" target="_blank"><i class='bx bxs-graduation'></i></a>
+    </div>
     <footer class="site-footer">
         <p>© 2024 All rights reserved. <a href="legal.html">Legal notice</a></p>
     </footer>

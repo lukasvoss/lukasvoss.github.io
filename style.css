@@ -174,7 +174,6 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-left: 0;
 }
 
 /* Vertical line connecting bubbles */
@@ -183,7 +182,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 116.3pt; /* Adjust this to align with the center of the bubbles */
+    left: calc(150px + 20px + 10px); /* Center the line between logo and content */
     width: 2px;
     background-color: #333;
 }
@@ -191,14 +190,15 @@
 .timeline-entry {
     display: flex;
     align-items: center;
-    margin-bottom: 50px; /* Increased space between entries */
+    justify-content: flex-start; /* Ensure the logo, bubble, and content are aligned horizontally */
+    margin-bottom: 50px;
     position: relative;
 }
 
 .timeline-logo {
-    margin-right: 50px; /* Increased space between the logo and the vertical line */
-    width: 100px;
+    width: 100px; /* Increased size for the logos */
     height: auto;
+    margin-right: 20px; /* Space between the logo and the bubble */
 }
 
 .timeline-logo img {
@@ -208,13 +208,14 @@
 }
 
 .timeline-bubble {
-    width: 12px;
+    width: 12px; /* Size of the bubble */
     height: 12px;
     background-color: #333;
     border-radius: 50%;
     position: relative;
-    margin-right: 60px; /* Increased space between the bubble and the text box */
+    left: 55px; /* Center the line between logo and content */
     z-index: 1; /* Ensure the bubble is above the line */
+    margin-right: 120px; /* Space between bubble and content */
 }
 
 /* Text box for the timeline content */
@@ -222,9 +223,10 @@
     background-color: #fff;
     padding: 15px 20px;
     border-radius: 8px;
+    width: calc(100% - 190px - 40px - 20px); /* Ensure consistent width for content boxes */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    width: 80%;
 }
+
 .timeline-content ul {
     padding-left: 20px; /* Adjust the left padding to align with the content */
     margin-bottom: 10px; /* Adds space below the list */
@@ -244,6 +246,37 @@
     margin: 5px 0;
     font-size: 16px;
     color: #555;
+}
+
+.about-section {
+    margin-bottom: 40px; /* Space between sections */
+    padding: 0 10%; /* Ensure all content stays within the header borders */
+}
+
+.section-header {
+    position: relative;
+    margin-bottom: 20px; /* Space between header and content */
+}
+
+.section-header h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section-header hr {
+    border: 0;
+    height: 2px;
+    background-color: #333; /* Color of the horizontal line */
+    width: 100%; /* Span the entire page width */
+}
+
+.section-content {
+    background-color: #f9f9f9; /* Light background for textbox */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    line-height: 1.5; /* Improves readability */
 }
 
 /* General Portfolio Styling */
@@ -304,15 +337,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.home-footer {
-    display: flex;
-    justify-content: space-between; /* Distributes space evenly between the icons and the footer */
-    align-items: center; /* Aligns items vertically */
-    margin-top: 100px; /* Adds some space above the footer */
-    padding-left: 10%; /* Align with other content */
-    padding-right: 10%; /* Align with other content */
-}
-
 .home-sci {
     display: flex;
     gap: 20px; /* Space between icons */
@@ -339,3 +363,36 @@
     margin-left: auto; /* Center the image horizontally */
     margin-right: auto; /* Center the image horizontally */
 }
+.site-footer {
+    text-align: center;
+    font-size: 14px;
+    padding-top: 20px; /* Space above the footer text */
+    margin-bottom: 40px; /* Space below the footer */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: rgba(255, 255, 255, 0.8); /* Temporary light background for visibility */
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #0D0A3A;
+    border-radius: 50%;
+    color: #0D0A3A !important; /* Force the icon color */
+    font-size: 24px;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: rgba(0, 170, 240, 0.1);
+    color: #0D0A3A; /* Ensure color remains consistent */
+}
+
