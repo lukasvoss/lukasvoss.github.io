@@ -292,6 +292,7 @@
 .indented-list {
     padding-left: 40px; /* Increase this value to indent more */
     margin-left: 30px; /* Optional: You can add margin as well to adjust */
+    color: #555;
 }
 
 /* Specific Styling for Vertical Image in Anki Project */
