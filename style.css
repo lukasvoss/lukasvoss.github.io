@@ -307,6 +307,10 @@
     line-height: 1.5; /* Improves readability */
 }
 
+.full-cv-footer {
+    padding: 0 10%;
+}
+
 .portfolio h3 {
     font-size: 24px;
     margin-bottom: 20px;
