@@ -66,12 +66,23 @@
                     to become a new tool in the calibration workflows enabling 
                     the successful execution of complex quantum algorithms. 
                     We also open the door to a change of paradigm regarding the traditional gate model of quantum computation, enabling the seamless adjustment of those building blocks based on the context they are executed in.
-                    <br>The provided pictures shows the average error (infidelity) per gate over the training time of the Reinforcement Learning model if performed on a real quantum computer.
+                    <br>The provided pictures shows the average gate error (infidelity) over the training time of the Reinforcement Learning model if performed on a real quantum computer.
                     <br><br><i>In collaboration with Arthur Strauss & Hui Khoon Ng (Centre for Quantum Technologies, National University of Singapore)</i>
                     <br>Manuscript in the making.
                 </p>
             </div>
         </div>
+
+        <div class="portfolio-entry">
+            <img src="images/illustration_deeplearning_training_gpu.png" alt="Project 4 Image">
+            <div class="portfolio-entry-content">
+                <h4>Parallelized Deep Learning Training - A Performance Study with GPU (2023)</h4>
+                <p>In this project, I investigated the performance of parallelized deep learning training on an NVIDIA RTX 3070 GPU. I compared the training time of a convolutional neural network (CNN) on both a CPU and a GPU. The CNN was trained on the MNIST dataset, a popular benchmark for image classification. I implemented the CNN using the PyTorch library and trained it on the GPU utilizing CUDA. My findings showed that training the CNN on the GPU significantly reduced the training time compared to training on the CPU. I also explored the impact of batch size, learning rate, the choice of optimizer, and data parallelization on the training time and accuracy of the CNN. The results indicated that increasing the batch size and learning rate could further decrease the training time without significantly affecting the accuracy of the CNN. Overall, this study demonstrates the benefits of parallelized deep learning training on a GPU for accelerating CNN training.
+                <br>Illustration on the left is taken from my slide deck. 1) National Applied Research Laboratories provided GPU access for this project.
+                <br><br><i>Final project of class "High-Performance Big Data and Artificial Intelligence Systems" (National Taiwan University, ROC)</i>
+                <br><a href="files/HPBDAIS_final_presentation_vF.pdf" target="_blank">View the Slide Deck</a></p>
+            </div>
+        </div>   
 
         <div class="portfolio-entry">
             <img src="images/anki_card.png" alt="Project 3 Image" class="large-vertical-image">
@@ -93,12 +104,12 @@
                     <li>Adjust the coordinates of the buttons according to your screen, and you can start the script.</li>
                     <li>The script will then perform the necessary clicks to add the recording for each card.</li>
                 </ul>
-                <p><br>Picture on the left shows an example Anki card created by this tool.</p>
+                <p>Picture on the left shows an example Anki card created by this tool.</p>
                 <p><br><i>Own mini life-automation project during my time in Taipei, ROC.</i></p>
                 <p><a href="https://github.com/lukasvoss/anki_vocabulary_automation/tree/feature/excel_anki_import" target="_blank">View the GitHub Repo</a></p>
             </div>
         </div>
-
+        <!-- Add more project entries as needed -->
         <div class="portfolio-entry">
             <img src="images/network_theory_plot.png" alt="Project 4 Image">
             <div class="portfolio-entry-content">
@@ -109,9 +120,21 @@
                 <br><a href="files/network_theory_slides.pdf" target="_blank">View the Slide Deck</a>
                 </p>
             </div>
-        </div>
-    </section>
+        </div>    
         <!-- Add more project entries as needed -->
+        <div class="portfolio-entry">
+            <img src="images/spin_interaction_illustration.png" alt="Project 5 Image">
+            <div class="portfolio-entry-content">
+                <h4>Monte Carlo Simulations of NV centres as open quantum system (2021)</h4>
+                <p>Nitrogen Vacancy (NV) centres are a promising candidate for quantum information processing. In this work, we investigate the dynamics of an NV centre as open quantum systems using Monte Carlo simulations for a non-Markovian description. We describe the NV centres as a two-level system interacting with a bath <sup>13</sup>C nuclear spins in the carbon lattice. Spins are modeled by stochastic differential equations (Markovian quantum jump approach) leaning on ideas from a work by <a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.69.022115" target="_blank">Breuer (2004)</a>. We show that using a Markovian approach under a stochastic formalution of the von-Neumann equation, we can recover exact dynamics of a non-Markovian physical system as the NV centre in the presence of a bath. The simulation were performed in Matlab.
+                <br>The picture on the left shows an illustration of two interacting spins interacting.
+                <br><br><i>Honors Research Project @Institute for Complex Quantum Systems (Ulm University, Germany)</i>
+                <br><a href="files/ICQ_seminar_talk_NV_centres_LV_Jul2021.pdf" target="_blank">View the Slide Deck</a></p>
+            </div>
+        </div>
+
+    </section>
+    
     <div class="social-icons">
         <a href="https://www.linkedin.com/in/lukasvoss/" target="_blank"><i class='bx bxl-linkedin'></i></a>
         <a href="mailto:lukas_voss@icloud.com"><i class='bx bxs-envelope'></i></a>
