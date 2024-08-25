@@ -135,15 +135,27 @@
 
     </section>
     
-    <div class="social-icons">
-        <a href="https://www.linkedin.com/in/lukasvoss/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-        <a href="mailto:lukas_voss@icloud.com"><i class='bx bxs-envelope'></i></a>
-        <a href="https://scholar.google.com/citations?user=lIDlyVMAAAAJ&hl=en&oi=ao" target="_blank"><i class='bx bxs-graduation'></i></a>
-        <a href="https://github.com/lukasvoss" target="_blank"><i class='bx bxl-github' style='color:#0D0A3A'></i></a>
-    </div>
-    
-    <footer class="site-footer">
-        <p>© 2024 All rights reserved. <a href="legal.html">Legal notice</a></p>
-    </footer>
+    <div class="page-footer-container">
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/lukasvoss/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <!-- Placeholder for the email link -->
+            <span id="email-icon"></span>
+            <a href="https://scholar.google.com/citations?user=lIDlyVMAAAAJ&hl=en&oi=ao" target="_blank"><i class='bx bxs-graduation'></i></a>
+            <a href="https://github.com/lukasvoss" target="_blank"><i class='bx bxl-github' style='color:#0D0A3A'></i></a>
+        </div>
+        
+        <script type="text/javascript">
+            // Base64 encoded email address
+            const encodedEmail = "bHVrYXNfdm9zc0BpY2xvdWQuY29t";
+            // Decode the email address
+            const decodedEmail = atob(encodedEmail);
+            // Create the mailto link with an envelope icon
+            const emailLink = `<a href="mailto:${decodedEmail}"><i class='bx bxs-envelope'></i></a>`;
+            // Insert the email icon into the social icons
+            document.getElementById("email-icon").innerHTML = emailLink;
+        </script>
+        <footer class="site-footer">
+            <p>© 2024 All rights reserved. <a href="legal.html">Legal notice</a></p>
+        </footer>
 </body>
 </html>
