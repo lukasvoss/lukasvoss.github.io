@@ -10,8 +10,8 @@
 }
 
 .landing-page {
-    height: 100vh;
-    overflow-y: scroll; /* Forces a vertical scrollbar, even if not needed */
+    min-height: 100vh;
+    overflow-y: scroll;  /*  Forces a vertical scrollbar, even if not needed */
     display: flex;
     flex-direction: column;
 }
@@ -29,6 +29,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    height: 60px; /* Define the height of the navigation bar */
     padding: 20px 10%;
     background: #0D0A3A;
     display: flex;
@@ -44,20 +45,22 @@
 }
 
 .profile-photo {
-    width: 500px; /* Set the desired width */
-    height: 340px; /* Set the same height to make it a square */
-    border-radius: 50%; /* Make the image a circle */
+    width: 30vw; /* Set the width relative to the viewport width */
+    height: auto; /* Let the height adjust automatically to maintain the aspect ratio */
+    max-width: 600px; /* Set a maximum width to prevent it from getting too large on larger screens */
+    min-width: 180px; /* Set a minimum width to prevent it from getting too small on smaller screens */
+    border-radius: 50%; /* Keep the image circular */
     object-fit: cover; /* Ensures the image is cropped from the center */
     overflow: hidden; /* Ensures any overflow is hidden */
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  Optional: Adds a subtle shadow */
-    margin-top: 0px; /* Adds space above the image */
+    margin-top: 10px; /* Adds space above the image */
     margin-bottom: 20px; /* Adds space below the image */
     display: block; /* Ensure the image aligns properly */
     margin-left: auto; /* Align the image to the right */
-    margin-right: 20px; /* Space between the image and the text */
+    margin-right: 10px; /* Space between the image and the text */
 }
 
 .home {
+    flex: 1; /* Takes up the remaining space */
     height: 300vh;
     display: flex;
     align-items: flex-start; /* Align the content at the top of the section */
@@ -69,10 +72,12 @@
 .home-content {
     display: flex;
     flex-direction: row;
+    max-width: 100%; /* Ensures content doesn't overflow */
     align-items: center; /* Center content horizontally */
     justify-content: center; /* Center content vertically */
     margin-top: 0;
     padding-top: 100px;
+    padding-bottom: 10px;
     margin-right: 25%; /* Centers the content between the navigation bar's borders */ */
 }
 
@@ -409,10 +414,12 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    position: absolute;
+    position: relative;
     bottom: 2px; /* Positions the footer slightly above the bottom */
     left: 0;
     text-align: center;
+    margin-top: auto;
+    z-index: 10; /* Ensures it doesn't overlap content */
 }
 
 .page-footer-container {
