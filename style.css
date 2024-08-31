@@ -432,6 +432,12 @@
     box-sizing: border-box;
 }
 
+.email-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+    /* font-weight: bold; */
+}
+
 .page-footer-container .social-icons {
     margin-bottom: 10px; /* Add space between the icons and the footer text */
 }
