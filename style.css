@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-}
 
 .body {
     background: #ffffff;
@@ -480,3 +479,129 @@
     color: #0D0A3A; /* Ensure color remains consistent */
 }
 
+/* ===== Tablet Adjustments (min-width: 769px and max-width: 1024px) ===== */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* 1. Block-style (left-aligned) text for subpages */
+    .about, 
+    .portfolio, 
+    .about-section, 
+    .portfolio-entry, 
+    .portfolio-entry-content, 
+    .timeline-content {
+      text-align: left;
+    }
+    
+    /* 2. Increase top padding in the home section so the profile picture isn’t overlapped by the fixed header */
+    .home-content {
+      padding-top: 120px;  /* Increased from 100px */
+    }
+    
+    /* 3. For the About section timeline: remove the vertical line and dots, then stack the elements vertically */
+    .timeline:before {
+      display: none;
+    }
+    .timeline-entry {
+      flex-direction: column;
+      align-items: center;  /* Centers the logo horizontally */
+      text-align: left;     /* Ensures the text remains block-style */
+      margin-bottom: 30px;
+    }
+    .timeline-logo {
+      width: 120px;             /* Reduced width for tablet */
+      margin-right: 0;         /* Remove right-margin */
+      margin-bottom: 10px;      /* Add spacing below the logo */
+    }
+    .timeline-bubble {
+      display: none;           /* Hide the dot/bubble */
+    }
+    .timeline-content {
+      width: 100%;             /* Use full container width */
+      padding: 10px;           /* Adjust padding as needed */
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);       /* Optional: remove shadow for a cleaner look */
+    }
+
+        /* 5. Portfolio Subpage: Stack the media element (image) on top of the text */
+    .portfolio-entry {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .portfolio-entry img {
+        margin: 0 0 20px 0;  /* Remove right margin and add spacing below the image */
+    }
+    .portfolio-entry-content {
+        width: 100%;
+        padding: 0 10px;
+    }
+  }
+  
+  /* ===== Mobile Adjustments (max-width: 768px) ===== */
+@media screen and (max-width: 768px) {
+    /* 1. Block-style (left-aligned) text on About page elements */
+    .about,
+    .about-section,
+    .timeline-content {
+        text-align: left;
+    }
+    
+    /* 2. Increase top padding in the home section so the profile picture isn’t overlapped by the header */
+    .home-content {
+        padding-top: 150px;
+    }
+    
+    /* Center the profile picture on the landing page */
+    .profile-photo {
+        margin: 20px auto;
+        width: 50vw;  /* Adjust width as needed */
+    }
+    
+    /* 3. Adjust the About page timeline: remove vertical line and dots, stack the elements vertically */
+    .timeline:before {
+        display: none;
+    }
+    .timeline-entry {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .timeline-logo {
+        width: 80px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .timeline-bubble {
+        display: none;
+    }
+    .timeline-content {
+        width: 100%;
+        padding: 10px;
+        font-size: 15px;
+        /* Retain the shadow effect */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* 4. Adjust navigation bar: keep all subpage buttons in one row with reduced spacing */
+    .navbar {
+        white-space: nowrap;
+        overflow-x: auto;  /* Allows horizontal scrolling if needed */
+    }
+    .navbar a {
+        margin-left: 10px;
+        font-size: 16px;
+    }
+
+    /* 5. Portfolio Subpage: Stack the media element (image) on top of the text */
+    .portfolio-entry {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+    .portfolio-entry img {
+        margin: 0 0 20px 0;
+        max-width: 90%;
+    }
+    .portfolio-entry-content {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
