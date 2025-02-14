@@ -555,12 +555,15 @@
     .home-content {
         padding-top: 80px;
     }
+    .home-content h1 {
+        font-size: 24px;
+    }
     
     /* Center the profile picture properly on mobile */
     .profile-photo {
         display: block;
-        margin-left: 60px;
-        width: 50vw;  /* Adjust as needed */
+        margin-left: 64px;
+        width: 70vw;  /* Adjust as needed */
     }
     
     /* Reduce the font size of the home intro text for mobile */
