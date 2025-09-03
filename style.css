@@ -302,6 +302,16 @@
     color: #555;
 }
 
+.cv-list {
+  padding-left: 20px;     /* indent bullets */
+  margin-bottom: 0;
+}
+
+.cv-list li {
+  margin-bottom: 5px;     /* space between bullets */
+  line-height: 1.5;       /* comfortable reading */
+}
+
 .about-section {
     margin-bottom: 40px; /* Space between sections */
     padding: 0 10%; /* Ensure all content stays within the header borders */
