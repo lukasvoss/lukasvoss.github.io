@@ -24,28 +24,48 @@
         <p class="portfolio-summary">Summary of my previous and ongoing (research) projects, primarily focused on quantum physics, statistical modeling, and applied machine learning. All illustrations were created by me unless otherwise noted. Publications are open access.</p>
     
         <div class="portfolio-entry">
-    <img src="images/DE_permutation_importance.png" alt="Explaining Electriciy Prices in France and Germany">
-    <div class="portfolio-entry-content">
-        <h4>Quant Research Challenge: Explaining Electriciy Prices in DE & FR (2024)</h4>
-        <p>
-            By the time of submission, my solution ranked in the <b>top 9% of all global participants</b>.
-            <br><br>
-            This project was part of a quantitative research challenge by the Quant Hedge Fund QRT where the goal was to explain daily price variations 
-            for 24-hour electricity futures in France (FR) and Germany (DE). <a href="https://challengedata.ens.fr/participants/challenges/97/">Link to the challenge</a>
-            <br><br>
-            My approach focused on <b>country-specific models</b>: using a LightGBM regressor for Germany and a regularized Elastic Net for France. 
-            To improve predictive power, I engineered features such as cross-border flow differentials, renewable production bundles, 
-            and weather-demand interactions. Hyperparameter optimization was applied to maximize <i>Spearman rank correlation</i>, 
-            ensuring the models captured directional movements in futures prices. <br>
-            The figure on the left shows the <b>permutation importance analysis</b> for the German model. 
-            It highlights that net exports, wind generation, and solar spreads between France and Germany were the most influential 
-            drivers of daily price variation. France required heavier regularization due to noisier patterns, 
-            reflecting structural differences between the two markets.
+            <img src="images/sg_gic_with_fit_breaks.png" alt="Singapore Wage Distribution Analysis">
+            <div class="portfolio-entry-content">
+                <h4>Singapore Wage Distribution Analysis (2025)</h4>
+                <p>
+                    This analysis has been conducted using publicly available data from the Inland Revenue Authority of Singapore (IRAS) on the assessable income of tax residents.
+                    <br> 
+                    Between 2004 and 2023, Singapore's income distribution experienced broad-based growth, as shown in the Growth Incidence Curve. 
+                    For most percentiles, incomes rise almost linearly — roughly +0.6% cumulative growth per percentile — reflecting consistent gains across the population. 
+                    Yet, several <i>regime breaks</i> emerge: percentiles P62-P67 and P70-P80 temporarily outpace the linear trend, while P86-P89 and especially P92-P98 fall below it. 
+                    <br>
+                    Finally, the top 1% (P99) stand out again, with a cumulative growth of around 66%, exceeding the fitted line.
+                    These breakpoints highlight how inequality pressures are concentrated at the very top, despite broadly shared gains across most of the distribution.
+                    <br>
+                    <i>GitHub Repo: <a href="https://github.com/lukasvoss/sg_income_data_analysis/tree/main" target="_blank">Link</a></i>, <i>Data Source:</i> <a href="https://data.gov.sg/datasets/d_f394f202534237671d39b17bd3b506ec/view" target="_blank">Link</a></i>
+                </p>
+            </div>
+        </div>
 
-            <br><br><i>GitHub Repo: <a href="https://github.com/lukasvoss/forecast_electricity_futures_QRT_challenge" target="_blank">Link</a></i>
-        </p>
-    </div>
-</div>
+
+        <div class="portfolio-entry">
+            <img src="images/DE_permutation_importance.png" alt="Explaining Electriciy Prices in France and Germany">
+            <div class="portfolio-entry-content">
+                <h4>Quant Research Challenge: Explaining Electriciy Prices in DE & FR (2024)</h4>
+                <p>
+                    By the time of submission, my solution ranked in the <b>top 9% of all global participants</b>.
+                    <br><br>
+                    This project was part of a quantitative research challenge by the Quant Hedge Fund QRT where the goal was to explain daily price variations 
+                    for 24-hour electricity futures in France (FR) and Germany (DE). <a href="https://challengedata.ens.fr/participants/challenges/97/">Link to the challenge</a>
+                    <br><br>
+                    My approach focused on <b>country-specific models</b>: using a LightGBM regressor for Germany and a regularized Elastic Net for France. 
+                    To improve predictive power, I engineered features such as cross-border flow differentials, renewable production bundles, 
+                    and weather-demand interactions. Hyperparameter optimization was applied to maximize <i>Spearman rank correlation</i>, 
+                    ensuring the models captured directional movements in futures prices. <br>
+                    The figure on the left shows the <b>permutation importance analysis</b> for the German model. 
+                    It highlights that net exports, wind generation, and solar spreads between France and Germany were the most influential 
+                    drivers of daily price variation. France required heavier regularization due to noisier patterns, 
+                    reflecting structural differences between the two markets.
+                    <br>
+                    <i>GitHub Repo: <a href="https://github.com/lukasvoss/forecast_electricity_futures_QRT_challenge" target="_blank">Link</a></i>
+                </p>
+            </div>
+        </div>
 
         <div class="portfolio-entry">
             <img src="images/QECTannerGraph-1.png" alt="Project 1 Image">
@@ -58,7 +78,9 @@
                     The high encoding rate and compact layout make our codes highly suitable candidates for near-term hardware implementations, paving the way for a realizable quantum error correction protocol.
                     <br>The picture on the left is Fig. 1 in our paper showing the Tanner graph for our weight-5 [[30, 4, 5]] code. 
                     <br><br><i>In collaboration with Sim Jian Xian, Tobias Haug, Kishor Bharti (National University of Singapore, TII Abu Dhabi, A*STAR Agency for Science & Technology Singapore)</i>
-                    <br><a href="https://journals.aps.org/pra/abstract/10.1103/ll5p-z88p" target="_blank">Link to publication</a>
+                    <br>
+                    <i>Publication</i>: <a href="https://journals.aps.org/pra/abstract/10.1103/ll5p-z88p" target="_blank">Link</i></a>
+
                 </p>
             </div>
         </div>
@@ -91,7 +113,7 @@
                     We also open the door to a change of paradigm regarding the traditional gate model of quantum computation, enabling the seamless adjustment of those building blocks based on the context they are executed in.
                     <br>The provided pictures shows the average gate error (infidelity) over the training time of the Reinforcement Learning model if performed on a real quantum computer.
                     <br><br><i>In collaboration with Arthur Strauss & Hui Khoon Ng (Centre for Quantum Technologies, National University of Singapore)</i>
-                    <br>Manuscript in the making.
+                    <br>Manuscript in the making. <i>GitHub Repo:</i> <a href="https://github.com/arthurostrauss/Quantum_Optimal_Control" target="_blank">Link</i></a>
                 </p>
             </div>
         </div>
@@ -103,7 +125,8 @@
                 <p>In this project, I investigated the performance of parallelized deep learning training on an NVIDIA RTX 3070 GPU. I compared the training time of a convolutional neural network (CNN) on both a CPU and a GPU. The CNN was trained on the MNIST dataset, a popular benchmark for image classification. I implemented the CNN using the PyTorch library and trained it on the GPU utilizing CUDA. My findings showed that training the CNN on the GPU significantly reduced the training time compared to training on the CPU. I also explored the impact of batch size, learning rate, the choice of optimizer, and data parallelization on the training time and accuracy of the CNN. Parallelizing data loading across worker processes leads to a significant performance gain by reducing training time. Overall, this study demonstrates the benefits of parallelized deep learning training on a GPU for accelerating CNN training.
                 <br>Illustration on the left is taken from my slide deck. 1) National Applied Research Laboratories provided GPU access for this project.
                 <br><br><i>Final project of class "High-Performance Big Data and Artificial Intelligence Systems" (National Taiwan University, ROC)</i>
-                <br><a href="files/HPBDAIS_final_presentation_vF_watermark.pdf" target="_blank">View the Slide Deck</a></p>
+                <br>
+                <i>Slide Deck</i>: <a href="files/HPBDAIS_final_presentation_vF_watermark.pdf" target="_blank">Link</i></a>
             </div>
         </div>   
 
@@ -128,8 +151,10 @@
                     <li>The script will then perform the necessary clicks to add the recording for each card.</li>
                 </ul>
                 <p>Picture on the left shows an example Anki card created by this tool.</p>
-                <p><br><i>Own mini life-automation project during my time in Taipei, ROC.</i></p>
-                <p><a href="https://github.com/lukasvoss/anki_vocabulary_automation/tree/feature/excel_anki_import" target="_blank">View the GitHub Repo</a></p>
+                <p><br><i>Own mini life-automation project during my time in Taipei, ROC.</i>
+                <br>
+                <i>GitHub Repo:</i> <a href="https://github.com/lukasvoss/anki_vocabulary_automation/tree/feature/excel_anki_import" target="_blank">Link</i></a>
+                </p>
             </div>
         </div>
         <!-- Add more project entries as needed -->
@@ -140,7 +165,8 @@
                 <p>Provides a comprehensive overview of Network Theory, and introduces important concepts and phenomena such as Power-Law observations in distribution functions of a newtwork, the Bianconi-Barabási model, "winner-takes-all" and the spread of information in random networks.
                 <br>The picture on the left provides a mapping between fitness of a network to Bose-Einstein condensates. (taken from Bianconi and Barabási, 2001)
                 <br><br><i>Graduate Seminar in Advanced Interdisciplinary Statistical Methods (Ulm University, Germany)</i>
-                <br><a href="files/network_theory_slides_watermark.pdf" target="_blank">View the Slide Deck</a>
+                <br>
+                <i>Slide Deck:</i> <a href="files/network_theory_slides_watermark.pdf" target="_blank">Link</i></a>
                 </p>
             </div>
         </div>    
@@ -152,7 +178,8 @@
                 <p>Nitrogen Vacancy (NV) centres are a promising candidate for quantum information processing. In this work, we investigate the dynamics of an NV centre as open quantum systems using Monte Carlo simulations for a non-Markovian description. We describe the NV centres as a two-level system interacting with a bath <sup>13</sup>C nuclear spins in the carbon lattice. Spins are modeled by stochastic differential equations (Markovian quantum jump approach) leaning on ideas from a work by <a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.69.022115" target="_blank">Breuer (2004)</a>. We show that using a Markovian approach under a stochastic formalution of the von-Neumann equation, we can recover exact dynamics of a non-Markovian physical system as the NV centre in the presence of a bath. The simulation were performed in Matlab.
                 <br>The picture on the left shows an illustration of two interacting spins.
                 <br><br><i>Honors Research Project @Institute for Complex Quantum Systems (Ulm University, Germany)</i>
-                <br><a href="files/ICQ_seminar_talk_NV_centres_LV_Jul2021_watermark.pdf" target="_blank">View the Slide Deck</a></p>
+                <br>
+                <i>Slide Deck:</i> <a href="files/ICQ_seminar_talk_NV_centres_LV_Jul2021_watermark.pdf" target="_blank">Link</i></a>
             </div>
         </div>
 
