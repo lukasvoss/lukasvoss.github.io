@@ -24,20 +24,20 @@
         <p class="portfolio-summary">Summary of my previous and ongoing (research) projects, primarily focused on quantum physics, statistical modeling, and applied machine learning. All illustrations were created by me unless otherwise noted. Publications are open access.</p>
     
         <div class="portfolio-entry">
-            <img src="images/sg_gic_with_fit_breaks.png" alt="Singapore Wage Distribution Analysis">
+            <img src="images/sg_gic_with_fit_breaks.png" alt="Singapore Income Distribution Analysis">
             <div class="portfolio-entry-content">
-                <h4>Singapore Wage Distribution Analysis (2025)</h4>
+                <h4>Singapore Income Distribution Analysis (2025)</h4>
                 <p>
-                    This analysis has been conducted using publicly available data from the Inland Revenue Authority of Singapore (IRAS) on the assessable income of tax residents.
+                    This analysis has been conducted using publicly available data from the <b>Inland Revenue Authority of Singapore (IRAS)</b> on the assessable income of tax residents.
                     <br> 
-                    Between 2004 and 2023, Singapore's income distribution experienced broad-based growth, as shown in the Growth Incidence Curve. 
-                    For most percentiles, incomes rise almost linearly — roughly +0.6% cumulative growth per percentile — reflecting consistent gains across the population. 
-                    Yet, several <i>regime breaks</i> emerge: percentiles P62-P67 and P70-P80 temporarily outpace the linear trend, while P86-P89 and especially P92-P98 fall below it. 
+                    Between 2004 and 2023, <b>Singapore's income distribution experienced broad-based growth</b>, as shown in the Growth Incidence Curve. 
+                    For most percentiles, incomes rise almost linearly — <b>roughly +0.6% cumulative growth per percentile</b> — reflecting consistent gains across the population. 
+                    Yet, several <i>regime breaks</i> emerge: <b>percentiles P62-P67 and P70-P80 temporarily outpace</b> the linear trend, while <b>P86-P89 and especially P92-P98 fall below it</b>. 
                     <br>
-                    Finally, the top 1% (P99) stand out again, with a cumulative growth of around 66%, exceeding the fitted line.
-                    These breakpoints highlight how inequality pressures are concentrated at the very top, despite broadly shared gains across most of the distribution.
-                    <br>
-                    <i>GitHub Repo: <a href="https://github.com/lukasvoss/sg_income_data_analysis/tree/main" target="_blank">Link</a></i>, <i>Data Source:</i> <a href="https://data.gov.sg/datasets/d_f394f202534237671d39b17bd3b506ec/view" target="_blank">Link</a></i>
+                    Finally, the <b>top 1% (P99)</b> stand out again, with a <b>cumulative growth of around 66%</b>, exceeding the fitted line.
+                    These breakpoints highlight how <b>inequality pressures are concentrated at the very top</b>, despite broadly shared gains across most of the distribution.
+
+                    <i>GitHub Repo:</i> <a href="https://github.com/lukasvoss/sg_income_data_analysis/tree/main" target="_blank">Link</a>, <i>Data Source:</i> <a href="https://data.gov.sg/datasets/d_f394f202534237671d39b17bd3b506ec/view" target="_blank">Link</a></i>
                 </p>
             </div>
         </div>
@@ -49,20 +49,20 @@
                 <h4>Quant Research Challenge: Explaining Electriciy Prices in DE & FR (2024)</h4>
                 <p>
                     By the time of submission, my solution ranked in the <b>top 9% of all global participants</b>.
-                    <br><br>
+                    <br>
                     This project was part of a quantitative research challenge by the Quant Hedge Fund QRT where the goal was to explain daily price variations 
                     for 24-hour electricity futures in France (FR) and Germany (DE). <a href="https://challengedata.ens.fr/participants/challenges/97/">Link to the challenge</a>
                     <br><br>
-                    My approach focused on <b>country-specific models</b>: using a LightGBM regressor for Germany and a regularized Elastic Net for France. 
+                    My approach focused on <b>country-specific models</b>: using a <b>LightGBM regressor for Germany</b> and a <b>regularized Elastic Net for France</b>. 
                     To improve predictive power, I engineered features such as cross-border flow differentials, renewable production bundles, 
                     and weather-demand interactions. Hyperparameter optimization was applied to maximize <i>Spearman rank correlation</i>, 
                     ensuring the models captured directional movements in futures prices. <br>
-                    The figure on the left shows the <b>permutation importance analysis</b> for the German model. 
+                    The figure on the left shows the <b>permutation importance analysis</b> for the German model over 200 iterations. 
                     It highlights that net exports, wind generation, and solar spreads between France and Germany were the most influential 
                     drivers of daily price variation. France required heavier regularization due to noisier patterns, 
                     reflecting structural differences between the two markets.
                     <br>
-                    <i>GitHub Repo: <a href="https://github.com/lukasvoss/forecast_electricity_futures_QRT_challenge" target="_blank">Link</a></i>
+                    <i>GitHub Repo:</i> <a href="https://github.com/lukasvoss/forecast_electricity_futures_QRT_challenge" target="_blank">Link</a>
                 </p>
             </div>
         </div>
@@ -72,11 +72,13 @@
             <div class="portfolio-entry-content">
                 <h4>Multivariate Bicycle Codes (2024)</h4>
                 <p>Quantum error correction suppresses noise in quantum systems to allow for high-precision computations. 
-                    In this work, we introduce Multivariate Bicycle (MB) Quantum Low-Density Parity-Check (QLDPC) codes, via an extension of the framework developed by Bravyi <i>et al.</i> [Nature, 627, 778-782 (2024)] and particularly focus on Trivariate Bicycle (TB) codes. 
-                    Unlike the weight-6 codes proposed in their study, we offer concrete examples of weight-4 and weight-5 TB-QLDPC codes which promise to be more amenable to near-term experimental setups. We show that our TB-QLDPC codes up to weight-6 have a bi-planar structure. Further, most of our new codes can also be arranged in a two-dimensional toric layout, and have substantially better encoding rates than comparable surface codes while offering similar error suppression capabilities.
-                    For example, we can encode 4 logical qubits with distance 5 into 30 physical qubits with weight-5 check measurements, while a surface code with these parameters requires 100 physical qubits. 
-                    The high encoding rate and compact layout make our codes highly suitable candidates for near-term hardware implementations, paving the way for a realizable quantum error correction protocol.
-                    <br>The picture on the left is Fig. 1 in our paper showing the Tanner graph for our weight-5 [[30, 4, 5]] code. 
+                    Quantum error correction suppresses noise in quantum systems to allow for high-precision computations. 
+                    In this work, we introduce <b>Multivariate Bicycle (MB)</b> Quantum Low-Density Parity-Check (<b>QLDPC</b>) codes, via an extension of the framework developed by Bravyi <i>et al.</i> [Nature, 627, 778-782 (2024)] and particularly focus on <b>Trivariate Bicycle (TB) codes</b>. 
+                    Unlike the weight-6 codes proposed in their study, <b>we offer</b> concrete examples of <b>weight-4 and weight-5 TB-QLDPC codes</b> which promise to be more amenable to near-term experimental setups. 
+                    We show that our <b>TB-QLDPC codes up to weight-6 have a bi-planar structure</b>. Further, most of our new codes can also be arranged in a <b>two-dimensional toric layout</b>, and have <b>substantially better encoding rates than comparable surface codes</b> while offering similar error suppression capabilities.
+                    For example, we can <b>encode 4 logical qubits with distance 5 into 30 physical qubits with weight-5 check measurements</b>, while a surface code with these parameters requires 100 physical qubits. 
+                    The <b>high encoding rate and compact layout</b> make our codes highly suitable candidates for <b>near-term hardware implementations</b>, paving the way for a realizable quantum error correction protocol.
+                    <br>The picture on the left is Fig. 1 in our paper showing the Tanner graph for our <b>weight-5 [[30, 4, 5]] code</b>. 
                     <br><br><i>In collaboration with Sim Jian Xian, Tobias Haug, Kishor Bharti (National University of Singapore, TII Abu Dhabi, A*STAR Agency for Science & Technology Singapore)</i>
                     <br>
                     <i>Publication</i>: <a href="https://journals.aps.org/pra/abstract/10.1103/ll5p-z88p" target="_blank">Link</i></a>
@@ -89,27 +91,14 @@
             <img src="images/SpilloverNoise_comparison_reward_methods_infidelity_experiment_runtime.png" alt="Project 2 Image">
             <div class="portfolio-entry-content">
                 <h4>Context-aware gate calibration with Deep Reinforcement Learning (2024)</h4>
-                <p>The advent of scalable quantum computation relies on
-                    the possibility of executing quantum gates with high fi-
-                    delity. To do so, there is a need to design operations
-                    which are robust to a variety of noise sources. While
-                    many techniques exploiting both physical models and ex-
-                    perimental data have emerged in the past few years, few
-                    of them actually consider the noise inherent to the execu-
-                    tion of a specific quantum circuit context. In this work,
-                    we benchmark the importance of such noise on near-term
-                    superconducting quantum devices and propose a new dynamical 
-                    gate calibration method based on model-free
-                    reinforcement learning for its active suppression. We
-                    demonstrate the efficiency of the method by addressing a
-                    pulse optimization over a set of parameters that would be
-                    adjustable in real-time, provided that the control system
-                    is equipped with such real-time processing features. This
-                    means that no additional memory overhead should be required 
-                    in the control system to enable an adaptive and
-                    context-aware gate calibration. We envision our method
-                    to become a new tool in the calibration workflows enabling 
-                    the successful execution of complex quantum algorithms. 
+                <p>The advent of scalable quantum computation relies on the possibility of executing quantum gates with high fidelity. To do so, there is a need to design operations
+                    which are robust to a variety of noise sources. While many techniques exploiting both physical models and experimental data have emerged in the past few years, few
+                    of them actually consider the noise inherent to the execution of a specific quantum circuit context. In this work,
+                    we <b>benchmark</b> the importance of such <b>noise on near-term superconducting quantum devices</b> and <b>propose a new dynamical
+                    gate calibration method</b> based on <b>model-free reinforcement learning</b> for its active suppression. In particular, we employ <b>Proximal Policy Optimization (PPO)</b>, a <b>policy-gradient method</b> that improves stability during training.
+                    We <b>demonstrate</b> the <b>efficiency</b> of the method by addressing a <b>pulse optimization</b> over a <b>set of parameters</b> that would be <b>adjustable in real-time</b>, provided that the control system is equipped with such real-time processing features. This
+                    means that no additional memory overhead should be required in the control system to enable an adaptive and <b>context-aware gate calibration</b>. We envision our method
+                    to become a new tool in the calibration workflows enabling the successful execution of complex quantum algorithms.
                     We also open the door to a change of paradigm regarding the traditional gate model of quantum computation, enabling the seamless adjustment of those building blocks based on the context they are executed in.
                     <br>The provided pictures shows the average gate error (infidelity) over the training time of the Reinforcement Learning model if performed on a real quantum computer.
                     <br><br><i>In collaboration with Arthur Strauss & Hui Khoon Ng (Centre for Quantum Technologies, National University of Singapore)</i>
@@ -162,7 +151,7 @@
             <img src="images/network_theory_plot.png" alt="Project 4 Image">
             <div class="portfolio-entry-content">
                 <h4>Network Theory - An executive summary (2022)</h4>
-                <p>Provides a comprehensive overview of Network Theory, and introduces important concepts and phenomena such as Power-Law observations in distribution functions of a newtwork, the Bianconi-Barabási model, "winner-takes-all" and the spread of information in random networks.
+                <p>Provides a comprehensive overview of Network Theory, and introduces important concepts and phenomena such as <b>Power-Law observations in distribution functions</b> of a network, the <b>Bianconi-Barabási model</b>, <b>"winner-takes-all"</b> and the <b>spread of information in random networks</b>.
                 <br>The picture on the left provides a mapping between fitness of a network to Bose-Einstein condensates. (taken from Bianconi and Barabási, 2001)
                 <br><br><i>Graduate Seminar in Advanced Interdisciplinary Statistical Methods (Ulm University, Germany)</i>
                 <br>
@@ -175,7 +164,10 @@
             <img src="images/spin_interaction_illustration.png" alt="Project 5 Image">
             <div class="portfolio-entry-content">
                 <h4>Monte Carlo Simulations of NV centres as open quantum system (2021)</h4>
-                <p>Nitrogen Vacancy (NV) centres are a promising candidate for quantum information processing. In this work, we investigate the dynamics of an NV centre as open quantum systems using Monte Carlo simulations for a non-Markovian description. We describe the NV centres as a two-level system interacting with a bath <sup>13</sup>C nuclear spins in the carbon lattice. Spins are modeled by stochastic differential equations (Markovian quantum jump approach) leaning on ideas from a work by <a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.69.022115" target="_blank">Breuer (2004)</a>. We show that using a Markovian approach under a stochastic formalution of the von-Neumann equation, we can recover exact dynamics of a non-Markovian physical system as the NV centre in the presence of a bath. The simulation were performed in Matlab.
+                <p>Nitrogen Vacancy (NV) centres are a promising candidate for quantum information processing. In this work, we investigate the dynamics of an NV centre as open quantum systems using Monte Carlo simulations for a non-Markovian description. 
+                    We describe the NV centres as a two-level system interacting with a bath <sup>13</sup>C nuclear spins in the carbon lattice. <b>Spins are modeled by stochastic differential equations (Markovian quantum jump approach)</b> leaning on ideas from
+                    a work by <a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.69.022115" target="_blank">Breuer (2004)</a>. We show that using a Markovian approach under a stochastic formalution of the von-Neumann equation,
+                    we can <b>recover exact dynamics of a non-Markovian physical system</b> as the NV centre in the presence of a bath. <b>Numerical simulation in Matlab.</b>
                 <br>The picture on the left shows an illustration of two interacting spins.
                 <br><br><i>Honors Research Project @Institute for Complex Quantum Systems (Ulm University, Germany)</i>
                 <br>
