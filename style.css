@@ -101,6 +101,16 @@
     font-size: 14px;
 }
 
+.typewriter {
+    border-right: 2px solid #0D0A3A;
+    animation: blink-cursor 0.75s step-end infinite;
+}
+
+@keyframes blink-cursor {
+    from, to { border-color: transparent; }
+    50% { border-color: #0D0A3A; }
+}
+
 .what-im-looking-for {
     font-size: 18px;
 }
