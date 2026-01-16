@@ -17,11 +17,10 @@
 }
 
 .landing-page .home {
-    height: 100vh; /* Ensures the home section takes up the full viewport height */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     box-sizing: border-box;
 }
 .header {
@@ -98,6 +97,10 @@
     margin-left: 10vw; /* Adjust this value as needed */
 }
 
+.intro-text p {
+    font-size: 14px;
+}
+
 .what-im-looking-for {
     font-size: 18px;
 }
@@ -126,7 +129,7 @@
 } */
 
 .home-content p {
-    font-size: 20px;
+    font-size: 16px;
     margin: 20px 0 20px;
 }
 
@@ -389,6 +392,7 @@
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
+    color: #0D0A3A;
 }
 
 .portfolio-entry-content p {
@@ -497,6 +501,50 @@
     background-color: rgba(0, 170, 240, 0.1);
     color: #0D0A3A; /* Ensure color remains consistent */
 }
+
+.social-icons .cv-text {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* ===== Portfolio Slider ===== */
+.portfolio-slider {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.portfolio-slider img {
+    width: 100%;
+    display: none;
+}
+
+.portfolio-slider img.active {
+    display: block;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 16px;
+    z-index: 10;
+}
+
+.slider-btn:hover {
+    background: rgba(0,0,0,0.7);
+}
+
+.slider-btn.prev { left: 10px; }
+.slider-btn.next { right: 10px; }
 
 /* ===== Tablet Adjustments (min-width: 769px and max-width: 1024px) ===== */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -638,5 +686,38 @@
         width: 100%;
         padding: 0 10px;
     }
+
+    .portfolio-slider {
+        position: relative;
+        width: 100%;
+        max-width: 420px;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .portfolio-slider img {
+        width: 100%;
+        display: none;
+        transition: opacity 0.4s ease;
+    }
+
+    .portfolio-slider img.active {
+        display: block;
+    }
+
+    .slider-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0,0,0,0.5);
+        color: white;
+        border: none;
+        padding: 6px 10px;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    .slider-btn.prev { left: 8px; }
+    .slider-btn.next { right: 8px; }
 
 }
