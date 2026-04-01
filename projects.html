@@ -18,15 +18,17 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/favicon.png" type="image/png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="js/theme-toggle.js"></script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to content</a>
 
     <header class="header">
         <a href="index.html" class="logo">Lukas.</a>
-        <button class="menu-toggle" aria-label="Toggle navigation menu">
-            <i class='bx bx-menu'></i>
-        </button>
+        <div style="display:flex;align-items:center;gap:0.5rem">
+            <button class="theme-toggle" aria-label="Toggle dark mode"><i class='bx bx-moon'></i></button>
+            <button class="menu-toggle" aria-label="Toggle navigation menu"><i class='bx bx-menu'></i></button>
+        </div>
         <nav class="navbar" role="navigation" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
