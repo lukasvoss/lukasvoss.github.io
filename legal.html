@@ -1,65 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio - Lukas Voss</title>
-        <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
-        <link rel="icon" href="images/favicon.png" type="image/png"> <!-- Favicon for .png format -->
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Legal notice and privacy information for lukasvoss.com.">
+    <meta name="view-transition" content="same-origin">
+    <title>Legal Notice - Lukas Voss</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
     <header class="header">
         <a href="index.html" class="logo">Lukas.</a>
-        <nav class="navbar">
+        <button class="menu-toggle" aria-label="Toggle navigation menu">
+            <i class='bx bx-menu'></i>
+        </button>
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
-            <a href="projects.html" class="active">Projects</a>
+            <a href="projects.html">Projects</a>
             <a href="engagements.html">Engagements</a>
         </nav>
     </header>
-    <style>
-        body {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #fff;
-            overflow-y: scroll; /* Forces a vertical scrollbar, even if not needed */
-            color: #333;
-            margin: 0;
-            padding: 10%;
-        }
 
-        .legal-header {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            border-bottom: 2px solid #333;
-            padding-bottom: 5px; /* Increased padding */
-            width: 100%;
-        }
+    <main id="main-content">
+        <div class="legal">
+            <div class="legal-header">Legal Notice</div>
+            <div class="legal-content">
+                <p><strong>Scope:</strong> This Legal Notice applies to the website available under the domains lukasvoss.github.io, as well as all public social media presences (LinkedIn, GitHub, Google Scholar).</p>
+                <p><strong>Data Controller:</strong> Lukas Voss</p>
+                <p><strong>Address:</strong> Mutiara Crest, 249183 Singapore</p>
+                <p><strong>E-Mail:</strong> firstname _ lastname [at] icloud dot com</p>
+                <p><strong>Types of Data collected:</strong> None</p>
+            </div>
+        </div>
+    </main>
 
-        .legal-content {
-            font-size: 16px;
-            line-height: 1.6;
-            margin-top: 20px;
-        }
+    <div class="page-footer-container">
+        <div class="email-text">
+            <b>Email</b>: firstname _ lastname [at] icloud dot com
+        </div>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/lukasvoss/" target="_blank" aria-label="LinkedIn profile"><i class='bx bxl-linkedin'></i></a>
+            <span id="email-icon"></span>
+            <a href="https://scholar.google.com/citations?user=lIDlyVMAAAAJ&hl=en&oi=ao" target="_blank" aria-label="Google Scholar profile"><i class='bx bxs-graduation'></i></a>
+            <a href="https://github.com/lukasvoss" target="_blank" aria-label="GitHub profile"><i class='bx bxl-github'></i></a>
+            <a href="files/cv_voss_research.pdf" target="_blank" aria-label="Download CV"><span class="cv-text">CV</span></a>
+        </div>
 
-        .legal-content p {
-            margin-bottom: 10px;
-        }
-
-        .legal-content strong {
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-    <div class="legal-header">Legal Notice</div>
-
-    <div class="legal-content">
-        <p><strong>Scope:</strong> This Legal Notice applies to the website available under the domains lukasvoss.github.io, as well as all public social media presences (LinkedIn, GitHub, Google Scholar).</p>
-        <p><strong>Data Controller:</strong> Lukas Voss</p>
-        <p><strong>Address:</strong> Mutiara Crest, 249183 Singapore</p>
-        <p><strong>E-Mail:</strong> firstname _ lastname [at] icloud dot com</p>
-        <p><strong>Types of Data collected:</strong> None</p>
+        <script type="text/javascript">
+            const encodedEmail = "bHVrYXNfdm9zc0BpY2xvdWQuY29t";
+            const decodedEmail = atob(encodedEmail);
+            const emailLink = `<a href="mailto:${decodedEmail}" aria-label="Send email"><i class='bx bxs-envelope'></i></a>`;
+            document.getElementById("email-icon").innerHTML = emailLink;
+        </script>
+        <footer class="site-footer">
+            <p>&copy; 2026 All rights reserved. <a href="legal.html">Legal notice</a></p>
+        </footer>
     </div>
+
+    <script src="js/menu-toggle.js"></script>
 </body>
 </html>

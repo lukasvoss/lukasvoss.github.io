@@ -1,520 +1,511 @@
-* {
+/* ===== Design Tokens ===== */
+:root {
+    /* Colors */
+    --color-bg: #ffffff;
+    --color-surface: #f8fafc;
+    --color-text: #0f172a;
+    --color-text-muted: #64748b;
+    --color-accent: rgb(249, 141, 0);
+    --color-nav-bg: #0f172a;
+    --color-nav-text: #e2e8f0;
+    --color-border: #e2e8f0;
+    --color-shadow: rgba(0, 0, 0, 0.06);
+    --color-shadow-hover: rgba(0, 0, 0, 0.1);
+
+    /* Typography */
+    --font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    --font-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+    --font-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+    --font-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+    --font-lg: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+    --font-xl: clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem);
+
+    /* Spacing */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.5rem;
+    --space-6: 2rem;
+    --space-8: 3rem;
+    --space-10: 4rem;
+    --space-12: 5rem;
+    --space-16: 8rem;
+
+    /* Layout */
+    --content-padding: 10%;
+    --max-content-width: 1200px;
+    --header-height: 60px;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-base: 0.3s ease;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 3px var(--color-shadow), 0 1px 2px var(--color-shadow);
+    --shadow-md: 0 1px 3px var(--color-shadow), 0 4px 12px var(--color-shadow);
+    --shadow-lg: 0 4px 6px var(--color-shadow), 0 10px 24px var(--color-shadow-hover);
+
+    /* Border radius */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+}
+
+/* ===== Dark Mode ===== */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-bg: #0f172a;
+        --color-surface: #1e293b;
+        --color-text: #e2e8f0;
+        --color-text-muted: #94a3b8;
+        --color-nav-bg: #020617;
+        --color-border: #334155;
+        --color-shadow: rgba(0, 0, 0, 0.3);
+        --color-shadow-hover: rgba(0, 0, 0, 0.4);
+    }
+
+    img {
+        filter: brightness(0.92);
+    }
+
+    .social-icons a {
+        border-color: var(--color-border);
+        color: var(--color-text) !important;
+    }
+
+    .timeline-bubble {
+        background-color: var(--color-text-muted);
+    }
+
+    .timeline:before {
+        background-color: var(--color-border);
+    }
+}
+
+/* ===== Reset & Base ===== */
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
-.body {
-    background: #ffffff;
+html {
+    scroll-behavior: smooth;
 }
 
-.landing-page {
-    min-height: 100vh;
-    overflow-y: scroll;  /*  Forces a vertical scrollbar, even if not needed */
-    display: flex;
-    flex-direction: column;
+body {
+    font-family: var(--font-family);
+    background: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.landing-page .home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    box-sizing: border-box;
+/* ===== Skip Link (Accessibility) ===== */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: var(--space-4);
+    background: var(--color-accent);
+    color: #fff;
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-sm);
+    z-index: 200;
+    font-weight: 600;
+    text-decoration: none;
 }
+
+.skip-link:focus {
+    top: var(--space-2);
+}
+
+/* ===== View Transitions ===== */
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-old(root) {
+    animation: fade-out 0.2s ease;
+}
+
+::view-transition-new(root) {
+    animation: fade-in 0.2s ease;
+}
+
+@keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ===== Header ===== */
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px; /* Define the height of the navigation bar */
-    padding: 20px 10%;
-    background: #0D0A3A;
+    height: var(--header-height);
+    padding: 0 var(--content-padding);
+    background: var(--color-nav-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
 
-.intro-list {
-    padding-left: 20px;
-    padding-top: 20px; /* adjust value as you like */
-}
-.intro-list li {
-  margin-bottom: 12px;   /* space between bullets */
-}
-
-.about, .portfolio {
-    padding: 60px 10%; /* Ensure all content stays within the header borders */
-    margin-top: 100px;
-    max-width: 100%; /* Make sure content doesn’t overflow */
+.logo {
+    color: var(--color-accent);
+    font-size: var(--font-lg);
+    text-decoration: none;
+    font-weight: 600;
 }
 
-.profile-photo {
-    width: 30vw; /* Set the width relative to the viewport width */
-    height: auto; /* Let the height adjust automatically to maintain the aspect ratio */
-    max-width: 600px; /* Set a maximum width to prevent it from getting too large on larger screens */
-    min-width: 180px; /* Set a minimum width to prevent it from getting too small on smaller screens */
-    border-radius: 50%; /* Keep the image circular */
-    object-fit: cover; /* Ensures the image is cropped from the center */
-    overflow: hidden; /* Ensures any overflow is hidden */
-    margin-top: 10px; /* Adds space above the image */
-    margin-bottom: 20px; /* Adds space below the image */
-    display: block; /* Ensure the image aligns properly */
-    margin-left: auto; /* Align the image to the right */
-    /* margin-right: 10px; Space between the image and the text */
+.navbar {
+    display: flex;
+    gap: var(--space-2);
+    align-items: center;
+}
+
+.navbar a {
+    font-size: var(--font-sm);
+    color: var(--color-nav-text);
+    text-decoration: none;
+    font-weight: 500;
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-sm);
+    transition: color var(--transition-base), background var(--transition-base);
+}
+
+.navbar a:hover {
+    color: var(--color-accent);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.navbar a.active {
+    color: var(--color-accent);
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-nav-text);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: var(--space-2);
+    line-height: 1;
+}
+
+/* ===== Home / Landing ===== */
+.landing-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .home {
-    flex: 1; /* Takes up the remaining space */
-    height: 300vh;
-    display: flex;
-    align-items: flex-start; /* Align the content at the top of the section */
-    justify-content: center;
-    padding: 0 10%;
-    overflow: hidden;
+    flex: 1;
+    display: grid;
+    place-items: center;
+    min-height: 100svh;
+    padding: var(--header-height) var(--content-padding) var(--space-8);
 }
 
 .home-content {
-    display: flex;
-    flex-direction: row;
-    max-width: 100%; /* Ensures content doesn't overflow */
-    align-items: center; /* Center content horizontally */
-    justify-content: center; /* Center content vertically */
-    margin-top: 0;
-    padding-top: 100px;
-    padding-bottom: 10px;
-    margin-right: 25%; /* Centers the content between the navigation bar's borders */
+    max-width: var(--max-content-width);
+    width: 100%;
+    padding-top: var(--space-8);
 }
 
 .home-intro {
-    width: 100%; /* Make sure the parent container is wide enough */
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-8);
+    width: 100%;
+}
+
+.profile-photo {
+    width: clamp(180px, 25vw, 400px);
+    height: clamp(180px, 25vw, 400px);
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-lg);
 }
 
 .intro-text {
-    width: 100%;
-    margin-left: 10vw; /* Adjust this value as needed */
+    flex: 1;
+}
+
+.intro-text h1 {
+    font-size: var(--font-xl);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--space-4);
 }
 
 .intro-text p {
-    font-size: 14px;
+    font-size: var(--font-sm);
+    color: var(--color-text-muted);
+    line-height: 1.7;
 }
 
+/* Typewriter cursor */
 .typewriter {
-    border-right: 2px solid #0D0A3A;
+    border-right: 2px solid var(--color-text);
     animation: blink-cursor 0.75s step-end infinite;
 }
 
 @keyframes blink-cursor {
     from, to { border-color: transparent; }
-    50% { border-color: #0D0A3A; }
+    50% { border-color: var(--color-text); }
 }
 
-.what-im-looking-for {
-    font-size: 18px;
-}
-.what-im-looking-for h3 {
-    font-size: 22px; /* Adjust the font size as needed */
-}
-
-.home-content .btn-box {
-    display: flex;
-    justify-content: space-between;
-    color: #0D0A3A;
-    width: 345px;
-    height: 50px;
-}
-
-.home-content h1 {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.2;
-}
-
-/* .home-content h3 {
-    font-size: 32px;
-    font-weight: 700;
-    color: #00abf0;
-} */
-
-.home-content p {
-    font-size: 16px;
-    margin: 20px 0 20px;
-}
-
-.logo {
-    color: rgb(249, 141, 0);
-    font-size: 24px;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.navbar a {
-    font-size: 18px;
-    color: #ededed;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    transition: .3s;
-}
-
-.navbar a:hover,
-.navbar a.active {
-    color: rgb(249, 141, 0);
-}
-
-.btn-box a {
-    position: relateive;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 100%;
-    background: #0D0A3A;
-    border: 2px solid #0D0A3A;
-    border-radius: 8px;
-    font-size: 19px;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 1px;
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
-}
-
-.btn-box a:nth-child(1) {
-    background: transparent;
-    color: #0D0A3A;
-}
-
-.btn-box a:nth-child(1)::before {
-    background: #ffffff;
-}
-
-.btn-box a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: #0D0A3A;
-    z-index: -1;
-    transition: .5s;
-}
-
-.home-sci {
-    position: absolute;
-    bottom: 40px;
-    width: 100%; 
-    display: flex;
-    /* justify-content: center;  */
-    gap: 30px;
-}
-
-.home-sci a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px; 
-    height: 50px;
-    background: transparent;
-    border: 2px solid #0D0A3A;
-    border-radius: 50%;
-    color: #0D0A3A;
-    font-size: 24px;
-    text-decoration: none;
-    transition: background 0.3s ease;
-}
-
-.home-sci a:hover {
-    background: rgba(0, 170, 240, 0.1);
+/* ===== About / CV ===== */
+.about,
+.portfolio {
+    padding: var(--space-12) var(--content-padding);
+    padding-top: calc(var(--header-height) + var(--space-10));
+    max-width: 100%;
 }
 
 .cv-section {
-    margin-bottom: 50px;
+    margin-bottom: var(--space-10);
 }
 
 .cv-section h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #333;
-    padding-bottom: 4px;
-    width: 100%; /* Adjust this to match the width needed */
+    font-size: var(--font-lg);
+    margin-bottom: var(--space-5);
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: var(--space-2);
 }
 
-/* Timeline Styling */
+/* Timeline */
 .timeline {
     position: relative;
     display: flex;
     flex-direction: column;
 }
 
-/* Vertical line connecting bubbles */
 .timeline:before {
     content: '';
     position: absolute;
     top: 0;
     bottom: 0;
-    left: calc(150px + 20px + 10px); /* Center the line between logo and content */
+    left: calc(100px + 20px + 10px);
     width: 2px;
-    background-color: #333;
+    background-color: var(--color-border);
 }
 
 .timeline-entry {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Ensure the logo, bubble, and content are aligned horizontally */
-    margin-bottom: 50px;
+    justify-content: flex-start;
+    margin-bottom: var(--space-10);
     position: relative;
 }
 
 .timeline-logo {
-    width: 100px; /* Increased size for the logos */
+    width: 100px;
     height: auto;
-    margin-right: 20px; /* Space between the logo and the bubble */
+    margin-right: var(--space-5);
+    flex-shrink: 0;
 }
 
 .timeline-logo img {
     width: 100%;
     height: auto;
-    border: none; /* Remove the circle border */
+    border: none;
 }
 
 .timeline-bubble {
-    width: 12px; /* Size of the bubble */
+    width: 12px;
     height: 12px;
-    background-color: #333;
+    background-color: var(--color-text-muted);
     border-radius: 50%;
     position: relative;
-    left: 55px; /* Center the line between logo and content */
-    z-index: 1; /* Ensure the bubble is above the line */
-    margin-right: 120px; /* Space between bubble and content */
+    left: 35px;
+    z-index: 1;
+    margin-right: calc(var(--space-8) + 40px);
+    flex-shrink: 0;
 }
 
-/* Text box for the timeline content */
 .timeline-content {
-    background-color: #fff;
-    padding: 15px 20px;
-    border-radius: 8px;
-    width: calc(100% - 190px - 40px - 20px); /* Ensure consistent width for content boxes */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-surface);
+    padding: var(--space-5) var(--space-6);
+    border-radius: var(--radius-md);
+    width: calc(100% - 190px - 40px - 20px);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.timeline-content ul {
-    padding-left: 20px; /* Adjust the left padding to align with the content */
-    margin-bottom: 10px; /* Adds space below the list */
-}
-
-.timeline-content li {
-    margin-bottom: 5px; /* Adds space between list items */
-    line-height: 1.5; /* Improves readability */
+.timeline-content:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
 }
 
 .timeline-content h4 {
-    margin: 0 0 5px;
-    font-size: 18px;
+    margin: 0 0 var(--space-1);
+    font-size: var(--font-base);
+    color: var(--color-text);
 }
 
 .timeline-content p {
-    margin: 5px 0;
-    font-size: 16px;
-    color: #555;
+    margin: var(--space-1) 0;
+    font-size: var(--font-sm);
+    color: var(--color-text-muted);
 }
 
-.cv-list {
-  padding-left: 20px;     /* indent bullets */
-  margin-bottom: 0;
+.timeline-content ul {
+    padding-left: var(--space-5);
+    margin-bottom: var(--space-3);
 }
 
-.cv-list li {
-  margin-bottom: 5px;     /* space between bullets */
-  line-height: 1.5;       /* comfortable reading */
+.timeline-content li {
+    margin-bottom: var(--space-1);
+    line-height: 1.6;
+    font-size: var(--font-sm);
+    color: var(--color-text-muted);
 }
 
+/* About extra sections */
 .about-section {
-    margin-bottom: 40px; /* Space between sections */
-    padding: 0 10%; /* Ensure all content stays within the header borders */
+    margin-bottom: var(--space-8);
+    padding: 0 var(--content-padding);
 }
 
 .section-header {
-    position: relative;
-    margin-bottom: 20px; /* Space between header and content */
+    margin-bottom: var(--space-5);
 }
 
 .section-header h3 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-size: var(--font-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-3);
 }
 
 .section-header hr {
     border: 0;
     height: 2px;
-    background-color: #333; /* Color of the horizontal line */
-    width: 100%; /* Span the entire page width */
+    background-color: var(--color-border);
 }
 
 .section-content {
-    background-color: #f9f9f9; /* Light background for textbox */
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-    line-height: 1.5; /* Improves readability */
+    background-color: var(--color-surface);
+    padding: var(--space-5);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+    line-height: 1.6;
+    font-size: var(--font-sm);
+    color: var(--color-text-muted);
 }
 
-/* General Portfolio Styling */
-.portfolio-summary {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 50px;
-    line-height: 1.5; /* Improves readability */
+.cv-list {
+    padding-left: var(--space-5);
+    margin-bottom: 0;
+}
+
+.cv-list li {
+    margin-bottom: var(--space-1);
+    line-height: 1.6;
 }
 
 .full-cv-footer {
-    padding: 0 10%;
+    padding: 0 var(--content-padding);
+    font-size: var(--font-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-6);
 }
 
+.full-cv-footer a {
+    color: var(--color-accent);
+}
+
+/* ===== Portfolio ===== */
 .portfolio h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #333;
-    padding-bottom: 4px;
-    width: 100%; /* Adjust this to match the width needed */
+    font-size: var(--font-lg);
+    margin-bottom: var(--space-5);
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: var(--space-2);
+}
+
+.portfolio-summary {
+    font-size: var(--font-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-10);
+    line-height: 1.7;
 }
 
 .portfolio-entry {
     display: flex;
-    align-items: center;
-    margin-bottom: 50px;
+    align-items: flex-start;
+    margin-bottom: var(--space-10);
+    gap: var(--space-8);
 }
 
 .portfolio-entry img {
-    max-width: 300px; /* Ensures consistent image size across portfolio entries */
-    height: auto; /* Maintains the aspect ratio */
-    margin-right: 40px; /* Consistent spacing between the image and the text */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    height: auto;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.portfolio-entry img:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
 }
 
 .portfolio-entry-content h4 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #0D0A3A;
+    font-size: var(--font-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-3);
+    color: var(--color-text);
 }
 
 .portfolio-entry-content p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.5;
+    font-size: var(--font-sm);
+    color: var(--color-text-muted);
+    line-height: 1.7;
 }
 
-/* Indentation for Bullet Points */
+.portfolio-entry-content a {
+    color: var(--color-accent);
+    transition: opacity var(--transition-fast);
+}
+
+.portfolio-entry-content a:hover {
+    opacity: 0.8;
+}
+
 .indented-list {
-    padding-left: 40px; /* Increase this value to indent more */
-    margin-left: 30px; /* Optional: You can add margin as well to adjust */
-    color: #555;
+    padding-left: var(--space-8);
+    margin-left: var(--space-5);
+    color: var(--color-text-muted);
+    font-size: var(--font-sm);
 }
 
-/* Specific Styling for Vertical Image in Anki Project */
 .large-vertical-image {
-    width: 300px; /* Match this with the width of other images */
-    height: auto; /* Keep the aspect ratio intact */
-    margin-right: 40px; /* Keep consistent spacing */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.home-sci {
-    display: flex;
-    gap: 20px; /* Space between icons */
-}
-
-.site-footer {
-    text-align: center;
-    font-size: 14px;
-    color: #333;
-    padding-top: 40px; /* Adjust this value as needed */
-    margin-bottom: 40px; /* Adjust this value as needed */
-}
-
-.footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    position: relative;
-    bottom: 2px; /* Positions the footer slightly above the bottom */
-    left: 0;
-    text-align: center;
-    margin-top: auto;
-    z-index: 10; /* Ensures it doesn't overlap content */
-}
-
-.page-footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center the content horizontally */
-    justify-content: flex-end; /* Push the footer to the bottom of the page */
-    padding: 20px 0; /* Add some padding to the container */
-    text-align: center; /* Center the text */
-    box-sizing: border-box;
-}
-
-.email-text {
-    font-size: 16px;
-    margin-bottom: 20px;
-    /* font-weight: bold; */
-}
-
-.page-footer-container .social-icons {
-    margin-bottom: 10px; /* Add space between the icons and the footer text */
-}
-
-.page-footer-container .site-footer {
-    font-size: 14px;
-    color: #333;
-}
-
-.site-footer {
-    text-align: center;
-    font-size: 14px;
-    padding-top: 20px; /* Space above the footer text */
-    margin-bottom: 40px; /* Space below the footer */
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    background-color: rgba(255, 255, 255, 0.8); /* Temporary light background for visibility */
-}
-
-.social-icons a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border: 2px solid #0D0A3A;
-    border-radius: 50%;
-    color: #0D0A3A !important; /* Force the icon color */
-    font-size: 24px;
-    text-decoration: none;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-.social-icons a:hover {
-    background-color: rgba(0, 170, 240, 0.1);
-    color: #0D0A3A; /* Ensure color remains consistent */
-}
-
-.social-icons .cv-text {
-    font-size: 16px;
-    font-weight: 700;
+    width: 300px;
+    height: auto;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
 }
 
 /* ===== Portfolio Slider ===== */
@@ -523,12 +514,14 @@
     width: 100%;
     max-width: 420px;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: var(--radius-md);
+    flex-shrink: 0;
 }
 
 .portfolio-slider img {
     width: 100%;
     display: none;
+    transition: opacity 0.4s ease;
 }
 
 .portfolio-slider img.active {
@@ -539,195 +532,353 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 8px 12px;
+    padding: var(--space-2) var(--space-3);
     cursor: pointer;
     border-radius: 50%;
-    font-size: 16px;
+    font-size: var(--font-base);
     z-index: 10;
+    transition: background var(--transition-fast);
 }
 
 .slider-btn:hover {
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .slider-btn.prev { left: 10px; }
 .slider-btn.next { right: 10px; }
 
-/* ===== Tablet Adjustments (min-width: 769px and max-width: 1024px) ===== */
+/* ===== Engagements ===== */
+.engagements {
+    padding: var(--space-12) var(--content-padding);
+    padding-top: calc(var(--header-height) + var(--space-10));
+}
+
+.engagements h3 {
+    font-size: var(--font-lg);
+    margin-bottom: var(--space-5);
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: var(--space-2);
+}
+
+.engagements .intro {
+    margin-bottom: var(--space-6);
+    font-size: var(--font-sm);
+    color: var(--color-text-muted);
+}
+
+#map {
+    height: 80vh;
+    width: 100%;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+}
+
+/* ===== Legal ===== */
+.legal {
+    padding: var(--space-12) var(--content-padding);
+    padding-top: calc(var(--header-height) + var(--space-10));
+    max-width: 800px;
+}
+
+.legal-header {
+    font-size: var(--font-lg);
+    font-weight: 700;
+    margin-bottom: var(--space-5);
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: var(--space-2);
+}
+
+.legal-content {
+    font-size: var(--font-sm);
+    line-height: 1.7;
+    color: var(--color-text-muted);
+}
+
+.legal-content p {
+    margin-bottom: var(--space-3);
+}
+
+.legal-content strong {
+    color: var(--color-text);
+}
+
+/* ===== Footer ===== */
+.page-footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-8) 0 var(--space-6);
+    text-align: center;
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--space-8);
+}
+
+.email-text {
+    font-size: var(--font-sm);
+    margin-bottom: var(--space-5);
+    color: var(--color-text-muted);
+}
+
+.email-text b {
+    color: var(--color-text);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-5);
+    margin-bottom: var(--space-4);
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border: 2px solid var(--color-border);
+    border-radius: 50%;
+    color: var(--color-text) !important;
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: background var(--transition-base), transform var(--transition-fast), border-color var(--transition-base);
+}
+
+.social-icons a:hover {
+    background-color: rgba(249, 141, 0, 0.1);
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+}
+
+.social-icons .cv-text {
+    font-size: var(--font-sm);
+    font-weight: 700;
+}
+
+.site-footer {
+    text-align: center;
+    font-size: var(--font-xs);
+    color: var(--color-text-muted);
+    padding-top: var(--space-4);
+}
+
+.site-footer a {
+    color: var(--color-text-muted);
+    transition: color var(--transition-fast);
+}
+
+.site-footer a:hover {
+    color: var(--color-accent);
+}
+
+/* ===== Scroll-Driven Reveal Animations ===== */
+@supports (animation-timeline: view()) {
+    .portfolio-entry,
+    .timeline-entry,
+    .about-section {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: reveal linear both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 30%;
+    }
+
+    @keyframes reveal {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Fallback: items are visible when animation-timeline is not supported */
+@supports not (animation-timeline: view()) {
+    .portfolio-entry,
+    .timeline-entry,
+    .about-section {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ===== Tablet (769px - 1024px) ===== */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-    /* 1. Block-style (left-aligned) text for subpages */
-    .about, 
-    .portfolio, 
-    .about-section, 
-    .portfolio-entry, 
-    .portfolio-entry-content, 
-    .timeline-content {
-      text-align: left;
-    }
-    
-    /* 2. Increase top padding in the home section so the profile picture isn’t overlapped by the fixed header */
-    .home-content {
-      padding-top: 100px;
-    }
-
-    /* Center and enlarge the profile picture */
-    .profile-photo {
-        margin-left: 160px;
-        width: 50vw;                  /* Larger picture on tablet */
-    }
-    
-    /* 3. For the About section timeline: remove the vertical line and dots, then stack the elements vertically */
-    .timeline:before {
-      display: none;
-    }
-    .timeline-entry {
-      flex-direction: column;
-      align-items: center;  /* Centers the logo horizontally */
-      text-align: left;     /* Ensures the text remains block-style */
-      margin-bottom: 30px;
-    }
-    .timeline-logo {
-      width: 120px;             /* Reduced width for tablet */
-      margin-right: 0;         /* Remove right-margin */
-      margin-bottom: 10px;      /* Add spacing below the logo */
-    }
-    .timeline-bubble {
-      display: none;           /* Hide the dot/bubble */
-    }
-    .timeline-content {
-      width: 100%;             /* Use full container width */
-      padding: 10px;           /* Adjust padding as needed */
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);       /* Optional: remove shadow for a cleaner look */
-    }
-
-    /* 5. Portfolio Subpage: Stack the media element (image) on top of the text */
-    .portfolio-entry {
+    .home-intro {
         flex-direction: column;
         align-items: center;
-        text-align: center;
     }
-    .portfolio-entry img {
-        margin: 0 0 20px 0;  /* Remove right margin and add spacing below the image */
-    }
-    .portfolio-entry-content {
-        width: 100%;
-        padding: 0 10px;
-    }
-  }
-  
-  /* ===== Mobile Adjustments (max-width: 768px) ===== */
-@media screen and (max-width: 768px) {
-    /* 1. Block-style (left-aligned) text on About page elements */
-    .about,
-    .about-section,
-    .timeline-content {
+
+    .intro-text {
         text-align: left;
     }
-    
-    /* 2. Increase top padding in the home section so the profile picture isn’t overlapped by the header */
-    .home-content {
-        padding-top: 80px;
-    }
-    .home-content h1 {
-        font-size: 24px;
-    }
-    
-    /* Center the profile picture properly on mobile */
+
     .profile-photo {
-        display: block;
-        margin-left: 64px;
-        width: 70vw;  /* Adjust as needed */
+        width: clamp(200px, 40vw, 350px);
+        height: clamp(200px, 40vw, 350px);
     }
-    
-    /* Reduce the font size of the home intro text for mobile */
-    .intro-text p {
-        font-size: 16px;  /* Reduced for a better mobile fit */
-    }
-    
-    /* 3. Adjust the About page timeline: remove vertical line and dots, stack the elements vertically */
+
     .timeline:before {
         display: none;
     }
+
     .timeline-entry {
         flex-direction: column;
         align-items: center;
-        margin-bottom: 20px;
+        text-align: left;
+        margin-bottom: var(--space-6);
     }
+
+    .timeline-logo {
+        width: 100px;
+        margin-right: 0;
+        margin-bottom: var(--space-3);
+    }
+
+    .timeline-bubble {
+        display: none;
+    }
+
+    .timeline-content {
+        width: 100%;
+        padding: var(--space-4);
+    }
+
+    .portfolio-entry {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-entry img {
+        margin: 0 0 var(--space-5) 0;
+        max-width: 80%;
+    }
+
+    .portfolio-entry-content {
+        width: 100%;
+    }
+}
+
+/* ===== Mobile (max-width: 768px) ===== */
+@media screen and (max-width: 768px) {
+    :root {
+        --content-padding: 6%;
+    }
+
+    /* Hamburger menu */
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        background: var(--color-nav-bg);
+        flex-direction: column;
+        padding: var(--space-4) var(--content-padding);
+        gap: 0;
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform var(--transition-base), opacity var(--transition-base);
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .navbar.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .navbar a {
+        padding: var(--space-3) var(--space-4);
+        font-size: var(--font-base);
+        border-radius: var(--radius-sm);
+    }
+
+    /* Home */
+    .home {
+        min-height: auto;
+        padding-top: calc(var(--header-height) + var(--space-6));
+        padding-bottom: var(--space-6);
+    }
+
+    .home-intro {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-5);
+    }
+
+    .profile-photo {
+        width: clamp(150px, 50vw, 280px);
+        height: clamp(150px, 50vw, 280px);
+    }
+
+    .intro-text h1 {
+        font-size: clamp(1.25rem, 4vw, 1.75rem);
+    }
+
+    /* About */
+    .about,
+    .portfolio {
+        padding-top: calc(var(--header-height) + var(--space-6));
+    }
+
+    .timeline:before {
+        display: none;
+    }
+
+    .timeline-entry {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: var(--space-5);
+    }
+
     .timeline-logo {
         width: 80px;
         margin-right: 0;
-        margin-bottom: 10px;
+        margin-bottom: var(--space-3);
     }
+
     .timeline-bubble {
         display: none;
     }
+
     .timeline-content {
         width: 100%;
-        padding: 10px;
-        font-size: 15px;
-        /* Retain the shadow effect */
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-    
-    /* 4. Adjust navigation bar: keep all subpage buttons in one row with reduced spacing */
-    .navbar {
-        white-space: nowrap;
-        overflow-x: auto;  /* Allows horizontal scrolling if needed */
-    }
-    .navbar a {
-        margin-left: 10px;
-        font-size: 16px;
+        padding: var(--space-4);
     }
 
-    /* 5. Portfolio Subpage: Stack the media element (image) on top of the text */
+    /* Portfolio */
     .portfolio-entry {
         flex-direction: column;
         align-items: center;
-        text-align: left;
     }
+
     .portfolio-entry img {
-        margin: 0 0 20px 0;
         max-width: 90%;
+        margin: 0 0 var(--space-5) 0;
     }
+
     .portfolio-entry-content {
         width: 100%;
-        padding: 0 10px;
     }
 
     .portfolio-slider {
-        position: relative;
-        width: 100%;
-        max-width: 420px;
-        overflow: hidden;
-        border-radius: 10px;
-    }
-
-    .portfolio-slider img {
-        width: 100%;
-        display: none;
-        transition: opacity 0.4s ease;
-    }
-
-    .portfolio-slider img.active {
-        display: block;
+        max-width: 100%;
     }
 
     .slider-btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(0,0,0,0.5);
-        color: white;
-        border: none;
-        padding: 6px 10px;
-        cursor: pointer;
-        border-radius: 50%;
+        padding: var(--space-2);
     }
 
-    .slider-btn.prev { left: 8px; }
-    .slider-btn.next { right: 8px; }
-
+    /* Engagements */
+    .engagements {
+        padding-top: calc(var(--header-height) + var(--space-6));
+    }
 }

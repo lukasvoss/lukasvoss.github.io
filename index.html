@@ -2,72 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lukas Voss - Quantitative Researcher with expertise in physics, statistical modeling, and applied machine learning. Currently at Qube Research & Technologies.">
+    <meta property="og:title" content="Lukas Voss | Quantitative Researcher">
+    <meta property="og:description" content="Quantitative researcher with a strong academic foundation in Physics and applied machine learning.">
+    <meta property="og:image" content="https://lukasvoss.com/images/personal_picture_cqt_optimized.jpg">
+    <meta property="og:url" content="https://lukasvoss.com/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="view-transition" content="same-origin">
     <title>Lukas Voss | Personal Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/favicon.png" type="image/png"> <!-- Favicon for .png format -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-
-</html>
-
 <body class="landing-page">
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
     <header class="header">
-        <a href="#" class="logo">Lukas.</a>
-        <nav class="navbar">
-            <a href="#" class="active">Home</a>
+        <a href="index.html" class="logo">Lukas.</a>
+        <button class="menu-toggle" aria-label="Toggle navigation menu">
+            <i class='bx bx-menu'></i>
+        </button>
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <a href="index.html" class="active">Home</a>
             <a href="about.html">About</a>
             <a href="projects.html">Projects</a>
             <a href="engagements.html">Engagements</a>
         </nav>
     </header>
 
-    <section class="home">
-        <div class="home-content">
-            <div class="home-intro">
-                <img src="images/personal_picture_cqt.jpg" alt="Lukas Voss" class="profile-photo"> 
-                <div class="intro-text">
-                    <h1>Hi, I <span class="typewriter"></span></h1>
-                    
-                    <p>
-                        <b>Quantitative researcher</b> with a strong academic foundation in <b>Physics (MSc & BSc)</b> and <b>applied machine learning</b>, recently
-                        contributing to global Equity alpha and high-frequency execution research at <b>Qube Research & Technologies</b>. 
-                        <br> Experienced in building scalable research infrastructure and signal pipelines with expertise in Python, cloud computing and <b>statistical modeling</b>.
-                        <br> Background includes AI-driven
-                        quantum computing research and a proven track record across quantitative finance and deep tech environments.
-                    </p>
-
+    <main id="main-content">
+        <section class="home">
+            <div class="home-content">
+                <div class="home-intro">
+                    <img src="images/personal_picture_cqt_optimized.jpg" alt="Portrait photo of Lukas Voss" class="profile-photo" width="800" height="587">
+                    <div class="intro-text">
+                        <h1>Hi, I <span class="typewriter"></span></h1>
+                        <p>
+                            <b>Quantitative researcher</b> with a strong academic foundation in <b>Physics (MSc & BSc)</b> and <b>applied machine learning</b>, recently
+                            contributing to global Equity alpha and high-frequency execution research at <b>Qube Research & Technologies</b>.
+                            <br> Experienced in building scalable research infrastructure and signal pipelines with expertise in Python, cloud computing and <b>statistical modeling</b>.
+                            <br> Background includes AI-driven
+                            quantum computing research and a proven track record across quantitative finance and deep tech environments.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
+
     <div class="page-footer-container">
         <div class="email-text">
             <b>Email</b>: firstname _ lastname [at] icloud dot com
         </div>
         <div class="social-icons">
-            <a href="https://www.linkedin.com/in/lukasvoss/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-            <!-- Placeholder for the email link -->
-            <!-- <span id="email-icon"></span> -->
-            <a href="https://scholar.google.com/citations?user=lIDlyVMAAAAJ&hl=en&oi=ao" target="_blank"><i class='bx bxs-graduation'></i></a>
-            <a href="https://github.com/lukasvoss" target="_blank"><i class='bx bxl-github' style='color:#0D0A3A'></i></a>
-            <a href="files/cv_voss_research.pdf" target="_blank"><span class="cv-text">CV</span></a>
+            <a href="https://www.linkedin.com/in/lukasvoss/" target="_blank" aria-label="LinkedIn profile"><i class='bx bxl-linkedin'></i></a>
+            <span id="email-icon"></span>
+            <a href="https://scholar.google.com/citations?user=lIDlyVMAAAAJ&hl=en&oi=ao" target="_blank" aria-label="Google Scholar profile"><i class='bx bxs-graduation'></i></a>
+            <a href="https://github.com/lukasvoss" target="_blank" aria-label="GitHub profile"><i class='bx bxl-github'></i></a>
+            <a href="files/cv_voss_research.pdf" target="_blank" aria-label="Download CV"><span class="cv-text">CV</span></a>
         </div>
-        
+
         <script type="text/javascript">
-            // Base64 encoded email address
             const encodedEmail = "bHVrYXNfdm9zc0BpY2xvdWQuY29t";
-            // Decode the email address
             const decodedEmail = atob(encodedEmail);
-            // Create the mailto link with an envelope icon
-            const emailLink = `<a href="mailto:${decodedEmail}"><i class='bx bxs-envelope'></i></a>`;
-            // Insert the email icon into the social icons
+            const emailLink = `<a href="mailto:${decodedEmail}" aria-label="Send email"><i class='bx bxs-envelope'></i></a>`;
             document.getElementById("email-icon").innerHTML = emailLink;
         </script>
         <footer class="site-footer">
-            <p>© 2026 All rights reserved. <a href="legal.html">Legal notice</a></p>
+            <p>&copy; 2026 All rights reserved. <a href="legal.html">Legal notice</a></p>
         </footer>
     </div>
+
     <script src="js/typewriter.js"></script>
+    <script src="js/menu-toggle.js"></script>
 </body>
+</html>

@@ -1,147 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Engagements - Lukas Voss</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="images/favicon.png" type="image/png">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <style>
-    /* Inline style for the map container */
-    #map {
-      height: 80vh;
-      width: 100%;
-    }
-    /* Optional: Adjust spacing for the page header */
-    .engagements {
-      padding: 60px 10%;
-    }
-    /* Subtitle styling: Underlined title with proper spacing */
-    .engagements h3 {
-      font-size: 24px;
-      margin-top: 100px;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #333;
-      padding-bottom: 4px;
-      width: 100%;
-    }
-    .engagements .intro {
-      margin-bottom: 30px;
-    }
-    /* Map container: full width and a fixed height */
-    #map {
-      height: 80vh;
-      width: 100%;
-    }
-    /* Ensure the header stays on top at all times (prevents overlap on tablet/mobile) */
-    .header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 9999; /* Increased z-index to ensure it stays above other elements */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional engagements of Lukas Voss - Interactive map of work, research, and education experiences across the globe.">
+    <meta property="og:title" content="Engagements - Lukas Voss">
+    <meta property="og:description" content="Interactive map of professional engagements across Singapore, Germany, Taiwan, and more.">
+    <meta property="og:image" content="https://lukasvoss.com/images/personal_picture_cqt_optimized.jpg">
+    <meta property="og:url" content="https://lukasvoss.com/engagements.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="view-transition" content="same-origin">
+    <title>Engagements - Lukas Voss</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
-  <header class="header">
-    <a href="index.html" class="logo">Lukas.</a>
-    <nav class="navbar">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="engagements.html" class="active">Engagements</a>
-    </nav>
-  </header>
+    <a href="#main-content" class="skip-link">Skip to content</a>
 
-  <section class="engagements">
-    <h3>Engagements</h3>
-    <p class="intro">Click on the markers to learn more about my experiences.</p>
-    <div id="map"></div>
-  </section>
+    <header class="header">
+        <a href="index.html" class="logo">Lukas.</a>
+        <button class="menu-toggle" aria-label="Toggle navigation menu">
+            <i class='bx bx-menu'></i>
+        </button>
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="engagements.html" class="active">Engagements</a>
+        </nav>
+    </header>
 
-  <div class="page-footer-container">
-    <div class="email-text">
-      <b>Email</b>: firstname _ lastname [at] icloud dot com
+    <main id="main-content">
+        <section class="engagements">
+            <h3>Engagements</h3>
+            <p class="intro">Click on the markers to learn more about my experiences.</p>
+            <div id="map"></div>
+        </section>
+    </main>
+
+    <div class="page-footer-container">
+        <div class="email-text">
+            <b>Email</b>: firstname _ lastname [at] icloud dot com
+        </div>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/lukasvoss/" target="_blank" aria-label="LinkedIn profile"><i class='bx bxl-linkedin'></i></a>
+            <span id="email-icon"></span>
+            <a href="https://scholar.google.com/citations?user=lIDlyVMAAAAJ&hl=en&oi=ao" target="_blank" aria-label="Google Scholar profile"><i class='bx bxs-graduation'></i></a>
+            <a href="https://github.com/lukasvoss" target="_blank" aria-label="GitHub profile"><i class='bx bxl-github'></i></a>
+            <a href="files/cv_voss_research.pdf" target="_blank" aria-label="Download CV"><span class="cv-text">CV</span></a>
+        </div>
+
+        <script type="text/javascript">
+            const encodedEmail = "bHVrYXNfdm9zc0BpY2xvdWQuY29t";
+            const decodedEmail = atob(encodedEmail);
+            const emailLink = `<a href="mailto:${decodedEmail}" aria-label="Send email"><i class='bx bxs-envelope'></i></a>`;
+            document.getElementById("email-icon").innerHTML = emailLink;
+        </script>
+        <footer class="site-footer">
+            <p>&copy; 2026 All rights reserved. <a href="legal.html">Legal notice</a></p>
+        </footer>
     </div>
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/lukasvoss/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-      <a href="https://scholar.google.com/citations?user=lIDlyVMAAAAJ&hl=en&oi=ao" target="_blank"><i class='bx bxs-graduation'></i></a>
-      <a href="https://github.com/lukasvoss" target="_blank"><i class='bx bxl-github' style='color:#0D0A3A'></i></a>
-      <a href="files/cv_voss_research.pdf" target="_blank"><span class="cv-text">CV</span></a>
-    </div>
-    <footer class="site-footer">
-      <p>© 2026 All rights reserved. <a href="legal.html">Legal notice</a></p>
-    </footer>
-  </div>
 
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script>
-    // Initialize the map centered at [20, 0] with a zoom level of 2 for a global view.
-    var map = L.map('map').setView([20, 0], 2);
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([20, 0], 2);
 
-    // Add the OpenStreetMap tile layer.
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '© OpenStreetMap'
-    }).addTo(map);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; OpenStreetMap'
+        }).addTo(map);
 
-    // Define an array of engagement objects.
-    var engagements = [
-    {
-      lat: 48.4011, lng: 10.0027,
-      text: "<b>Ulm, Germany</b><br>Double Master's degree (2x MSc) in Physics and Management from Ulm University."
-    },
-    {
-      lat: 28.6139, lng: 77.2090,
-      text: "<b>New Delhi, India</b><br>Exchange Student."
-    },
-    {
-      lat: 31.2304, lng: 121.4737,
-      text: "<b>Shanghai, PRC</b><br>Chinese Language Scholar at Shanghai Jiaotong University."
-    },
-    {
-      lat: 48.7758, lng: 9.1829,
-      text: "<b>Stuttgart, Germany</b><br>Research on Quantum Machine Learning in department of Cyber Cognitive Intelligence at Fraunhofer IPA Institute."
-    },
-    {
-      lat: 48.1351, lng: 11.5820,
-      text: "<b>Munich, Germany</b><br>Internship at Roland Berger and KPMG."
-    },
-    {
-      lat: 33.4484, lng: -112.0740,
-      text: "<b>Phoenix, USA</b><br>Conference attendance."
-    },
-    {
-      lat: 47.4979, lng: 19.0402,
-      text: "<b>Budapest, Hungary</b><br>Summer Analyst at BlackRock."
-    },
-    {
-      lat: 53.5511, lng: 9.9937,
-      text: "<b>Hamburg, Germany</b><br>Chairman of the Board, Deutscher Gründerpreis für Schüler Alumni e.V."
-    },
-    { 
-        lat: 1.352083, lng: 103.819836, text: "In <b>Singapore</b><br>Internship as Quantitative Researcher at QRT. 1-year research stay at Centre for Quantum Technologies (NUS). Talk at A*STAR. Quantum Technologies Meetup organizer." 
-    },
-    { 
-        lat: 25.033964, lng: 121.564468, text: "<b>Taipei, ROC</b><br>1-year Exchange Student at National Taiwan University. Guest speaker at GIS Taiwan. QIP conference attendance." 
-    },
-    {
-      lat: 22.9999, lng: 120.2270,
-      text: "<b>Tainan, ROC</b><br>Student cultural ambassador at Tainan Municipal Dongshan Junior High School."
-    }
-  ];
+        var engagements = [
+            {
+                lat: 48.4011, lng: 10.0027,
+                text: "<b>Ulm, Germany</b><br>Double Master's degree (2x MSc) in Physics and Management from Ulm University."
+            },
+            {
+                lat: 28.6139, lng: 77.2090,
+                text: "<b>New Delhi, India</b><br>Exchange Student."
+            },
+            {
+                lat: 31.2304, lng: 121.4737,
+                text: "<b>Shanghai, PRC</b><br>Chinese Language Scholar at Shanghai Jiaotong University."
+            },
+            {
+                lat: 48.7758, lng: 9.1829,
+                text: "<b>Stuttgart, Germany</b><br>Research on Quantum Machine Learning in department of Cyber Cognitive Intelligence at Fraunhofer IPA Institute."
+            },
+            {
+                lat: 48.1351, lng: 11.5820,
+                text: "<b>Munich, Germany</b><br>Internship at Roland Berger and KPMG."
+            },
+            {
+                lat: 33.4484, lng: -112.0740,
+                text: "<b>Phoenix, USA</b><br>Conference attendance."
+            },
+            {
+                lat: 47.4979, lng: 19.0402,
+                text: "<b>Budapest, Hungary</b><br>Summer Analyst at BlackRock."
+            },
+            {
+                lat: 53.5511, lng: 9.9937,
+                text: "<b>Hamburg, Germany</b><br>Chairman of the Board, Deutscher Gr&uuml;nderpreis f&uuml;r Sch&uuml;ler Alumni e.V."
+            },
+            {
+                lat: 1.352083, lng: 103.819836,
+                text: "In <b>Singapore</b><br>Internship as Quantitative Researcher at QRT. 1-year research stay at Centre for Quantum Technologies (NUS). Talk at A*STAR. Quantum Technologies Meetup organizer."
+            },
+            {
+                lat: 25.033964, lng: 121.564468,
+                text: "<b>Taipei, ROC</b><br>1-year Exchange Student at National Taiwan University. Guest speaker at GIS Taiwan. QIP conference attendance."
+            },
+            {
+                lat: 22.9999, lng: 120.2270,
+                text: "<b>Tainan, ROC</b><br>Student cultural ambassador at Tainan Municipal Dongshan Junior High School."
+            }
+        ];
 
-    // Loop through the engagements array and add markers with popups.
-    // Loop through the engagements array and add markers with the formatted popups.
-    engagements.forEach(function(eng) {
-        var marker = L.marker([eng.lat, eng.lng]).addTo(map);
-        marker.bindPopup(eng.text);
-    });
-  </script>
+        engagements.forEach(function(eng) {
+            var marker = L.marker([eng.lat, eng.lng]).addTo(map);
+            marker.bindPopup(eng.text);
+        });
+    </script>
+    <script src="js/menu-toggle.js"></script>
 </body>
 </html>
