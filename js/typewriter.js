@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
     const phrases = [
         "am Lukas (路卡).",
         "build things.",
@@ -11,6 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const typewriter = document.querySelector('.typewriter');
     if (!typewriter) return;
 
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        typewriter.textContent = phrases[0];
+        return;
+    }
+
     let phraseIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -22,13 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
     function type() {
         const currentPhrase = phrases[phraseIndex];
 
-        if (isDeleting) {
-            typewriter.textContent = currentPhrase.substring(0, charIndex - 1);
-            charIndex--;
-        } else {
-            typewriter.textContent = currentPhrase.substring(0, charIndex + 1);
-            charIndex++;
-        }
+        charIndex += isDeleting ? -1 : 1;
+        typewriter.textContent = currentPhrase.substring(0, charIndex);
 
         let delay = isDeleting ? deletingSpeed : typingSpeed;
 
@@ -44,5 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(type, delay);
     }
 
-    type();
+    // Start after the hero entrance animation
+    setTimeout(type, 700);
 });

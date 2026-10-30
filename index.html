@@ -3,84 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lukas Voss - Quantitative Researcher with expertise in physics, statistical modeling, and applied machine learning. Currently at Qube Research & Technologies.">
-    <meta property="og:title" content="Lukas Voss | Quantitative Researcher">
-    <meta property="og:description" content="Quantitative researcher with a strong academic foundation in Physics and applied machine learning.">
+    <title>Lukas Voss - AI &amp; ML Researcher</title>
+    <meta name="description" content="Lukas Voss – Quantitative Researcher with an academic foundation in Physics and applied machine learning. Most recently at Qube Research & Technologies.">
+    <meta name="author" content="Lukas Voss">
+    <link rel="canonical" href="https://lukasvoss.com/">
+    <meta property="og:title" content="Lukas Voss - AI &amp; ML Researcher">
+    <meta property="og:description" content="Quantitative researcher with an academic foundation in Physics and applied machine learning.">
     <meta property="og:image" content="https://lukasvoss.com/images/personal_picture_cqt_optimized.jpg">
     <meta property="og:url" content="https://lukasvoss.com/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="view-transition" content="same-origin">
-    <title>Lukas Voss | Personal Website</title>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Lukas Voss",
+        "url": "https://lukasvoss.com/",
+        "jobTitle": "AI & ML Researcher",
+        "sameAs": [
+            "https://www.linkedin.com/in/lukasvoss/",
+            "https://github.com/lukasvoss",
+            "https://scholar.google.com/citations?user=lIDlyVMAAAAJ"
+        ],
+        "alumniOf": [
+            { "@type": "CollegeOrUniversity", "name": "Ulm University" },
+            { "@type": "CollegeOrUniversity", "name": "National University of Singapore" },
+            { "@type": "CollegeOrUniversity", "name": "National Taiwan University" }
+        ]
+    }
+    </script>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/favicon.png" type="image/png">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="js/theme-toggle.js"></script>
 </head>
-<body class="landing-page">
+<body>
     <a href="#main-content" class="skip-link">Skip to content</a>
 
-    <header class="header">
-        <a href="index.html" class="logo">Lukas.</a>
-        <div style="display:flex;align-items:center;gap:0.5rem">
-            <button class="theme-toggle" aria-label="Toggle dark mode"><i class='bx bx-moon'></i></button>
-            <button class="menu-toggle" aria-label="Toggle navigation menu"><i class='bx bx-menu'></i></button>
-        </div>
-        <nav class="navbar" role="navigation" aria-label="Main navigation">
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="engagements.html">Engagements</a>
+    <header class="site-header">
+        <nav class="container" aria-label="Main navigation">
+            <a href="index.html" class="logo"><span>&gt;</span> L. Voss</a>
+            <div class="nav-right">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="engagements.html">Engagements</a></li>
+                </ul>
+                <button class="icon-btn theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon icon-moon" aria-hidden="true"><use href="images/icons.svg#moon"/></svg>
+                    <svg class="icon icon-sun" aria-hidden="true"><use href="images/icons.svg#sun"/></svg>
+                </button>
+                <button class="icon-btn menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+                    <svg class="icon icon-open" aria-hidden="true"><use href="images/icons.svg#menu"/></svg>
+                    <svg class="icon icon-close" aria-hidden="true"><use href="images/icons.svg#x"/></svg>
+                </button>
+            </div>
         </nav>
     </header>
 
     <main id="main-content">
-        <section class="home">
-            <div class="home-content">
-                <div class="home-intro">
-                    <img src="images/personal_picture_cqt_optimized.jpg" alt="Portrait photo of Lukas Voss" class="profile-photo" width="800" height="587">
-                    <div class="intro-text">
-                        <h1>Hi, I <span class="typewriter"></span></h1>
-                        <p>
-                            <b>Quantitative researcher</b> with a strong academic foundation in <b>Physics (MSc & BSc)</b> and <b>applied machine learning</b>, recently
-                            contributing to global Equity alpha and high-frequency execution research at <b>Qube Research & Technologies</b>.
-                            <br> Experienced in building scalable research infrastructure and signal pipelines with expertise in Python, cloud computing and <b>statistical modeling</b>.
-                            <br> Background includes AI-driven
-                            quantum computing research and a proven track record across quantitative finance and deep tech environments.
-                        </p>
-                    </div>
-                </div>
+        <section class="container hero">
+            <figure class="hero-photo">
+                <img src="images/lukas_gac_keynote.jpg" alt="Lukas Voss giving a talk on stage at the German American Conference at Harvard Kennedy School" width="900" height="1125" fetchpriority="high" decoding="async">
+                <figcaption>Speaking at the German American Conference, Harvard Kennedy School</figcaption>
+            </figure>
+            <h1>Lukas Voss - AI &amp; ML Researcher</h1>
+            <p class="prompt" aria-hidden="true"><span>&gt;</span> I <span class="typewriter"></span><span class="caret"></span></p>
+            <p class="lead">
+                Researcher in <strong>AI &amp; machine learning</strong> with a background in <strong>Physics (MSc &amp; BSc)</strong>.
+                Previously a <strong>quantitative researcher</strong> in systematic trading at the hedge fund <strong>Qube Research &amp; Technologies</strong>,
+                working on global equity alpha and high-frequency execution. My past research spans reinforcement learning for quantum computing,
+                quantum error correction, and scalable research infrastructure and signal pipelines.
+            </p>
+            <div class="pill-links">
+                <a class="pill-link" href="#" data-email>
+                    <svg class="icon" aria-hidden="true"><use href="images/icons.svg#mail"/></svg>Email
+                </a>
+                <a class="pill-link" href="https://www.linkedin.com/in/lukasvoss/" target="_blank" rel="noopener noreferrer">
+                    <svg class="icon" aria-hidden="true"><use href="images/icons.svg#linkedin"/></svg>LinkedIn
+                </a>
+                <a class="pill-link" href="https://github.com/lukasvoss" target="_blank" rel="noopener noreferrer">
+                    <svg class="icon" aria-hidden="true"><use href="images/icons.svg#github"/></svg>GitHub
+                </a>
+                <a class="pill-link" href="https://scholar.google.com/citations?user=lIDlyVMAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">
+                    <svg class="icon" aria-hidden="true"><use href="images/icons.svg#graduation-cap"/></svg>Google Scholar
+                </a>
+                <a class="pill-link" href="files/cv_voss_research.pdf" target="_blank" rel="noopener noreferrer">
+                    <svg class="icon" aria-hidden="true"><use href="images/icons.svg#file-text"/></svg>CV
+                </a>
             </div>
         </section>
     </main>
 
-    <div class="page-footer-container">
-        <div class="email-text">
-            <b>Email</b>: firstname _ lastname [at] icloud dot com
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-icons">
+                <a href="https://www.linkedin.com/in/lukasvoss/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#linkedin"/></svg></a>
+                <a href="https://github.com/lukasvoss" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#github"/></svg></a>
+                <a href="https://scholar.google.com/citations?user=lIDlyVMAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#graduation-cap"/></svg></a>
+                <a href="#" data-email aria-label="Email"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#mail"/></svg></a>
+            </div>
+            <p>&copy; <span data-year>2026</span> Lukas Voss. All rights reserved. <a href="legal.html">Legal notice</a></p>
         </div>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/lukasvoss/" target="_blank" aria-label="LinkedIn profile"><i class='bx bxl-linkedin'></i></a>
-            <span id="email-icon"></span>
-            <a href="https://scholar.google.com/citations?user=lIDlyVMAAAAJ&hl=en&oi=ao" target="_blank" aria-label="Google Scholar profile"><i class='bx bxs-graduation'></i></a>
-            <a href="https://github.com/lukasvoss" target="_blank" aria-label="GitHub profile"><i class='bx bxl-github'></i></a>
-            <a href="files/cv_voss_research.pdf" target="_blank" aria-label="Download CV"><span class="cv-text">CV</span></a>
-        </div>
+    </footer>
 
-        <script type="text/javascript">
-            const encodedEmail = "bHVrYXNfdm9zc0BpY2xvdWQuY29t";
-            const decodedEmail = atob(encodedEmail);
-            const emailLink = `<a href="mailto:${decodedEmail}" aria-label="Send email"><i class='bx bxs-envelope'></i></a>`;
-            document.getElementById("email-icon").innerHTML = emailLink;
-        </script>
-        <footer class="site-footer">
-            <p>&copy; 2026 All rights reserved. <a href="legal.html">Legal notice</a></p>
-        </footer>
-    </div>
-
+    <script src="js/site.js"></script>
     <script src="js/typewriter.js"></script>
-    <script src="js/menu-toggle.js"></script>
 </body>
 </html>

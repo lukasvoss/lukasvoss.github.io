@@ -3,248 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Lukas Voss - Research projects in quantum computing, statistical modeling, quantitative finance, and applied machine learning.">
-    <meta property="og:title" content="Portfolio - Lukas Voss">
-    <meta property="og:description" content="Research projects in quantum computing, statistical modeling, and applied machine learning.">
+    <title>Projects — Lukas Voss</title>
+    <meta name="description" content="Projects by Lukas Voss in quantum computing, statistical modeling, quantitative finance and applied machine learning.">
+    <meta name="author" content="Lukas Voss">
+    <link rel="canonical" href="https://lukasvoss.com/projects.html">
+    <meta property="og:title" content="Projects — Lukas Voss">
+    <meta property="og:description" content="Projects by Lukas Voss in quantum computing, statistical modeling, quantitative finance and applied machine learning.">
     <meta property="og:image" content="https://lukasvoss.com/images/personal_picture_cqt_optimized.jpg">
     <meta property="og:url" content="https://lukasvoss.com/projects.html">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="view-transition" content="same-origin">
-    <title>Portfolio - Lukas Voss</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/favicon.png" type="image/png">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="js/theme-toggle.js"></script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to content</a>
 
-    <header class="header">
-        <a href="index.html" class="logo">Lukas.</a>
-        <div style="display:flex;align-items:center;gap:0.5rem">
-            <button class="theme-toggle" aria-label="Toggle dark mode"><i class='bx bx-moon'></i></button>
-            <button class="menu-toggle" aria-label="Toggle navigation menu"><i class='bx bx-menu'></i></button>
-        </div>
-        <nav class="navbar" role="navigation" aria-label="Main navigation">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html" class="active">Projects</a>
-            <a href="engagements.html">Engagements</a>
+    <header class="site-header">
+        <nav class="container" aria-label="Main navigation">
+            <a href="index.html" class="logo"><span>&gt;</span> L. Voss</a>
+            <div class="nav-right">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html" aria-current="page">Projects</a></li>
+                    <li><a href="engagements.html">Engagements</a></li>
+                </ul>
+                <button class="icon-btn theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon icon-moon" aria-hidden="true"><use href="images/icons.svg#moon"/></svg>
+                    <svg class="icon icon-sun" aria-hidden="true"><use href="images/icons.svg#sun"/></svg>
+                </button>
+                <button class="icon-btn menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+                    <svg class="icon icon-open" aria-hidden="true"><use href="images/icons.svg#menu"/></svg>
+                    <svg class="icon icon-close" aria-hidden="true"><use href="images/icons.svg#x"/></svg>
+                </button>
+            </div>
         </nav>
     </header>
 
     <main id="main-content">
-        <section class="portfolio">
-            <h3>Portfolio</h3>
-            <p class="portfolio-summary">Summary of my previous and ongoing (research) projects, primarily focused on quantum physics, statistical modeling, and applied machine learning. All illustrations were created by me unless otherwise noted. Publications are open access.</p>
+        <div class="container page">
+            <h1 class="page-title">Projects</h1>
+            <p class="page-intro">An overview of my past and ongoing research and projects, centered around quantum physics, statistical modeling, and applied machine learning.</p>
+            <p class="page-note">All illustrations are my own unless otherwise noted. Publications are open access.</p>
+            <div class="sections">
+            <section>
+                <div class="section-heading"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#flask"/></svg><h2>Research</h2></div>
+                <div class="accordion">
+                    <details>
+                        <summary><span class="acc-year">2026</span><span class="acc-title">Calibrated Confidence Estimation for Tabular Question Answering</span><svg class="icon" aria-hidden="true"><use href="images/icons.svg#chevron-down"/></svg></summary>
+                        <div class="acc-body">
+                            <p class="prose">Large language models are increasingly deployed for question answering over tables, yet whether their confidence reflects the actual likelihood of being correct on structured data was largely unstudied. This paper presents the <strong>first systematic calibration study for tabular QA</strong>, comparing five confidence estimation methods across five frontier LLMs (GPT-4o, GPT-4o-mini, Gemini 2.5 Flash, Llama-3.3-70B, DeepSeek-V3) on WikiTableQuestions and TableBench.</p>
+                            <p class="prose">All models are <strong>severely overconfident</strong> (smooth ECE 0.35–0.64, versus 0.10–0.15 reported for textual QA). A consistent <strong>self-evaluation versus perturbation dichotomy</strong> replicates across both benchmarks: self-evaluation methods (verbalized confidence, P(True)) reach AUROC 0.42–0.76, while perturbation methods (semantic entropy, self-consistency, MFA) reach 0.78–0.86, with per-model paired bootstrap tests significant at p &lt; 0.001 after Holm-Bonferroni correction.</p>
+                            <p class="prose">I propose <strong>Multi-Format Agreement (MFA)</strong>, which treats format sensitivity as an uncertainty signal: the same table is serialized losslessly as Markdown, HTML, JSON and CSV, and agreement across formats serves as confidence. MFA <strong>reduces ECE by 44–63%</strong>, matches sampling baselines at <strong>20% lower API cost</strong>, and combines complementarily with sampling — an MFA + self-consistency ensemble lifts AUROC from 0.74 to 0.82. A secondary contribution, <strong>structure-aware recalibration</strong>, extends Platt scaling with table covariates and improves AUROC by +10 percentage points over standard post-hoc methods.</p>
+                            <figure class="acc-figure wide">
+                                <a href="images/tabular_qa_calibration_methods.png" target="_blank" rel="noopener"><img src="images/tabular_qa_calibration_methods.png" alt="Bar charts of calibration error and AUROC for five confidence methods on Llama-3.3-70B: self-evaluation methods are poorly calibrated and near random, perturbation methods including MFA perform much better" loading="lazy"></a>
+                                <figcaption>Fig. 2 of the paper: five confidence elicitation methods on Llama-3.3-70B. Self-evaluation methods (red) stay near random discrimination; perturbation methods (blue), including MFA, reach AUROC ~0.74–0.75.</figcaption>
+                            </figure>
+                            <p class="acc-meta">Independent research · Preprint, April 2026</p>
+                            <div class="acc-links">
+                                <a href="https://arxiv.org/abs/2604.12491" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#external-link"/></svg>arXiv:2604.12491</a>
+                                <a href="https://arxiv.org/pdf/2604.12491" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#external-link"/></svg>PDF</a>
+                            </div>
+                        </div>
+                    </details>
+                    <details>
+                        <summary><span class="acc-year">2024</span><span class="acc-title">Multivariate Bicycle Codes</span><svg class="icon" aria-hidden="true"><use href="images/icons.svg#chevron-down"/></svg></summary>
+                        <div class="acc-body">
+                            <p class="prose">Quantum error correction suppresses noise in quantum systems to allow for high-precision computations. In this work, we introduce <strong>Multivariate Bicycle (MB)</strong> Quantum Low-Density Parity-Check (<strong>QLDPC</strong>) codes, via an extension of the framework developed by Bravyi <i>et al.</i> [Nature 627, 778–782 (2024)], with a particular focus on <strong>Trivariate Bicycle (TB) codes</strong>.</p>
+                            <p class="prose">Unlike the weight-6 codes proposed in their study, we offer concrete examples of <strong>weight-4 and weight-5 TB-QLDPC codes</strong> which promise to be more amenable to near-term experimental setups. We show that our TB-QLDPC codes up to weight-6 have a <strong>bi-planar structure</strong>. Most of our new codes can also be arranged in a <strong>two-dimensional toric layout</strong>, and have substantially better encoding rates than comparable surface codes while offering similar error suppression capabilities.</p>
+                            <p class="prose">For example, we can <strong>encode 4 logical qubits with distance 5 into 30 physical qubits</strong> with weight-5 check measurements, while a surface code with these parameters requires 100 physical qubits. The high encoding rate and compact layout make our codes highly suitable candidates for near-term hardware implementations.</p>
+                            <figure class="acc-figure">
+                                <a href="images/QECTannerGraph-1.png" target="_blank" rel="noopener"><img src="images/QECTannerGraph-1.png" alt="Tanner graph of the weight-5 [[30, 4, 5]] Trivariate Bicycle code" loading="lazy"></a>
+                                <figcaption>Fig. 1 of the paper: Tanner graph of our weight-5 [[30, 4, 5]] code.</figcaption>
+                            </figure>
+                            <p class="acc-meta">In collaboration with Sim Jian Xian, Tobias Haug, Kishor Bharti (National University of Singapore, TII Abu Dhabi, A*STAR)</p>
+                            <div class="acc-links">
+                                <a href="https://journals.aps.org/pra/abstract/10.1103/ll5p-z88p" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#external-link"/></svg>Publication (Phys. Rev. A)</a>
+                            </div>
+                        </div>
+                    </details>
+                    <details>
+                        <summary><span class="acc-year">2024</span><span class="acc-title">Context-Aware Gate Calibration with Deep Reinforcement Learning</span><svg class="icon" aria-hidden="true"><use href="images/icons.svg#chevron-down"/></svg></summary>
+                        <div class="acc-body">
+                            <p class="prose">Scalable quantum computation relies on executing quantum gates with high fidelity, which requires operations that are robust to a variety of noise sources. While many techniques exploiting physical models and experimental data have emerged, few consider the noise inherent to the execution of a specific quantum circuit <i>context</i>.</p>
+                            <p class="prose">In this work, we <strong>benchmark the importance of such noise on near-term superconducting quantum devices</strong> and propose a new <strong>dynamical gate calibration method</strong> based on <strong>model-free reinforcement learning</strong> for its active suppression. We employ <strong>Proximal Policy Optimization (PPO)</strong>, a policy-gradient method that improves stability during training.</p>
+                            <p class="prose">We demonstrate the method's efficiency on a <strong>pulse optimization</strong> over a set of parameters that would be adjustable in real time, provided the control system supports real-time processing — so no additional memory overhead is required to enable adaptive, context-aware gate calibration. We envision the method as a new tool in calibration workflows, and as a step towards adjusting the building blocks of the gate model based on the context they are executed in.</p>
+                            <figure class="acc-figure">
+                                <a href="images/SpilloverNoise_comparison_reward_methods_infidelity_experiment_runtime.png" target="_blank" rel="noopener"><img src="images/SpilloverNoise_comparison_reward_methods_infidelity_experiment_runtime.png" alt="Average gate infidelity over training time for different reward methods" loading="lazy"></a>
+                                <figcaption>Average gate error (infidelity) over training time of the RL agent on a real quantum computer.</figcaption>
+                            </figure>
+                            <p class="acc-meta">In collaboration with Arthur Strauss &amp; Hui Khoon Ng (Centre for Quantum Technologies, National University of Singapore) · Manuscript in preparation</p>
+                            <div class="acc-links">
+                                <a href="https://github.com/arthurostrauss/Quantum_Optimal_Control" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#external-link"/></svg>GitHub</a>
+                            </div>
+                        </div>
+                    </details>
+                    <details>
+                        <summary><span class="acc-year">2021</span><span class="acc-title">Monte Carlo Simulations of NV Centres as Open Quantum Systems</span><svg class="icon" aria-hidden="true"><use href="images/icons.svg#chevron-down"/></svg></summary>
+                        <div class="acc-body">
+                            <p class="prose">Nitrogen Vacancy (NV) centres are a promising candidate for quantum information processing. We investigate the dynamics of an NV centre as an open quantum system using Monte Carlo simulations for a non-Markovian description, modelling the NV centre as a two-level system interacting with a bath of <sup>13</sup>C nuclear spins in the carbon lattice.</p>
+                            <p class="prose">Spins are modelled by <strong>stochastic differential equations (Markovian quantum jump approach)</strong>, building on ideas from <a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.69.022115" target="_blank" rel="noopener noreferrer">Breuer (2004)</a>. We show that a Markovian approach under a stochastic formulation of the von Neumann equation can <strong>recover the exact dynamics of a non-Markovian physical system</strong> such as the NV centre in the presence of a bath. Numerical simulation in Matlab.</p>
+                            <figure class="acc-figure">
+                                <a href="images/spin_interaction_illustration.png" target="_blank" rel="noopener"><img src="images/spin_interaction_illustration.png" alt="Illustration of two interacting spins" loading="lazy"></a>
+                                <figcaption>Illustration of two interacting spins.</figcaption>
+                            </figure>
+                            <p class="acc-meta">Honors research project at the Institute for Complex Quantum Systems (Ulm University, Germany)</p>
+                            <div class="acc-links">
+                                <a href="files/ICQ_seminar_talk_NV_centres_LV_Jul2021_watermark.pdf" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#external-link"/></svg>Slide deck</a>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </section>
 
-            <div class="portfolio-entry">
-                <div class="portfolio-slider">
-                    <img src="images/fin-dash_main_page.png" class="slide active" alt="fin-dash dashboard overview showing portfolio analytics" loading="lazy">
-                    <img src="images/fin-dash_analysis_page.png" class="slide" alt="fin-dash analytics view with performance charts" loading="lazy">
-                    <button class="slider-btn prev" aria-label="Previous slide">&#10094;</button>
-                    <button class="slider-btn next" aria-label="Next slide">&#10095;</button>
+            <section>
+                <div class="section-heading"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#code"/></svg><h2>Independent Projects</h2></div>
+                <p class="section-intro">Side projects in quantitative finance, data analysis and automation.</p>
+                <div class="accordion">
+                    <details>
+                        <summary><span class="acc-year">2025</span><span class="acc-title">fin-dash.xyz: Financial Dashboard for Retail Investors</span><svg class="icon" aria-hidden="true"><use href="images/icons.svg#chevron-down"/></svg></summary>
+                        <div class="acc-body">
+                            <p class="prose"><strong>fin-dash.xyz</strong> is an investment tracking platform for retail investors who want complete visibility into their portfolio. Track investments across <strong>stocks, ETFs and cryptocurrencies</strong> with support for <strong>multiple currencies</strong> and broker accounts, all in one place.</p>
+                            <ul class="prose">
+                                <li><strong>Real-time portfolio analytics</strong> — net worth, P&amp;L and returns with interactive equity curves and performance charts</li>
+                                <li><strong>Performance metrics</strong> — Sharpe ratio, IRR, annualized volatility and drawdown analysis</li>
+                                <li><strong>Dividend tracking</strong> — interactive calendar with tax deductions and yearly summaries</li>
+                                <li><strong>Asset allocation</strong> — breakdown by sector, industry, region and country</li>
+                                <li><strong>Contribution &amp; return heatmaps</strong> — monthly patterns at a glance</li>
+                                <li><strong>Portfolio optimization</strong> — efficient-frontier analysis with data-driven rebalancing recommendations</li>
+                                <li><strong>Financial planning</strong> — compound growth simulator and objective planner for retirement goals</li>
+                                <li><strong>Smart CSV import</strong> — intelligent column mapping and duplicate detection for any broker</li>
+                            </ul>
+                            <figure class="acc-figure pair">
+                                <a href="images/fin-dash_main_page.png" target="_blank" rel="noopener"><img src="images/fin-dash_main_page.png" alt="fin-dash dashboard overview showing portfolio analytics" loading="lazy"></a>
+                                <a href="images/fin-dash_analysis_page.png" target="_blank" rel="noopener"><img src="images/fin-dash_analysis_page.png" alt="fin-dash analytics view with performance charts" loading="lazy"></a>
+                            </figure>
+                            <div class="acc-links">
+                                <a href="https://fin-dash.xyz" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#external-link"/></svg>fin-dash.xyz</a>
+                            </div>
+                        </div>
+                    </details>
+                    <details>
+                        <summary><span class="acc-year">2025</span><span class="acc-title">Singapore Income Distribution Analysis</span><svg class="icon" aria-hidden="true"><use href="images/icons.svg#chevron-down"/></svg></summary>
+                        <div class="acc-body">
+                            <p class="prose">Analysis of publicly available data from the <strong>Inland Revenue Authority of Singapore (IRAS)</strong> on the assessable income of tax residents. Between 2004 and 2023, Singapore's income distribution experienced <strong>broad-based growth</strong>, as shown in the Growth Incidence Curve: for most percentiles incomes rise almost linearly — roughly <strong>+0.6% cumulative growth per percentile</strong>.</p>
+                            <p class="prose">Several <i>regime breaks</i> emerge: percentiles <strong>P62–P67 and P70–P80</strong> temporarily outpace the linear trend, while <strong>P86–P89 and especially P92–P98</strong> fall below it. The <strong>top 1% (P99)</strong> stand out again with cumulative growth of around <strong>66%</strong>, exceeding the fitted line — highlighting how inequality pressures concentrate at the very top despite broadly shared gains.</p>
+                            <figure class="acc-figure">
+                                <a href="images/sg_gic_with_fit_breaks.png" target="_blank" rel="noopener"><img src="images/sg_gic_with_fit_breaks.png" alt="Growth Incidence Curve of Singapore's income distribution, 2004–2023, with fitted breakpoints" loading="lazy"></a>
+                            </figure>
+                            <div class="acc-links">
+                                <a href="https://github.com/lukasvoss/sg_income_data_analysis/tree/main" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#external-link"/></svg>GitHub</a>
+                                <a href="https://data.gov.sg/datasets/d_f394f202534237671d39b17bd3b506ec/view" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#external-link"/></svg>Data source</a>
+                            </div>
+                        </div>
+                    </details>
+                    <details>
+                        <summary><span class="acc-year">2024</span><span class="acc-title">QRT Challenge: Explaining Electricity Prices in DE &amp; FR</span><svg class="icon" aria-hidden="true"><use href="images/icons.svg#chevron-down"/></svg></summary>
+                        <div class="acc-body">
+                            <p class="prose">A quantitative research challenge by QRT to explain daily price variations of 24-hour electricity futures in France and Germany. At the time of submission my solution ranked in the <strong>top 9% of all global participants</strong>.</p>
+                            <p class="prose">I built <strong>country-specific models</strong>: a <strong>LightGBM regressor for Germany</strong> and a <strong>regularized Elastic Net for France</strong>, with engineered features such as cross-border flow differentials, renewable production bundles and weather–demand interactions. Hyperparameters were optimized for <i>Spearman rank correlation</i> to capture directional moves in futures prices.</p>
+                            <p class="prose">The permutation importance analysis for the German model (200 iterations) shows net exports, wind generation and FR–DE solar spreads as the most influential drivers. France required heavier regularization due to noisier patterns, reflecting structural differences between the two markets.</p>
+                            <figure class="acc-figure">
+                                <a href="images/DE_permutation_importance.png" target="_blank" rel="noopener"><img src="images/DE_permutation_importance.png" alt="Permutation importance of features in the German electricity price model" loading="lazy"></a>
+                                <figcaption>Permutation importance for the German model.</figcaption>
+                            </figure>
+                            <div class="acc-links">
+                                <a href="https://challengedata.ens.fr/participants/challenges/97/" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#external-link"/></svg>Challenge</a>
+                                <a href="https://github.com/lukasvoss/forecast_electricity_futures_QRT_challenge" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#external-link"/></svg>GitHub</a>
+                            </div>
+                        </div>
+                    </details>
+                    <details>
+                        <summary><span class="acc-year">2023</span><span class="acc-title">Automating Anki Flashcard Creation for Chinese</span><svg class="icon" aria-hidden="true"><use href="images/icons.svg#chevron-down"/></svg></summary>
+                        <div class="acc-body">
+                            <p class="prose">A Python tool that streamlines how Chinese learners create flashcards in Anki, the spaced-repetition flashcard app, by generating CSV files that Anki imports directly.</p>
+                            <ul class="prose">
+                                <li><strong>Input:</strong> an Excel file (<code>hanzi_list.xlsx</code>) with a &ldquo;Hanzi&rdquo; column listing the characters (simplified or traditional)</li>
+                                <li><strong>Output:</strong> an Excel file (<code>chinese_vocabulary.xlsx</code>) with characters, pinyin, English translations and, where available, example sentences — exported to CSV for import into Anki</li>
+                            </ul>
+                            <p class="prose">A second script semi-automates adding mp3 pronunciations inside Anki using the <a href="https://ankiweb.net/shared/info/858591644" target="_blank" rel="noopener noreferrer">Forvo add-on</a>, AutoHotkey-style: adjust the button coordinates to your screen and the script clicks through each card.</p>
+                            <figure class="acc-figure">
+                                <a href="images/anki_card.png" target="_blank" rel="noopener"><img src="images/anki_card.png" alt="Example Anki flashcard created by the tool" loading="lazy"></a>
+                                <figcaption>Example card created by the tool.</figcaption>
+                            </figure>
+                            <p class="acc-meta">Personal life-automation project from my time in Taipei</p>
+                            <div class="acc-links">
+                                <a href="https://github.com/lukasvoss/anki_vocabulary_automation/tree/feature/excel_anki_import" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#external-link"/></svg>GitHub</a>
+                            </div>
+                        </div>
+                    </details>
                 </div>
-                <div class="portfolio-entry-content">
-                    <h4>fin-dash.xyz: Financial Dashboard for Retail Investors (2025)</h4>
-                    <p>
-                        <b>fin-dash.xyz</b> is a comprehensive investment tracking platform designed for retail investors who want complete visibility into their financial portfolio. Track your investments across <b>stocks, ETFs, and cryptocurrencies</b> with support for <b>multiple currencies</b> and broker accounts, all in one place.
-                    </p>
-                    <br>
-                    <p><b>Key Features</b></p>
-                    <ul class="indented-list">
-                        <li><b>Real-Time Portfolio Analytics</b> - Monitor your net worth, profit & loss, and returns with interactive equity curves and performance charts</li>
-                        <li><b>Advanced Performance Metrics</b> - Track key indicators including <b>Sharpe Ratio</b>, <br>IRR (Internal Rate of Return)</b>, annualized volatility, and drawdown analysis</li>
-                        <li><b>Dividend Tracking</b> - View dividend payments in an interactive calendar with tax deductions and yearly summaries</li>
-                        <li><b>Asset Allocation Analysis</b> - Visualize your portfolio breakdown by sectors, industries, geographic regions, and countries</li>
-                        <li><b>Contributions & Returns Heatmaps</b> - Track your investment patterns and monthly performance at a glance with color-coded heatmaps</li>
-                        <li><b>Portfolio Optimization</b> - Analyze your portfolio on the efficient frontier and receive data-driven rebalancing recommendations to maximize risk-adjusted returns</li>
-                        <li><b>Financial Planning Tools</b> - Use the compound growth simulator and objective planner to model future wealth scenarios and retirement goals</li>
-                        <li><b>Smart CSV Import</b> - Seamlessly import transactions from any broker with intelligent column mapping and duplicate detection</li>
-                    </ul>
-                    <br><i>Website:</i> <a href="https://fin-dash.xyz" target="_blank">fin-dash.xyz</a>
+            </section>
+
+            <section>
+                <div class="section-heading"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#book-open"/></svg><h2>Coursework &amp; Seminars</h2></div>
+                <p class="section-intro">Selected work from courses and seminars at National Taiwan University and Ulm University.</p>
+                <div class="accordion">
+                    <details>
+                        <summary><span class="acc-year">2023</span><span class="acc-title">Parallelized Deep Learning Training: A GPU Performance Study</span><svg class="icon" aria-hidden="true"><use href="images/icons.svg#chevron-down"/></svg></summary>
+                        <div class="acc-body">
+                            <p class="prose">Investigated the performance of parallelized deep learning training on an NVIDIA RTX 3070 GPU, comparing CPU and GPU training time of a convolutional neural network on MNIST, implemented in PyTorch with CUDA.</p>
+                            <p class="prose">GPU training significantly reduced training time. I also explored the impact of batch size, learning rate, optimizer choice and data parallelization on training time and accuracy — parallelizing data loading across worker processes gave a significant additional speed-up. GPU access was provided by the National Applied Research Laboratories.</p>
+                            <figure class="acc-figure">
+                                <a href="images/illustration_deeplearning_training_gpu.png" target="_blank" rel="noopener"><img src="images/illustration_deeplearning_training_gpu.png" alt="Illustration of parallelized deep learning training on a GPU" loading="lazy"></a>
+                                <figcaption>Illustration from the slide deck.</figcaption>
+                            </figure>
+                            <p class="acc-meta">Final project, &ldquo;High-Performance Big Data and Artificial Intelligence Systems&rdquo; (National Taiwan University)</p>
+                            <div class="acc-links">
+                                <a href="files/HPBDAIS_final_presentation_vF_watermark.pdf" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#external-link"/></svg>Slide deck</a>
+                            </div>
+                        </div>
+                    </details>
+                    <details>
+                        <summary><span class="acc-year">2022</span><span class="acc-title">Network Theory: An Executive Summary</span><svg class="icon" aria-hidden="true"><use href="images/icons.svg#chevron-down"/></svg></summary>
+                        <div class="acc-body">
+                            <p class="prose">An overview of network theory introducing key concepts and phenomena such as <strong>power-law distributions</strong>, the <strong>Bianconi–Barabási model</strong>, <strong>&ldquo;winner-takes-all&rdquo;</strong> dynamics and the <strong>spread of information in random networks</strong>.</p>
+                            <figure class="acc-figure">
+                                <a href="images/network_theory_plot.png" target="_blank" rel="noopener"><img src="images/network_theory_plot.png" alt="Mapping between network fitness and Bose–Einstein condensation" loading="lazy"></a>
+                                <figcaption>Mapping between network fitness and Bose–Einstein condensates (Bianconi &amp; Barabási, 2001).</figcaption>
+                            </figure>
+                            <p class="acc-meta">Graduate Seminar in Advanced Interdisciplinary Statistical Methods (Ulm University)</p>
+                            <div class="acc-links">
+                                <a href="files/network_theory_slides_watermark.pdf" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#external-link"/></svg>Slide deck</a>
+                            </div>
+                        </div>
+                    </details>
                 </div>
+            </section>
             </div>
-
-            <div class="portfolio-entry">
-                <img src="images/sg_gic_with_fit_breaks.png" alt="Growth Incidence Curve showing Singapore income distribution from 2004-2023" loading="lazy">
-                <div class="portfolio-entry-content">
-                    <h4>Singapore Income Distribution Analysis (2025)</h4>
-                    <p>
-                        This analysis has been conducted using publicly available data from the <b>Inland Revenue Authority of Singapore (IRAS)</b> on the assessable income of tax residents.
-                        <br>
-                        Between 2004 and 2023, <b>Singapore's income distribution experienced broad-based growth</b>, as shown in the Growth Incidence Curve.
-                        For most percentiles, incomes rise almost linearly &mdash; <b>roughly +0.6% cumulative growth per percentile</b> &mdash; reflecting consistent gains across the population.
-                        Yet, several <i>regime breaks</i> emerge: <b>percentiles P62-P67 and P70-P80 temporarily outpace</b> the linear trend, while <b>P86-P89 and especially P92-P98 fall below it</b>.
-                        <br>
-                        Finally, the <b>top 1% (P99)</b> stand out again, with a <b>cumulative growth of around 66%</b>, exceeding the fitted line.
-                        These breakpoints highlight how <b>inequality pressures are concentrated at the very top</b>, despite broadly shared gains across most of the distribution.
-
-                        <i>GitHub Repo:</i> <a href="https://github.com/lukasvoss/sg_income_data_analysis/tree/main" target="_blank">Link</a>, <i>Data Source:</i> <a href="https://data.gov.sg/datasets/d_f394f202534237671d39b17bd3b506ec/view" target="_blank">Link</a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="portfolio-entry">
-                <img src="images/DE_permutation_importance.png" alt="Permutation importance analysis for German electricity price model" loading="lazy">
-                <div class="portfolio-entry-content">
-                    <h4>Quant Research Challenge: Explaining Electricity Prices in DE & FR (2024)</h4>
-                    <p>
-                        By the time of submission, my solution ranked in the <b>top 9% of all global participants</b>.
-                        <br>
-                        This project was part of a quantitative research challenge by the Quant Hedge Fund QRT where the goal was to explain daily price variations
-                        for 24-hour electricity futures in France (FR) and Germany (DE). <a href="https://challengedata.ens.fr/participants/challenges/97/">Link to the challenge</a>
-                        <br><br>
-                        My approach focused on <b>country-specific models</b>: using a <b>LightGBM regressor for Germany</b> and a <b>regularized Elastic Net for France</b>.
-                        To improve predictive power, I engineered features such as cross-border flow differentials, renewable production bundles,
-                        and weather-demand interactions. Hyperparameter optimization was applied to maximize <i>Spearman rank correlation</i>,
-                        ensuring the models captured directional movements in futures prices. <br>
-                        The figure on the left shows the <b>permutation importance analysis</b> for the German model over 200 iterations.
-                        It highlights that net exports, wind generation, and solar spreads between France and Germany were the most influential
-                        drivers of daily price variation. France required heavier regularization due to noisier patterns,
-                        reflecting structural differences between the two markets.
-                        <br>
-                        <i>GitHub Repo:</i> <a href="https://github.com/lukasvoss/forecast_electricity_futures_QRT_challenge" target="_blank">Link</a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="portfolio-entry">
-                <img src="images/QECTannerGraph-1.png" alt="Tanner graph for weight-5 quantum error correction code" loading="lazy">
-                <div class="portfolio-entry-content">
-                    <h4>Multivariate Bicycle Codes (2024)</h4>
-                    <p>Quantum error correction suppresses noise in quantum systems to allow for high-precision computations.
-                        In this work, we introduce <b>Multivariate Bicycle (MB)</b> Quantum Low-Density Parity-Check (<b>QLDPC</b>) codes, via an extension of the framework developed by Bravyi <i>et al.</i> [Nature, 627, 778-782 (2024)] and particularly focus on <b>Trivariate Bicycle (TB) codes</b>.
-                        Unlike the weight-6 codes proposed in their study, <b>we offer</b> concrete examples of <b>weight-4 and weight-5 TB-QLDPC codes</b> which promise to be more amenable to near-term experimental setups.
-                        We show that our <b>TB-QLDPC codes up to weight-6 have a bi-planar structure</b>. Further, most of our new codes can also be arranged in a <b>two-dimensional toric layout</b>, and have <b>substantially better encoding rates than comparable surface codes</b> while offering similar error suppression capabilities.
-                        For example, we can <b>encode 4 logical qubits with distance 5 into 30 physical qubits with weight-5 check measurements</b>, while a surface code with these parameters requires 100 physical qubits.
-                        The <b>high encoding rate and compact layout</b> make our codes highly suitable candidates for <b>near-term hardware implementations</b>, paving the way for a realizable quantum error correction protocol.
-                        <br>The picture on the left is Fig. 1 in our paper showing the Tanner graph for our <b>weight-5 [[30, 4, 5]] code</b>.
-                        <br><br><i>In collaboration with Sim Jian Xian, Tobias Haug, Kishor Bharti (National University of Singapore, TII Abu Dhabi, A*STAR Agency for Science & Technology Singapore)</i>
-                        <br>
-                        <i>Publication</i>: <a href="https://journals.aps.org/pra/abstract/10.1103/ll5p-z88p" target="_blank">Link</a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="portfolio-entry">
-                <img src="images/SpilloverNoise_comparison_reward_methods_infidelity_experiment_runtime.png" alt="Comparison of reward methods showing gate infidelity over training time" loading="lazy">
-                <div class="portfolio-entry-content">
-                    <h4>Context-aware gate calibration with Deep Reinforcement Learning (2024)</h4>
-                    <p>The advent of scalable quantum computation relies on the possibility of executing quantum gates with high fidelity. To do so, there is a need to design operations
-                        which are robust to a variety of noise sources. While many techniques exploiting both physical models and experimental data have emerged in the past few years, few
-                        of them actually consider the noise inherent to the execution of a specific quantum circuit context. In this work,
-                        we <b>benchmark</b> the importance of such <b>noise on near-term superconducting quantum devices</b> and <b>propose a new dynamical
-                        gate calibration method</b> based on <b>model-free reinforcement learning</b> for its active suppression. In particular, we employ <b>Proximal Policy Optimization (PPO)</b>, a <b>policy-gradient method</b> that improves stability during training.
-                        We <b>demonstrate</b> the <b>efficiency</b> of the method by addressing a <b>pulse optimization</b> over a <b>set of parameters</b> that would be <b>adjustable in real-time</b>, provided that the control system is equipped with such real-time processing features. This
-                        means that no additional memory overhead should be required in the control system to enable an adaptive and <b>context-aware gate calibration</b>. We envision our method
-                        to become a new tool in the calibration workflows enabling the successful execution of complex quantum algorithms.
-                        We also open the door to a change of paradigm regarding the traditional gate model of quantum computation, enabling the seamless adjustment of those building blocks based on the context they are executed in.
-                        <br>The provided pictures shows the average gate error (infidelity) over the training time of the Reinforcement Learning model if performed on a real quantum computer.
-                        <br><br><i>In collaboration with Arthur Strauss & Hui Khoon Ng (Centre for Quantum Technologies, National University of Singapore)</i>
-                        <br>Manuscript in the making. <i>GitHub Repo:</i> <a href="https://github.com/arthurostrauss/Quantum_Optimal_Control" target="_blank">Link</a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="portfolio-entry">
-                <img src="images/illustration_deeplearning_training_gpu.png" alt="Illustration of parallelized deep learning training architecture on GPU" loading="lazy">
-                <div class="portfolio-entry-content">
-                    <h4>Parallelized Deep Learning Training - A Performance Study with GPU (2023)</h4>
-                    <p>In this project, I investigated the performance of parallelized deep learning training on an NVIDIA RTX 3070 GPU. I compared the training time of a convolutional neural network (CNN) on both a CPU and a GPU. The CNN was trained on the MNIST dataset, a popular benchmark for image classification. I implemented the CNN using the PyTorch library and trained it on the GPU utilizing CUDA. My findings showed that training the CNN on the GPU significantly reduced the training time compared to training on the CPU. I also explored the impact of batch size, learning rate, the choice of optimizer, and data parallelization on the training time and accuracy of the CNN. Parallelizing data loading across worker processes leads to a significant performance gain by reducing training time. Overall, this study demonstrates the benefits of parallelized deep learning training on a GPU for accelerating CNN training.
-                    <br>Illustration on the left is taken from my slide deck. 1) National Applied Research Laboratories provided GPU access for this project.
-                    <br><br><i>Final project of class "High-Performance Big Data and Artificial Intelligence Systems" (National Taiwan University, ROC)</i>
-                    <br>
-                    <i>Slide Deck</i>: <a href="files/HPBDAIS_final_presentation_vF_watermark.pdf" target="_blank">Link</a>
-                </div>
-            </div>
-
-            <div class="portfolio-entry">
-                <img src="images/anki_card.png" alt="Example Anki flashcard for Chinese vocabulary learning" class="large-vertical-image" loading="lazy">
-                <div class="portfolio-entry-content">
-                    <h4>Automation of Anki Flashcard Creation (2023)</h4>
-                    <p>This automation tool is designed to optimize the way Chinese learners create their flashcards in Anki. Anki is a digital flashcard application based on the "spaced-repetition" method for human memory. This Python tool utilizes Anki's ability to import CSV files and directly creates corresponding flashcards.</p>
-                    <br><p>The tool automates the process, making it easier for learners to generate flashcards efficiently.</p>
-
-                    <ul class="indented-list">
-                        <li><br>Input:</b> An Excel file (hanzi_list.xlsx) that contains a column with the header "Hanzi," where the Chinese characters (simplified or traditional) are listed for flashcard creation.</li>
-                        <li><br>Output:</b> An Excel file (chinese_vocabulary.xlsx) that includes the characters, their phonetics (pinyin), English translations, and, in some cases, an example sentence. <br>
-                            According to each Chinese character (Hanzi), the corresponding pinyin and English translation are added to the dataframe generated from the input Excel file. This file is then exported to a CSV, which can be directly imported into Anki.</li>
-                    </ul>
-
-                    <br><p>There is another script that semi-automates the process of adding mp3 audio files to your Anki flashcards directly within the Anki app. It's similar to a Windows AutoHotkey script:</p>
-
-                    <ul class="indented-list">
-                        <li>First, download the <a href="https://ankiweb.net/shared/info/858591644" target="_blank">Forvo Add-On</a>. This extension allows you to add mp3 audio files based on a field in your Anki flashcard. It uses recordings from the Forvo community.</li>
-                        <li>Adjust the coordinates of the buttons according to your screen, and you can start the script.</li>
-                        <li>The script will then perform the necessary clicks to add the recording for each card.</li>
-                    </ul>
-                    <p>Picture on the left shows an example Anki card created by this tool.</p>
-                    <p><br><i>Own mini life-automation project during my time in Taipei, ROC.</i>
-                    <br>
-                    <i>GitHub Repo:</i> <a href="https://github.com/lukasvoss/anki_vocabulary_automation/tree/feature/excel_anki_import" target="_blank">Link</a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="portfolio-entry">
-                <img src="images/network_theory_plot.png" alt="Network fitness to Bose-Einstein condensate mapping visualization" loading="lazy">
-                <div class="portfolio-entry-content">
-                    <h4>Network Theory - An executive summary (2022)</h4>
-                    <p>Provides a comprehensive overview of Network Theory, and introduces important concepts and phenomena such as <b>Power-Law observations in distribution functions</b> of a network, the <b>Bianconi-Barabasi model</b>, <b>"winner-takes-all"</b> and the <b>spread of information in random networks</b>.
-                    <br>The picture on the left provides a mapping between fitness of a network to Bose-Einstein condensates. (taken from Bianconi and Barabasi, 2001)
-                    <br><br><i>Graduate Seminar in Advanced Interdisciplinary Statistical Methods (Ulm University, Germany)</i>
-                    <br>
-                    <i>Slide Deck:</i> <a href="files/network_theory_slides_watermark.pdf" target="_blank">Link</a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="portfolio-entry">
-                <img src="images/spin_interaction_illustration.png" alt="Illustration of two interacting quantum spins in a diamond lattice" loading="lazy">
-                <div class="portfolio-entry-content">
-                    <h4>Monte Carlo Simulations of NV centres as open quantum system (2021)</h4>
-                    <p>Nitrogen Vacancy (NV) centres are a promising candidate for quantum information processing. In this work, we investigate the dynamics of an NV centre as open quantum systems using Monte Carlo simulations for a non-Markovian description.
-                        We describe the NV centres as a two-level system interacting with a bath <sup>13</sup>C nuclear spins in the carbon lattice. <b>Spins are modeled by stochastic differential equations (Markovian quantum jump approach)</b> leaning on ideas from
-                        a work by <a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.69.022115" target="_blank">Breuer (2004)</a>. We show that using a Markovian approach under a stochastic formulation of the von-Neumann equation,
-                        we can <b>recover exact dynamics of a non-Markovian physical system</b> as the NV centre in the presence of a bath. <b>Numerical simulation in Matlab.</b>
-                    <br>The picture on the left shows an illustration of two interacting spins.
-                    <br><br><i>Honors Research Project @Institute for Complex Quantum Systems (Ulm University, Germany)</i>
-                    <br>
-                    <i>Slide Deck:</i> <a href="files/ICQ_seminar_talk_NV_centres_LV_Jul2021_watermark.pdf" target="_blank">Link</a>
-                </div>
-            </div>
-        </section>
+        </div>
     </main>
 
-    <div class="page-footer-container">
-        <div class="email-text">
-            <b>Email</b>: firstname _ lastname [at] icloud dot com
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-icons">
+                <a href="https://www.linkedin.com/in/lukasvoss/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#linkedin"/></svg></a>
+                <a href="https://github.com/lukasvoss" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#github"/></svg></a>
+                <a href="https://scholar.google.com/citations?user=lIDlyVMAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#graduation-cap"/></svg></a>
+                <a href="#" data-email aria-label="Email"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#mail"/></svg></a>
+            </div>
+            <p>&copy; <span data-year>2026</span> Lukas Voss. All rights reserved. <a href="legal.html">Legal notice</a></p>
         </div>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/lukasvoss/" target="_blank" aria-label="LinkedIn profile"><i class='bx bxl-linkedin'></i></a>
-            <span id="email-icon"></span>
-            <a href="https://scholar.google.com/citations?user=lIDlyVMAAAAJ&hl=en&oi=ao" target="_blank" aria-label="Google Scholar profile"><i class='bx bxs-graduation'></i></a>
-            <a href="https://github.com/lukasvoss" target="_blank" aria-label="GitHub profile"><i class='bx bxl-github'></i></a>
-            <a href="files/cv_voss_research.pdf" target="_blank" aria-label="Download CV"><span class="cv-text">CV</span></a>
-        </div>
+    </footer>
 
-        <script type="text/javascript">
-            const encodedEmail = "bHVrYXNfdm9zc0BpY2xvdWQuY29t";
-            const decodedEmail = atob(encodedEmail);
-            const emailLink = `<a href="mailto:${decodedEmail}" aria-label="Send email"><i class='bx bxs-envelope'></i></a>`;
-            document.getElementById("email-icon").innerHTML = emailLink;
-        </script>
-        <footer class="site-footer">
-            <p>&copy; 2026 All rights reserved. <a href="legal.html">Legal notice</a></p>
-        </footer>
-    </div>
-
-    <script src="js/portfolio-slides.js"></script>
-    <script src="js/menu-toggle.js"></script>
+    <script src="js/site.js"></script>
 </body>
 </html>

@@ -3,70 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Legal notice and privacy information for lukasvoss.com.">
+    <title>Legal Notice — Lukas Voss</title>
+    <meta name="description" content="Legal notice and data controller information for lukasvoss.com.">
+    <meta name="author" content="Lukas Voss">
+    <meta name="robots" content="noindex">
+    <link rel="canonical" href="https://lukasvoss.com/legal.html">
+    <meta property="og:title" content="Legal Notice — Lukas Voss">
+    <meta property="og:description" content="Legal notice and data controller information for lukasvoss.com.">
+    <meta property="og:image" content="https://lukasvoss.com/images/personal_picture_cqt_optimized.jpg">
+    <meta property="og:url" content="https://lukasvoss.com/legal.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="view-transition" content="same-origin">
-    <title>Legal Notice - Lukas Voss</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/favicon.png" type="image/png">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="js/theme-toggle.js"></script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to content</a>
 
-    <header class="header">
-        <a href="index.html" class="logo">Lukas.</a>
-        <div style="display:flex;align-items:center;gap:0.5rem">
-            <button class="theme-toggle" aria-label="Toggle dark mode"><i class='bx bx-moon'></i></button>
-            <button class="menu-toggle" aria-label="Toggle navigation menu"><i class='bx bx-menu'></i></button>
-        </div>
-        <nav class="navbar" role="navigation" aria-label="Main navigation">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="engagements.html">Engagements</a>
+    <header class="site-header">
+        <nav class="container" aria-label="Main navigation">
+            <a href="index.html" class="logo"><span>&gt;</span> L. Voss</a>
+            <div class="nav-right">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="engagements.html">Engagements</a></li>
+                </ul>
+                <button class="icon-btn theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon icon-moon" aria-hidden="true"><use href="images/icons.svg#moon"/></svg>
+                    <svg class="icon icon-sun" aria-hidden="true"><use href="images/icons.svg#sun"/></svg>
+                </button>
+                <button class="icon-btn menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+                    <svg class="icon icon-open" aria-hidden="true"><use href="images/icons.svg#menu"/></svg>
+                    <svg class="icon icon-close" aria-hidden="true"><use href="images/icons.svg#x"/></svg>
+                </button>
+            </div>
         </nav>
     </header>
 
     <main id="main-content">
-        <div class="legal">
-            <div class="legal-header">Legal Notice</div>
-            <div class="legal-content">
-                <p><strong>Scope:</strong> This Legal Notice applies to the website available under the domains lukasvoss.github.io, as well as all public social media presences (LinkedIn, GitHub, Google Scholar).</p>
+        <div class="container page">
+            <h1 class="page-title">Legal</h1>
+            <div class="legal">
+                <p><strong>Scope:</strong> This Legal Notice applies to the website available under the domains lukasvoss.com and lukasvoss.github.io, as well as all public social media presences (LinkedIn, GitHub, Google Scholar).</p>
                 <p><strong>Data Controller:</strong> Lukas Voss</p>
                 <p><strong>Address:</strong> Mutiara Crest, 249183 Singapore</p>
-                <p><strong>E-Mail:</strong> firstname _ lastname [at] icloud dot com</p>
+                <p><strong>E-Mail:</strong> <a class="link" href="#" data-email><span data-email-text>firstname _ lastname [at] icloud dot com</span></a></p>
                 <p><strong>Types of Data collected:</strong> None</p>
             </div>
         </div>
     </main>
 
-    <div class="page-footer-container">
-        <div class="email-text">
-            <b>Email</b>: firstname _ lastname [at] icloud dot com
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-icons">
+                <a href="https://www.linkedin.com/in/lukasvoss/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#linkedin"/></svg></a>
+                <a href="https://github.com/lukasvoss" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#github"/></svg></a>
+                <a href="https://scholar.google.com/citations?user=lIDlyVMAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#graduation-cap"/></svg></a>
+                <a href="#" data-email aria-label="Email"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#mail"/></svg></a>
+            </div>
+            <p>&copy; <span data-year>2026</span> Lukas Voss. All rights reserved. <a href="legal.html">Legal notice</a></p>
         </div>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/lukasvoss/" target="_blank" aria-label="LinkedIn profile"><i class='bx bxl-linkedin'></i></a>
-            <span id="email-icon"></span>
-            <a href="https://scholar.google.com/citations?user=lIDlyVMAAAAJ&hl=en&oi=ao" target="_blank" aria-label="Google Scholar profile"><i class='bx bxs-graduation'></i></a>
-            <a href="https://github.com/lukasvoss" target="_blank" aria-label="GitHub profile"><i class='bx bxl-github'></i></a>
-            <a href="files/cv_voss_research.pdf" target="_blank" aria-label="Download CV"><span class="cv-text">CV</span></a>
-        </div>
+    </footer>
 
-        <script type="text/javascript">
-            const encodedEmail = "bHVrYXNfdm9zc0BpY2xvdWQuY29t";
-            const decodedEmail = atob(encodedEmail);
-            const emailLink = `<a href="mailto:${decodedEmail}" aria-label="Send email"><i class='bx bxs-envelope'></i></a>`;
-            document.getElementById("email-icon").innerHTML = emailLink;
-        </script>
-        <footer class="site-footer">
-            <p>&copy; 2026 All rights reserved. <a href="legal.html">Legal notice</a></p>
-        </footer>
-    </div>
-
-    <script src="js/menu-toggle.js"></script>
+    <script src="js/site.js"></script>
 </body>
 </html>

@@ -3,324 +3,343 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About Lukas Voss - Professional experience at QRT, BlackRock, Roland Berger. Education in Physics from Ulm University, NUS, and NTU Taiwan.">
-    <meta property="og:title" content="About - Lukas Voss">
-    <meta property="og:description" content="Professional experience and education of Lukas Voss - Quantitative Researcher.">
+    <title>About — Lukas Voss</title>
+    <meta name="description" content="About Lukas Voss: experience at QRT, BlackRock, Roland Berger and KPMG; education in Physics at Ulm University, NUS and National Taiwan University.">
+    <meta name="author" content="Lukas Voss">
+    <link rel="canonical" href="https://lukasvoss.com/about.html">
+    <meta property="og:title" content="About — Lukas Voss">
+    <meta property="og:description" content="About Lukas Voss: experience at QRT, BlackRock, Roland Berger and KPMG; education in Physics at Ulm University, NUS and National Taiwan University.">
     <meta property="og:image" content="https://lukasvoss.com/images/personal_picture_cqt_optimized.jpg">
     <meta property="og:url" content="https://lukasvoss.com/about.html">
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="profile">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="view-transition" content="same-origin">
-    <title>About - Lukas Voss</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/favicon.png" type="image/png">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="js/theme-toggle.js"></script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to content</a>
 
-    <header class="header">
-        <a href="index.html" class="logo">Lukas.</a>
-        <div style="display:flex;align-items:center;gap:0.5rem">
-            <button class="theme-toggle" aria-label="Toggle dark mode"><i class='bx bx-moon'></i></button>
-            <button class="menu-toggle" aria-label="Toggle navigation menu"><i class='bx bx-menu'></i></button>
-        </div>
-        <nav class="navbar" role="navigation" aria-label="Main navigation">
-            <a href="index.html">Home</a>
-            <a href="about.html" class="active">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="engagements.html">Engagements</a>
+    <header class="site-header">
+        <nav class="container" aria-label="Main navigation">
+            <a href="index.html" class="logo"><span>&gt;</span> L. Voss</a>
+            <div class="nav-right">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" aria-current="page">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="engagements.html">Engagements</a></li>
+                </ul>
+                <button class="icon-btn theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon icon-moon" aria-hidden="true"><use href="images/icons.svg#moon"/></svg>
+                    <svg class="icon icon-sun" aria-hidden="true"><use href="images/icons.svg#sun"/></svg>
+                </button>
+                <button class="icon-btn menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+                    <svg class="icon icon-open" aria-hidden="true"><use href="images/icons.svg#menu"/></svg>
+                    <svg class="icon icon-close" aria-hidden="true"><use href="images/icons.svg#x"/></svg>
+                </button>
+            </div>
         </nav>
     </header>
 
     <main id="main-content">
-        <section class="about">
-            <div class="cv-section">
-                <h3>Experience</h3>
-                <div class="timeline">
-                    <div class="timeline-entry">
-                        <div class="timeline-logo">
-                            <img src="images/qrt_logo.png" alt="Qube Research & Technologies logo" loading="lazy">
+        <div class="container page sections">
+            <h1 class="page-title">About</h1>
+
+            <section aria-labelledby="experience">
+                <div class="section-heading"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#briefcase"/></svg><h2 id="experience">Experience</h2></div>
+                <div class="timeline-item">
+                    <div class="timeline-row">
+                        <div class="timeline-aside">
+                            <span class="timeline-period">Dec 2025 – present</span>
+                            <span class="timeline-logo"><img src="images/logos/stealth.png" alt="" loading="lazy"></span>
                         </div>
-                        <div class="timeline-bubble"></div>
-                        <div class="timeline-content">
-                            <h4>Quantitative Research Intern</h4>
-                            <p><i>Qube Research & Technologies, Singapore</i></p>
-                            <p>Feb 2025 - Aug 2025</p>
-                            <ul>
-                                <li>Researched and implemented two mid/low-frequency Equity alpha strategies across US, EMEA, and AEC regions, contributing to live portfolio with improved Sharpe (Python, AWS EC2)</li>
-                                <li>Analyzed market microstructure for Tokyo Stock Exchange to optimize HFT arbitrage execution, reducing slippage by ~2% and improving fill rates by ~4% for the market making desk (Python, Ray)</li>
-                                <li>Deployed BARRA factor dashboard used by 12+ researchers for model attribution and portfolio insights</li>
-                                <li>Received return offer for different team due to internal restructuring; decided not to proceed</li>
+                        <div class="timeline-body">
+                            <p class="timeline-title">Builder</p>
+                            <p class="timeline-org"><i>Stealth</i></p>
+                            <p class="timeline-place"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#map-pin"/></svg> Singapore</p>
+                            <ul class="timeline-details">
+                                <li>Research and development of foundation models for structured enterprise data</li>
+                                <li>Time-series forecasting, regression and classification tasks solved in a few seconds, rather than another data science project taking weeks</li>
                             </ul>
                         </div>
                     </div>
+                </div>
 
-                    <div class="timeline-entry">
-                        <div class="timeline-logo">
-                            <img src="images/fraunhofer-vector-logo.png" alt="Fraunhofer IPA logo" loading="lazy">
+                <div class="timeline-item">
+                    <div class="timeline-row">
+                        <div class="timeline-aside">
+                            <span class="timeline-period">Feb – Sep 2025</span>
+                            <span class="timeline-logo"><img src="images/logos/qrt.png" alt="" loading="lazy"></span>
                         </div>
-                        <div class="timeline-bubble"></div>
-                        <div class="timeline-content">
-                            <h4>Student Researcher</h4>
-                            <p><i>Fraunhofer Institute for Manufacturing Engineering and Automation IPA, Stuttgart, Germany</i></p>
-                            <p>Jul 2023 - Sep 2023</p>
-                            <ul>
-                                <li>Predicted network traffic for component of automated driving with Quantum Machine Learning (Python)</li>
-                                <li>Set up a pipeline for training and evaluating of neural networks on an HPC cluster (Docker)</li>
+                        <div class="timeline-body">
+                            <p class="timeline-title">Quantitative Research Intern</p>
+                            <p class="timeline-org">Qube Research &amp; Technologies</p>
+                            <p class="timeline-place"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#map-pin"/></svg> Singapore</p>
+                            <ul class="timeline-details">
+                                <li>Researched and implemented two mid/low-frequency Equity alpha strategies across US, EMEA, and AEC regions, contributing to the live portfolio with improved Sharpe (Python, AWS EC2)</li>
+                                <li>Analyzed market microstructure for the Tokyo Stock Exchange to optimize HFT arbitrage execution, reducing slippage by ~2% and improving fill rates by ~4% for the market making desk (Python, Ray)</li>
+                                <li>Deployed a BARRA factor dashboard used by 12+ researchers for model attribution and portfolio insights</li>
+                                <li>Received return offer for a different team due to internal restructuring; decided not to proceed</li>
                             </ul>
                         </div>
                     </div>
-
-                    <div class="timeline-entry">
-                        <div class="timeline-logo">
-                            <img src="images/BlackRock_logo.png" alt="BlackRock logo" loading="lazy">
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-row">
+                        <div class="timeline-aside">
+                            <span class="timeline-period">Jul – Sep 2023</span>
+                            <span class="timeline-logo"><img src="images/logos/fraunhofer.png" alt="" loading="lazy"></span>
                         </div>
-                        <div class="timeline-bubble"></div>
-                        <div class="timeline-content">
-                            <h4>Summer Analyst - Portfolio Analytics Group</h4>
-                            <p><i>BlackRock, Budapest, Hungary</i></p>
-                            <p>Jun 2022 - Aug 2022</p>
-                            <ul>
+                        <div class="timeline-body">
+                            <p class="timeline-title">Student Researcher</p>
+                            <p class="timeline-org">Fraunhofer Institute for Manufacturing Engineering and Automation IPA</p>
+                            <p class="timeline-place"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#map-pin"/></svg> Stuttgart, Germany</p>
+                            <ul class="timeline-details">
+                                <li>Predicted network traffic for a component of automated driving with Quantum Machine Learning (Python)</li>
+                                <li>Set up a pipeline for training and evaluating neural networks on an HPC cluster (Docker)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-row">
+                        <div class="timeline-aside">
+                            <span class="timeline-period">Jun – Aug 2022</span>
+                            <span class="timeline-logo"><img src="images/logos/blackrock.png" alt="" loading="lazy"></span>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="timeline-title">Summer Analyst – Portfolio Analytics Group</p>
+                            <p class="timeline-org">BlackRock</p>
+                            <p class="timeline-place"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#map-pin"/></svg> Budapest, Hungary</p>
+                            <ul class="timeline-details">
                                 <li>Engineered an evaluation pipeline to validate a new multi-asset multi-factor financial model by comparing its outputs with an older model, enhancing data collection efficiency by 60% through infrastructure improvements</li>
                                 <li>Developed a risk monitoring dashboard to automatically flag data inconsistencies between firm-internal and client databases across multiple portfolios, utilizing Python and SQL for data validation and integrating the solution into a nightly update routine</li>
                             </ul>
                         </div>
                     </div>
-
-                    <div class="timeline-entry">
-                        <div class="timeline-logo">
-                            <img src="images/roland_berger_logo.jpeg" alt="Roland Berger logo" loading="lazy">
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-row">
+                        <div class="timeline-aside">
+                            <span class="timeline-period">Mar – Jun 2022</span>
+                            <span class="timeline-logo"><img src="images/logos/roland-berger.png" alt="" loading="lazy"></span>
                         </div>
-                        <div class="timeline-bubble"></div>
-                        <div class="timeline-content">
-                            <h4>Graduate Intern - Restructuring, Performance, Transformation & Transaction</h4>
-                            <p><i>Roland Berger, Munich, Germany</i></p>
-                            <p>Mar 2022 - Jun 2022</p>
-                            <ul>
-                                <li>Communicated with executive board and managed the data room for distressed sell-side mandate in the chemicals sector, prepared 12 investor proposals and analyzed deal structures for a &euro;100m+ transaction</li>
+                        <div class="timeline-body">
+                            <p class="timeline-title">Graduate Intern – Restructuring, Performance, Transformation &amp; Transaction</p>
+                            <p class="timeline-org">Roland Berger</p>
+                            <p class="timeline-place"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#map-pin"/></svg> Munich, Germany</p>
+                            <ul class="timeline-details">
+                                <li>Communicated with the executive board and managed the data room for a distressed sell-side mandate in the chemicals sector, prepared 12 investor proposals and analyzed deal structures for a &euro;100m+ transaction</li>
                                 <li>Conducted competitor analysis and interviewed 3 industry experts in a buy-side Commercial Due Diligence project, evaluating market trends and competitive positioning for a software company acquisition</li>
                             </ul>
                         </div>
                     </div>
-
-                    <div class="timeline-entry">
-                        <div class="timeline-logo">
-                            <img src="images/KPMG_logo.png" alt="KPMG logo" loading="lazy">
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-row">
+                        <div class="timeline-aside">
+                            <span class="timeline-period">Oct – Dec 2021</span>
+                            <span class="timeline-logo"><img src="images/logos/kpmg.png" alt="" loading="lazy"></span>
                         </div>
-                        <div class="timeline-bubble"></div>
-                        <div class="timeline-content">
-                            <h4>Intern - Risk & Treasury</h4>
-                            <p><i>KPMG, Munich, Germany</i></p>
-                            <p>Oct 2021 - Dec 2021</p>
-                            <ul>
-                                <li>Developed an interactive treasury dashboard in Microsoft PowerBI, integrating Python-based web scraping and Google News API to analyze real-time market data, including CDS spreads and sentiment analysis of news articles on 15 counterparties</li>
+                        <div class="timeline-body">
+                            <p class="timeline-title">Intern – Risk &amp; Treasury</p>
+                            <p class="timeline-org">KPMG</p>
+                            <p class="timeline-place"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#map-pin"/></svg> Munich, Germany</p>
+                            <ul class="timeline-details">
+                                <li>Developed an interactive treasury dashboard in Microsoft PowerBI, integrating Python-based web scraping and the Google News API to analyze real-time market data, including CDS spreads and sentiment analysis of news articles on 15 counterparties</li>
                                 <li>Presented project results and demonstrated the tool to the entire German Treasury practice (&gt;60 FTE, including partners) in a nationwide call, followed by a live demo to two clients, driving interest in advanced data-driven risk management solutions</li>
                             </ul>
                         </div>
                     </div>
-
-                    <div class="timeline-entry">
-                        <div class="timeline-logo">
-                            <img src="images/uni_ulm_logo.jpg" alt="Ulm University logo" loading="lazy">
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-row">
+                        <div class="timeline-aside">
+                            <span class="timeline-period">Oct 2020 – Jul 2021</span>
+                            <span class="timeline-logo"><img src="images/logos/ulm.png" alt="" loading="lazy"></span>
                         </div>
-                        <div class="timeline-bubble"></div>
-                        <div class="timeline-content">
-                            <h4>Student Researcher</h4>
-                            <p><i>Institute for Complex Quantum Systems, Ulm University, Germany</i></p>
-                            <p>Oct 2020 - Jul 2021</p>
-                            <ul>
+                        <div class="timeline-body">
+                            <p class="timeline-title">Student Researcher</p>
+                            <p class="timeline-org">Institute for Complex Quantum Systems, Ulm University</p>
+                            <p class="timeline-place"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#map-pin"/></svg> Ulm, Germany</p>
+                            <ul class="timeline-details">
                                 <li>Simulated Nitrogen Vacancy (NV) centre dynamics interacting with surrounding nuclear spins in Matlab with Monte Carlo methods</li>
-                                <li>Had a scientific poster presentation at 84th Condensed Matter Conference of German Physical Society</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="timeline-entry">
-                        <div class="timeline-logo">
-                            <img src="images/IBA_logo.png" alt="Institute for Business Analytics logo" loading="lazy">
-                        </div>
-                        <div class="timeline-bubble"></div>
-                        <div class="timeline-content">
-                            <h4>Assistant Lecturer & Student Researcher</h4>
-                            <p><i>Institute for Business Analytics, Ulm University, Germany</i></p>
-                            <p>Apr 2020 - Jul 2021</p>
-                            <ul>
-                                <li>Oversaw and maintained the large-scale IT infrastructure (server for 19 agencies) of the state-wide project <a href="https://wm.baden-wuerttemberg.de/de/service/presse-und-oeffentlichkeitsarbeit/pressemitteilung/pid/wirtschaftsministerium-foerdert-innovatives-digitales-und-bundesweit-einzigartiges-projekt-digipeg/" title="DIGIPEG project">DIGIPEG</a></li>
-                                <li>Was assistant lecturer for a Bachelor module teaching Data Science with Python to ~80 students (<a href="https://www.uni-ulm.de/mawi/iba/institut/team/mathias-klier/" title="Prof. Klier profile">Prof. Klier</a>)</li>
+                                <li>Presented a scientific poster at the 84th Condensed Matter Conference of the German Physical Society</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="cv-section">
-                <h3>Education</h3>
-                <div class="timeline">
-                    <div class="timeline-entry">
-                        <div class="timeline-logo">
-                            <img src="images/Sjtu-logo-standard-red.png" alt="Shanghai Jiao Tong University logo" loading="lazy">
+                <div class="timeline-item">
+                    <div class="timeline-row">
+                        <div class="timeline-aside">
+                            <span class="timeline-period">Apr 2020 – Jul 2021</span>
+                            <span class="timeline-logo"><img src="images/logos/iba.png" alt="" loading="lazy"></span>
                         </div>
-                        <div class="timeline-bubble"></div>
-                        <div class="timeline-content">
-                            <h4>Full-time Chinese Course</h4>
-                            <p><i>Jiao Tong University, Shanghai, People's Republic of China (PRC)</i></p>
-                            <p>Sep 2024 - Jan 2025 (discontinued in Dec 2024)</p>
-                            <ul>
-                                <li>I participated in the Full-Time Chinese Language Course of Shanghai Jiao Tong University in order to improve my Chinese level and experience Chinese life and culture. Personal Goal: Achieve HSK 5 (equiv. B2-C1)</li>
-                                <li>Discontinued my studies in Dec 2024 after I accepted an offer to work in Singapore from 2025</li>
+                        <div class="timeline-body">
+                            <p class="timeline-title">Assistant Lecturer &amp; Student Researcher</p>
+                            <p class="timeline-org">Institute for Business Analytics, Ulm University</p>
+                            <p class="timeline-place"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#map-pin"/></svg> Ulm, Germany</p>
+                            <ul class="timeline-details">
+                                <li>Oversaw and maintained the large-scale IT infrastructure (server for 19 agencies) of the state-wide project <a href="https://wm.baden-wuerttemberg.de/de/service/presse-und-oeffentlichkeitsarbeit/pressemitteilung/pid/wirtschaftsministerium-foerdert-innovatives-digitales-und-bundesweit-einzigartiges-projekt-digipeg/" target="_blank" rel="noopener noreferrer">DIGIPEG</a></li>
+                                <li>Assistant lecturer for a Bachelor module teaching Data Science with Python to ~80 students (<a href="https://www.uni-ulm.de/mawi/iba/institut/team/mathias-klier/" target="_blank" rel="noopener noreferrer">Prof. Klier</a>)</li>
                             </ul>
                         </div>
                     </div>
+                </div>
+            </section>
 
-                    <div class="timeline-entry">
-                        <div class="timeline-logo">
-                            <img src="images/nus_logo.jpg" alt="National University of Singapore logo" loading="lazy">
+            <section aria-labelledby="education">
+                <div class="section-heading"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#graduation-cap"/></svg><h2 id="education">Education</h2></div>
+                <div class="timeline-item">
+                    <div class="timeline-row">
+                        <div class="timeline-aside">
+                            <span class="timeline-period">Sep – Dec 2024</span>
+                            <span class="timeline-logo"><img src="images/logos/sjtu.png" alt="" loading="lazy"></span>
                         </div>
-                        <div class="timeline-bubble"></div>
-                        <div class="timeline-content">
-                            <h4>Research Stay for Master's Thesis</h4>
-                            <p><i>National University of Singapore</i></p>
-                            <p>Oct 2023 - Sep 2024</p>
-                            <ul>
-                                <li>Academic Research stay at Centre for Quantum Technologies (<a href="https://www.quantumlah.org" target="_blank">CQT</a>) in the group of Hui Khoon Ng. Working on Deep Reinforcement Learning for Quantum Computing applications.</li>
-                                <li>Master Thesis: "Real-time context-aware gate calibration for quantum error suppression using Reinforcement Learning" (grade: 4.0 / 4.0)</li>
+                        <div class="timeline-body">
+                            <p class="timeline-title">Full-time Chinese Language Course</p>
+                            <p class="timeline-org">Shanghai Jiao Tong University</p>
+                            <p class="timeline-place"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#map-pin"/></svg> Shanghai, PRC</p>
+                            <ul class="timeline-details">
+                                <li>Joined the full-time Chinese language programme to improve my Chinese and experience Chinese life and culture. Personal goal: HSK 5 (equiv. B2–C1)</li>
+                                <li>Discontinued in Dec 2024 after accepting an offer to work in Singapore from 2025</li>
                             </ul>
                         </div>
                     </div>
-
-                    <div class="timeline-entry">
-                        <div class="timeline-logo">
-                            <img src="images/national-taiwan-university_logo.jpg" alt="National Taiwan University logo" loading="lazy">
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-row">
+                        <div class="timeline-aside">
+                            <span class="timeline-period">Oct 2023 – Sep 2024</span>
+                            <span class="timeline-logo"><img src="images/logos/nus.png" alt="" loading="lazy"></span>
                         </div>
-                        <div class="timeline-bubble"></div>
-                        <div class="timeline-content">
-                            <h4>Exchange Year</h4>
-                            <p><i>National Taiwan University, Taipei, Republic of China (ROC)</i></p>
-                            <p>Sep 2022 - Jun 2023</p>
-                            <ul>
-                                <li>Coursework focus: Quantum Computing, Artificial Intelligence (AI) and High-Performance Computing (HPC), Chinese Language</li>
+                        <div class="timeline-body">
+                            <p class="timeline-title">Research Stay for Master's Thesis</p>
+                            <p class="timeline-org">Centre for Quantum Technologies, National University of Singapore</p>
+                            <p class="timeline-place"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#map-pin"/></svg> Singapore</p>
+                            <ul class="timeline-details">
+                                <li>Academic research stay at <a href="https://www.quantumlah.org" target="_blank" rel="noopener noreferrer">CQT</a> in the group of Hui Khoon Ng, working on Deep Reinforcement Learning for quantum computing applications</li>
+                                <li>Master's thesis: &ldquo;Real-time context-aware gate calibration for quantum error suppression using Reinforcement Learning&rdquo; (grade: 4.0 / 4.0)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-row">
+                        <div class="timeline-aside">
+                            <span class="timeline-period">Sep 2022 – Jun 2023</span>
+                            <span class="timeline-logo"><img src="images/logos/ntu.png" alt="" loading="lazy"></span>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="timeline-title">Exchange Year</p>
+                            <p class="timeline-org">National Taiwan University</p>
+                            <p class="timeline-place"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#map-pin"/></svg> Taipei, ROC</p>
+                            <ul class="timeline-details">
+                                <li>Coursework focus: Quantum Computing, Artificial Intelligence and High-Performance Computing, Chinese Language</li>
                                 <li>Final GPA: 4.0 / 4.0</li>
                             </ul>
                         </div>
                     </div>
-
-                    <div class="timeline-entry">
-                        <div class="timeline-logo">
-                            <img src="images/uni_ulm_logo.jpg" alt="Ulm University logo" loading="lazy">
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-row">
+                        <div class="timeline-aside">
+                            <span class="timeline-period">Apr 2021 – Sep 2024</span>
+                            <span class="timeline-logo"><img src="images/logos/ulm.png" alt="" loading="lazy"></span>
                         </div>
-                        <div class="timeline-bubble"></div>
-                        <div class="timeline-content">
-                            <h4>MSc Physics and Management & MSc Physics (Double Degree)</h4>
-                            <p><i>Ulm University, Germany</i></p>
-                            <p>Apr 2021 - Sep 2024</p>
-                            <ul>
+                        <div class="timeline-body">
+                            <p class="timeline-title">MSc Physics and Management &amp; MSc Physics (Double Degree)</p>
+                            <p class="timeline-org">Ulm University</p>
+                            <p class="timeline-place"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#map-pin"/></svg> Ulm, Germany</p>
+                            <ul class="timeline-details">
                                 <li>Coursework focus: Quantum Computing, Statistical Modeling and Machine Learning</li>
                                 <li>Final GPA: 4.0 / 4.0, major GPA: 4.0 / 4.0</li>
                             </ul>
                         </div>
                     </div>
-
-                    <div class="timeline-entry">
-                        <div class="timeline-logo">
-                            <img src="images/uni_ulm_logo.jpg" alt="Ulm University logo" loading="lazy">
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-row">
+                        <div class="timeline-aside">
+                            <span class="timeline-period">Oct 2017 – Mar 2021</span>
+                            <span class="timeline-logo"><img src="images/logos/ulm.png" alt="" loading="lazy"></span>
                         </div>
-                        <div class="timeline-bubble"></div>
-                        <div class="timeline-content">
-                            <h4>BSc Physics and Management</h4>
-                            <p><i>Ulm University, Germany</i></p>
-                            <p>Oct 2017 - Mar 2021</p>
-                            <ul>
+                        <div class="timeline-body">
+                            <p class="timeline-title">BSc Physics and Management</p>
+                            <p class="timeline-org">Ulm University</p>
+                            <p class="timeline-place"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#map-pin"/></svg> Ulm, Germany</p>
+                            <ul class="timeline-details">
                                 <li>Coursework focus: Statistical Mechanics, Business Analytics</li>
-                                <li>Bachelor thesis: "Exact stochastic correction of Mean Field Theory with application to diamond-based spin systems" (grade: 3.7 / 4.0)</li>
+                                <li>Bachelor's thesis: &ldquo;Exact stochastic correction of Mean Field Theory with application to diamond-based spin systems&rdquo; (grade: 3.7 / 4.0)</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="about-section">
-            <div class="section-header">
-                <h3>Languages</h3>
-                <hr>
-            </div>
-            <div class="section-content">
-                <ul class="cv-list">
-                    <li>German (native), English (professional working proficiency), Mandarin Chinese (est. HSK4, B1-2), French (est. B1)</li>
-                    <li>Python (advanced), R, Matlab, SQL, Bash (proficient)</li>
-                </ul>
-            </div>
-        </section>
+            <section>
+                <div class="section-heading"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#languages"/></svg><h2>Languages</h2></div>
+                <p class="label">Spoken</p>
+                <div class="chips">
+                    <span class="chip"><b>German</b><span>// Native</span></span>
+                    <span class="chip"><b>English</b><span>// Professional</span></span>
+                    <span class="chip"><b>Mandarin</b><span>// B1–B2 · HSK 4</span></span>
+                    <span class="chip"><b>French</b><span>// B1</span></span>
+                </div>
+                <p class="label">Programming</p>
+                <div class="chips">
+                    <span class="chip"><b>Python</b><span>// Advanced</span></span>
+                    <span class="chip"><b>R</b><span>// Proficient</span></span>
+                    <span class="chip"><b>Matlab</b><span>// Proficient</span></span>
+                    <span class="chip"><b>SQL</b><span>// Proficient</span></span>
+                    <span class="chip"><b>Bash</b><span>// Proficient</span></span>
+                </div>
+            </section>
 
-        <section class="about-section">
-            <div class="section-header">
-                <h3>Technology</h3>
-                <hr>
-            </div>
-            <div class="section-content">
-                <ul class="cv-list">
-                    <li>Cloud Computing: AWS (S3, EC2, Lambda, Braket), GCP (Virtual Machines, Storage)</li>
-                    <li>Docker, HPC clusters</li>
-                </ul>
-            </div>
-        </section>
+            <section>
+                <div class="section-heading"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#cpu"/></svg><h2>Technology</h2></div>
+                <div class="chips">
+                    <span class="chip"><b>AWS</b><span>// S3 · EC2 · Lambda · Braket</span></span>
+                    <span class="chip"><b>GCP</b><span>// VMs · Storage</span></span>
+                    <span class="chip"><b>Docker</b><span>// Containers</span></span>
+                    <span class="chip"><b>HPC</b><span>// Clusters</span></span>
+                </div>
+            </section>
 
-        <section class="about-section">
-            <div class="section-header">
-                <h3>Interests</h3>
-                <hr>
-            </div>
-            <div class="section-content">
-                <ul class="cv-list">
-                    <li>Passionate about cooking, swimming, tennis, traveling, language learning, Chinese culture, ...</li>
-                </ul>
-            </div>
-        </section>
+            <section>
+                <div class="section-heading"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#heart"/></svg><h2>Interests</h2></div>
+                <p class="prose">Passionate about cooking, swimming, tennis, traveling, language learning, Chinese culture, &hellip;</p>
+            </section>
 
-        <section class="about-section">
-            <div class="section-header">
-                <h3>Volunteering</h3>
-                <hr>
-            </div>
-            <div class="section-content">
-                <ul class="cv-list">
-                    <li>Entrepreneurship at the German Entrepreneurship Prize for Students (DGPS) <a href="https://dgps-alumni.de" target="_blank">Alumni Organization</a>.</li>
-                    <li>Organizer at Singapore Quantum Tech <a href="https://www.meetup.com/singapore-quantum-computing-meetup/" target="_blank">Meetup group</a>.</li>
-                </ul>
-            </div>
-        </section>
+            <section>
+                <div class="section-heading"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#users"/></svg><h2>Volunteering</h2></div>
+                <p class="prose">Entrepreneurship at the German Entrepreneurship Prize for Students (DGPS) <a class="link" href="https://dgps-alumni.de" target="_blank" rel="noopener noreferrer">Alumni Organization</a>, and organizer of the Singapore Quantum Tech <a class="link" href="https://www.meetup.com/singapore-quantum-computing-meetup/" target="_blank" rel="noopener noreferrer">Meetup group</a>.</p>
+            </section>
 
-        <p class="full-cv-footer">My resume can be found <a href="files/cv_voss_research.pdf" target="_blank">here</a> (Jan 2026 version)</p>
+            <section>
+                <div class="section-heading"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#file-text"/></svg><h2>Resume</h2></div>
+                <p class="prose">My full resume is available <a class="link" href="files/cv_voss_research.pdf" target="_blank" rel="noopener noreferrer">here</a> (Jan 2026 version).</p>
+            </section>
+        </div>
     </main>
 
-    <div class="page-footer-container">
-        <div class="email-text">
-            <b>Email</b>: firstname _ lastname [at] icloud dot com
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-icons">
+                <a href="https://www.linkedin.com/in/lukasvoss/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#linkedin"/></svg></a>
+                <a href="https://github.com/lukasvoss" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#github"/></svg></a>
+                <a href="https://scholar.google.com/citations?user=lIDlyVMAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#graduation-cap"/></svg></a>
+                <a href="#" data-email aria-label="Email"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#mail"/></svg></a>
+            </div>
+            <p>&copy; <span data-year>2026</span> Lukas Voss. All rights reserved. <a href="legal.html">Legal notice</a></p>
         </div>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/lukasvoss/" target="_blank" aria-label="LinkedIn profile"><i class='bx bxl-linkedin'></i></a>
-            <span id="email-icon"></span>
-            <a href="https://scholar.google.com/citations?user=lIDlyVMAAAAJ&hl=en&oi=ao" target="_blank" aria-label="Google Scholar profile"><i class='bx bxs-graduation'></i></a>
-            <a href="https://github.com/lukasvoss" target="_blank" aria-label="GitHub profile"><i class='bx bxl-github'></i></a>
-            <a href="files/cv_voss_research.pdf" target="_blank" aria-label="Download CV"><span class="cv-text">CV</span></a>
-        </div>
+    </footer>
 
-        <script type="text/javascript">
-            const encodedEmail = "bHVrYXNfdm9zc0BpY2xvdWQuY29t";
-            const decodedEmail = atob(encodedEmail);
-            const emailLink = `<a href="mailto:${decodedEmail}" aria-label="Send email"><i class='bx bxs-envelope'></i></a>`;
-            document.getElementById("email-icon").innerHTML = emailLink;
-        </script>
-        <footer class="site-footer">
-            <p>&copy; 2026 All rights reserved. <a href="legal.html">Legal notice</a></p>
-        </footer>
-    </div>
-
-    <script src="js/menu-toggle.js"></script>
+    <script src="js/site.js"></script>
 </body>
 </html>

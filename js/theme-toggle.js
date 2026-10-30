@@ -9,20 +9,17 @@
 
     function apply(theme) {
         document.documentElement.setAttribute('data-theme', theme);
-        localStorage.setItem(STORAGE_KEY, theme);
-        document.querySelectorAll('.theme-toggle i').forEach(icon => {
-            icon.className = theme === 'dark' ? 'bx bx-sun' : 'bx bx-moon';
-        });
     }
 
-    // Apply immediately (before DOMContentLoaded) to prevent flash
+    // Apply immediately (before first paint) to prevent a flash
     apply(getPreferred());
 
     document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.theme-toggle').forEach(btn => {
             btn.addEventListener('click', () => {
-                const current = document.documentElement.getAttribute('data-theme');
-                apply(current === 'dark' ? 'light' : 'dark');
+                const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+                apply(next);
+                localStorage.setItem(STORAGE_KEY, next);
             });
         });
     });
